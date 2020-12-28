@@ -25,7 +25,18 @@ policemen policewomen, congressman congresswoman, congressmen congresswomen,
 anchorman anchorwoman, anchormen anchorwomen, cameraman camerawoman, 
 cameramen camerawomen, showman showwoman, showmen showwomen, barman barmaid, 
 barmen barmaids, cockS henS, dogS bitchES, drakeS henS, dogS vixenS, tomS tibS, 
-boarS sowS, buckS roeS, peacockS peahenS, gander goose, ganders geese, friarS nunS, monkS nunS"""
+boarS sowS, buckS roeS, peacockS peahenS, gander goose, ganders geese, friarS nunS, 
+monkS nunS, archduchessES archdukeS, baronetS baronetessES, boyhood girlhood, 
+boyish girly, bro sis, bros sistas, comte comtesse, dadS momS, 
+deaconS deaconessES, duchessES dukeS, dude lady, dudelier womanlier, 
+dudeliest womanliest, dudely womanly, dudes ladies, earlS countessES, 
+fem masc, gal fellow, gentleman lady, gentlemen ladies, girlier dudelier, 
+girliest dudeliest, godhead goddesshead, godhood goddesshood, 
+godliness goddessliness, godly goddessly, gramps grandma, grandmaS grandpaS, 
+guyS galS, maiden stableboy, mama papa, manhood womanhood, mankind womankind, 
+manliness womanliness, manly womanly, marquis marquise, maternity paternity, 
+menz ladiez, mgtow wgtow, momma poppa, papa mama, priestS priestessES, 
+radfem radmasc, widow widower"""
 
 # compile() function returns the specified source as a code object, ready to be executed.
 
@@ -68,9 +79,8 @@ def flip_the_script(text):
   text = re_word.split(text)
   return "".join([ word+switch[gen] for word,gen in zip(text[::2],text[1::2])])+text[-1]
 
-text = input("Enter your text:")
 
-#text=u''''We were discussing something, and I said, “An advanced computer user knows what she needs…”, [when] a male colleague, suddenly interrupted, “Are you saying men cannot be advanced computer users?” I thought he was joking and laughed, but then realised I was the only one laughing, and he was looking at me as if I were his personal enemy'. '''
+text=u''''We were discussing something, and I said, “An advanced computer user knows what she needs…”, [when] a male colleague, suddenly interrupted, “Are you saying men cannot be advanced computer users?” I thought he was joking and laughed, but then realised I was the only one laughing, and he was looking at me as if I were his personal enemy'. '''
 
 result = flip_the_script(text)
 
