@@ -1,0 +1,39 @@
+.why {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.why .part-one {
+    display: flex;
+    height: 30%;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.why .part-two {
+    display: flex;
+    height: 70%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.why .part-two .card {
+    display: flex;
+    margin: 2em;
+    padding: 1em;
+    height: 90%;
+    justify-content: space-evenly;
+    background-color: lightgray;
+    align-items: center;
+}
+.why .part-two .card img {
+    display: flex;
+    margin: 1em;
+    width: 100%;
+    height: 50%;
+    border: 2px black solid;
+    border-radius: 10px;
+}

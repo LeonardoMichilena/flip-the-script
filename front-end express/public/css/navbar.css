@@ -1,0 +1,7 @@
+.nav-item {
+    margin-left: 3em;
+}
+nav .navbar {
+    display: flex;
+    justify-content: space-between !important;
+}
