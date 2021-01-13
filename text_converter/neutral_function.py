@@ -8,6 +8,10 @@ def neutral_converter(string, substitutions):
     regex = re.compile('|'.join(map(re.escape, substrings)))
     return regex.sub(lambda match: substitutions[match.group(0)], string)   #subn to count conversions
 
+#   TO BE CONSIDERED:
+#   Words such as 'woman' and 'man' as an isolated word or placed at the end of a sentence or phrase, will not be converted since the converter recognizes 'woman ' or 'man ', that is to say, with a space succeeding the word. 
+#   This is to prevent conversion of words such as 'Manchester' or 'womanizer' resulting in 'Personchester' and 'personizer'.
+
 dict_neutral = {' man ': ' person ', 'Man ': 'Person ', ' man.': ' person.', ' man,': ' person,', " man’": " person’", " man'": " person'", '-man': '-person', 
                 '-Man': '-Person', 'than a man': 'than a person',
                 ' men ': ' people ', 'Men ': 'People ', ' men.': ' people.', ' men,': ' people,', " men’": " people’", " men'": " people'", '-men': '-people', 
@@ -89,7 +93,8 @@ dict_neutral = {' man ': ' person ', 'Man ': 'Person ', ' man.': ' person.', ' m
                 'from her': 'from them', 'from him': 'from them', 'From her': 'From them', 'From him': 'From them',
                 'female ': None, 'Female ': None, 'female-': None, 'Female-': None,
                 'feminine ': None, 'Feminine ': None, "‘feminine’ ": None, "‘Feminine’ ": None, "'feminine' ": None, "'Feminine' ": None, 'feminine, ': None,
-                'feminist ': None, 'Feminist ': None,
+                'feminist ': 'gender-equality activist', 'Feminist ': 'Gender-equality activist',
+                'misandrist': 'gender-equality activist', 'Misandrist': 'Gender-equality activist',
                 'masculine ': None, 'Masculine ': None, "‘masculine’ ": None, "‘Masculine’ ": None, "'masculine' ": None, "'Masculine' ": None, 'masculine, ': None, 
                 'male ': None, 'Male ': None, 'male-': None, 'Male-': None,
                 'dudely ': None, 'Dudely ': None,
@@ -98,9 +103,9 @@ dict_neutral = {' man ': ' person ', 'Man ': 'Person ', ' man.': ' person.', ' m
                 'girly ': None, 'Girly ': None,
                 'manly ': None, 'Manly ': None,
                 'the Rev. ': None,
-                'feminism': 'activism', 'Feminism': 'Activism', 
+                'feminism': 'gender-equality activism', 'Feminism': 'Gender-equality activism', 
+                'misandry': 'gender-equality activism', 'Misandry': 'Gender-equality activism',
                 'femininity': 'humanity', 'masculinity': 'humanity', 'Femininity': 'Humanity', 'Masculinity': 'Humanity',
-                'misogynist': 'discriminatory', 'Misogynist': 'Discriminatory', 
                 'bossy': 'assertive', 'pushy': 'assertive', 'Bossy': 'Assertive', 'Pushy': 'Assertive',
                 'emotional': 'empathetic', 'hormonal': 'passionate', 'Emotional': 'Empathetic', 'Hormonal': 'Passionate',
                 'ditsy': 'silly', 'frigid': 'lacking sexual responsivness', 'Ditsy': 'Silly', 'Frigid': 'Lacking sexual responsivness',
@@ -109,8 +114,6 @@ dict_neutral = {' man ': ' person ', 'Man ': 'Person ', ' man.': ' person.', ' m
                 'hysterical': 'irrational', 'Hysterical': 'Irrational',
                 'mumsy': 'old fashioned', 'Mumsy': 'Old fashioned',
                 'virile': 'energetic', 'Virile': 'Energetic',
-                'matriarchal': 'egalitarian', 'patriarchal': 'egalitarian', 
-                'Matriarchal': 'Egalitarian', 'Patriarchal': 'Egalitarian',
                 'emperor': 'ruler', 'empress': 'ruler', 'Emperor': 'Ruler', 'Empress': 'Ruler',  
                 'queen': 'monarch', ' king ': ' monarch ', 'Queen': 'Monarch', 'King ': 'Monarch ', 'Kingdom': 'Realm', 'kingdom': 'realm', 'King’': 'Monarch’',
                 'king’': 'monarch’',
@@ -173,7 +176,7 @@ dict_neutral = {' man ': ' person ', 'Man ': 'Person ', ' man.': ' person.', ' m
                 'headmaster': 'head', 'headmistress ': 'head ', 'Headmaster': 'Head', 'Headmistress ': 'Head ',
                 'headmistresses': 'heads', 'Headmistresses': 'Heads',
                 ' her to ': ' them to '
-                }
+                } #'misogynist': 'discriminatory', 'Misogynist': 'Discriminatory', 'matriarchal': 'egalitarian', 'patriarchal': 'egalitarian', 'Matriarchal': 'Egalitarian', 'Patriarchal': 'Egalitarian',
 
 result = neutral_converter(text, dict_neutral)
 
@@ -198,8 +201,8 @@ list_string = r"""She\sstill\shas|\sshe\sstill\shas|\she\sstill\shas|\sHe\sstill
                 |\sher\s"that|\shim\s|himself|herself|\shim\.|\sher\.|\shim\sboy|\sthem\skiddo|\sher\sgirl|\sher\sup|takes\sher\shome|take\sher\shome|\shers\s|\sher\sby|from\sher|
                 |from\shim|From\sher|From\shim|female\s|Female\s|female-|Female-|feminine\s|Feminine\s|‘feminine’\s|‘Feminine’\s|'feminine'\s|'Feminine'\s|feminine,\s|feminist\s|Feminist\s|masculine\s|
                 |Masculine\s|‘masculine’\s|‘Masculine’\s|'masculine'\s|'Masculine'\s|masculine,\s|male\s|Male\s|male-|Male-|dudely\s|Dudely\s|womanly\s|Womanly\s|boyish\s|Boyish\s|girly\s|Girly\s|
-                |manly\s|Manly\s|the Rev.\s|feminism|Feminism|femininity|masculinity|Femininity|Masculinity|misogynist|Misogynist|bossy|pushy|Bossy|Pushy|emotional|hormonal|Emotional|
-                |Hormonal|ditsy|frigid|Ditsy|Frigid|frumpy|Frumpy|shrill|Shrill|hysterical|Hysterical|mumsy|Mumsy|virile|Virile|matriarchal|patriarchal|Matriarchal|Patriarchal|emperor|
+                |manly\s|Manly\s|the Rev.\s|feminism|Feminism|femininity|masculinity|Femininity|Masculinity|bossy|pushy|Bossy|Pushy|emotional|hormonal|Emotional|
+                |Hormonal|ditsy|frigid|Ditsy|Frigid|frumpy|Frumpy|shrill|Shrill|hysterical|Hysterical|mumsy|Mumsy|virile|Virile|misandry|Mysandry|emperor|
                 |empress|Emperor|Empress|queen|\sking\s|Queen|King\s|Kingdom|kingdom|princess|Princess|princesses|Princesses|prince\s|Prince\s|princes\s|Princes\s|manliness\s|womanliness\s|
                 |womanhood|Womanhood|manhood|Manhood|maiden|Maiden|stableboy|Stableboy|stableboys|Stableboys|\sboy\s|Boy|\sboys|Boys|boyfriend|Boyfriend|boyfriends|Boyfriends|
                 |daughter|Daughter|daughters|\sbro\s|\ssis\s|\sbros\s|\ssistas\s|brother\s'|\ssister\s|brothers\s|\ssisters\s|Brother\s|\sSister\s|Brothers\s|\sSisters\s|fraternity|
