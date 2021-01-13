@@ -1,0 +1,60 @@
+.about {
+    display: flex;
+}
+.about .part-one {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    padding: 1em;
+    justify-content: left;
+    background-color: lightgray;
+
+}
+.about h2 {
+    font-size: 3em;
+}
+.about p {
+    font-size: 2em;
+}
+
+.about .part-two {
+    display: flex;
+    height: 70%;
+    background-color: white;
+}
+.about .part-two .text-box {
+    display: flex;
+    padding: 1em;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about .part-two div p {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .part-two div a {
+    display: flex;
+    width: 70%;
+    font-size: 1.5em;
+    justify-content: left;
+    align-items: left;
+}
+.about a {
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+.about .part-two img {
+    display: flex;
+    margin: auto;
+    width: 45%;
+    height: 80%;
+    border: 2px grey solid;
+    border-radius: 10px;
+}
+

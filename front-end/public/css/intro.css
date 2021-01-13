@@ -1,0 +1,25 @@
+.intro {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 2em;
+    justify-content: center;
+    align-items: left;
+}
+.intro h1 {
+    font-size: 4em;
+}
+.intro p {
+    font-size: 1.5em;
+}
+.intro a {
+    display: flex;
+    width: fit-content;
+    padding: 20px;
+    font-size: 2em;
+    border-radius: 45px;
+    box-shadow: black 2px 5px 2px;
+}
+span {
+    color: #FF88BA
+}
