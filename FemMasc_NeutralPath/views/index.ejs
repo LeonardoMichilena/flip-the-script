@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>articles Index</title>
+</head>
+
+<body>
+    <h1>articles</h1>
+    <ul>
+        <% for(let a of articles) {%>
+        <li>
+            <%=a.article%> 
+            
+        </li>
+        <% }%>
+    </ul>
+    <a href="/home">New Comment</a>
+
+</body>
+
+</html>
