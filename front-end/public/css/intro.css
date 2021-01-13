@@ -1,34 +1,25 @@
-.intro p {
-    font-size: 2rem;
-}
 .intro {
     display: flex;
     flex-direction: column;
-}
-.intro .part-one {
-    display: flex;
-    height: 50vh;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.intro img {
-    display: flex;
-    height: 50%;
-    width: 30%;
-}
-
-.intro .part-two {
-    display: flex;
+    height: 100vh;
+    padding: 2em;
     justify-content: center;
-    align-items: center;
-    height: 50vh;
-
+    align-items: left;
 }
-.intro .part-two a {
-    padding: 1em;
-    font-size: 3em;
+.intro h1 {
+    font-size: 4em;
 }
-.intro .part-two a:hover {
-    font-size: 3.5em;
-    text-decoration: none;
+.intro p {
+    font-size: 1.5em;
+}
+.intro a {
+    display: flex;
+    width: fit-content;
+    padding: 20px;
+    font-size: 2em;
+    border-radius: 45px;
+    box-shadow: black 2px 5px 2px;
+}
+span {
+    color: #FF88BA
 }
