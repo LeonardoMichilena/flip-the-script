@@ -68,7 +68,7 @@ app.get('/neutral', function(req, res) {
     .then(function(response){
         console.log(response);
         //res.send(response.data);
-        res.render("new", {reversed: response.data})
+        res.render("flip", {response: response.data, articles: articles})
     })
     .catch(function(error){
         console.log(error);

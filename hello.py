@@ -104,7 +104,7 @@ def jsInfo():
 
     result = flip_the_script(text)
 
-    return("This is your reverse gendered text: " + str(result))
+    return(str(result))
 
     """ return(textData) """
 
@@ -301,7 +301,7 @@ def neutral():
 
     result = neutral_converter(text, dict_neutral)
 
-    return("This is your neutral text: " + str(result)) 
+    return(str(result)) 
 
    
     
