@@ -8,11 +8,13 @@ app = Flask(__name__)
 
 @app.route("/mascfem", methods=["GET"])
 def jsInfo():
-    req = requests.get("http://localhost:3000/show") 
+    req = requests.get("http://localhost:3000/articles") 
     print(req.content)
     data = json.loads(req.content)
     print(data)
+    # textData = data['articles'][0]['article']
     textData = data['articles'][0]['article']
+
     print(textData)
     
 
@@ -102,7 +104,7 @@ def jsInfo():
 
     result = flip_the_script(text)
 
-    return("This is your reverse gendered text: " + str(result))
+    return(str(result))
 
     """ return(textData) """
 
@@ -299,7 +301,7 @@ def neutral():
 
     result = neutral_converter(text, dict_neutral)
 
-    return("This is your neutral text: " + str(result)) 
+    return(str(result)) 
 
    
     
