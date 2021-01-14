@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route("/mascfem", methods=["GET"])
 def jsInfo():
-    req = requests.get("http://localhost:3000/show") 
+    req = requests.get("http://localhost:3000/articles") 
     print(req.content)
     data = json.loads(req.content)
     print(data)

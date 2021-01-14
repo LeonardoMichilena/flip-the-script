@@ -32,49 +32,12 @@ app.get('/flip', (req, res) => {
     res.render('flip', {articles: articles});
 })
     
-//////////
-// app.get('/home', function(req, res) {
-//     axios.get('http://127.0.0.1:5000/flask')
-//     .then(function(response){
-//         console.log(response);
-//         res.send(response.data);
-//     })
-//     .catch(function(error){
-//         console.log(error);
-//     });
-// });
-/////////
 
 
 //******************************************************** */
 //after python has reversed it, call the python http port
 //******************************************************** */
-
-app.get('/reversed', function(req, res) {
-    axios.get('http://127.0.0.1:5000/mascfem')
-    .then(function(response){
-        console.log(response, "We got a response from PY!!");
-        //res.send(response.data);
-        res.render("flip", {response: response.data, articles: articles})
-    })
-    .catch(function(error){
-        console.log("Error in rendering the view!");
-    });
-    
-});  
-
-app.get('/neutral', function(req, res) {
-    axios.get('http://127.0.0.1:5000/neutral')
-    .then(function(response){
-        console.log(response);
-        //res.send(response.data);
-        res.render("flip", {response: response.data, articles: articles})
-    })
-    .catch(function(error){
-        console.log(error);
-    });
-    
-});  
+ 
 
 /***************************
 fem/masc path, send back to user
@@ -89,7 +52,15 @@ app.post('/articles', (req, res) => {
     const { article } = req.body;
     articles.push({article});
     console.log({articles}, "Post request!!!");
-    res.redirect("/reversed");
+    axios.get('http://127.0.0.1:5000/mascfem')
+    .then(function(response){
+        console.log(response, "We got a response from PY!!");
+        //res.send(response.data);
+        res.render("flip", {response: response.data, articles: articles})
+    })
+    .catch(function(error){
+        console.log("Error in rendering the view!");
+    });
   
 })
 /* *****************************
@@ -103,9 +74,18 @@ app.get("/neutralarticle", (req, res) => {
 app.post('/neutralarticle', (req, res) => {
     console.log(req.body)
     const { article } = req.body;
-    articles.push({article})
-    console.log({articles})
-    res.redirect("/neutral")
+    articles.push({article});
+    console.log({articles});
+    axios.get('http://127.0.0.1:5000/neutral')
+    .then(function(response){
+        console.log(response);
+        //res.send(response.data);
+        res.render("flip", {response: response.data, articles: articles});
+    })
+    .catch(function(error){
+        console.log(error);
+    });
+    
   })
 //******************************************************** */
 //wrap the data to send to flask
