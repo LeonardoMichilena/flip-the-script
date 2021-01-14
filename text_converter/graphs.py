@@ -18,8 +18,8 @@ plt.subplot(3, 2, 1)
 plt.plot(news['words_count'], color='mediumaquamarine', label='Words in total')
 plt.plot(news['words_converted'], color='mediumorchid', label='Words converted')
 plt.ylabel("Quantity of words")
-plt.xlabel('Converted words')
-plt.title('Ratio = Neutral * % / Original')
+plt.xlabel('Quantity of articles')
+plt.legend(loc='upper left')
 #plt.show()
 
 print("# Ratio of conversions per topic")
@@ -37,7 +37,6 @@ plt.subplot(3, 2, 3)
 sns.barplot(x=news['gender_author'], y=news['rate'], alpha=0.5, hue=news['gender_author'], palette="hls") #rocket, hls 
 plt.ylabel('Converted words ratio')
 plt.xlabel("Author's gender")
-plt.title('Ratio = Neutral * % / Original')
 plt.legend(loc='upper right')
 #plt.show()
 
