@@ -12,7 +12,9 @@ def jsInfo():
     print(req.content)
     data = json.loads(req.content)
     print(data)
+    # textData = data['articles'][0]['article']
     textData = data['articles'][0]['article']
+
     print(textData)
     
 

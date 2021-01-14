@@ -1,0 +1,29 @@
+<%- include('partials/head') %>
+<%- include('partials/navbar') %>
+
+<link rel="stylesheet" href="/css/flip.css">
+    <section class="flip">
+        <div>
+            <h1>Flip your script here</h1>
+            <form method="POST">
+                <label for="newArticle">Enter your text:</label>
+                <br>
+                <textarea id="newArticle" type="text" cols=50 rows=10 name="article"
+                    placeholder="Write or Copy & Paste your script here!"></textarea>
+               <br>
+                <button type="submit" name="reverse" formaction="/articles">Flip to Opposite</button>
+                <button type="submit" name="neutral" formaction="/neutralarticle">Flip to Gender Neutral</button>
+            </form>
+        </div>
+        <div>
+            <% if(articles != 0) { %>
+                <div>
+                    <h1>Here is your flipped text:</h1>
+                    <p><%= response %></p>
+                </div>
+            <% } %>
+            
+        </div>
+
+    </section>
+</body>
