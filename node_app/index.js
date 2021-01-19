@@ -18,6 +18,8 @@ app.use(methodOverride("_method"));
 app.use(express.static('public'))
 app.set('public', path.join(__dirname,'/public'));
 
+
+
 //*****************
 // HOME
 //************* */ */
@@ -29,49 +31,44 @@ app.get('/', (req, res) => {
 empty list/form page step I
 ******************************** */
 app.get('/flip', (req, res) => {
-    articles = [];
-    res.render('flip');
+    res.render('flip', {response : false});
 })
     
 
 /***************************
 fem/masc path, send back to user
 **************************** */
-app.get("/articles", (req, res) => {
+/* app.get("/articles", (req, res) => {
     res.send({articles});
     console.log({articles}, "I am serving the articles data!!");
-}) 
+})  */
 
 app.post('/articles', (req, res) => {
     console.log(req.body);
     const { article } = req.body;
-    articles.push({article});
-    console.log({articles}, "Post request!!!");
-    axios.get('http://127.0.0.1:5000/mascfem')
+    axios.post('http://127.0.0.1:5000/mascfem', { article })//////check for post request
     .then(function(response){
-        console.log(response, "We got a response from PY!!");
+        console.log(response);
         //res.send(response.data);
         res.render("flip", {response: response.data})
     })
     .catch(function(error){
-        console.log("Error in rendering the view!");
+        console.log(error);
     });
   
 })
 /* *****************************
     neutral path, send back to user
 ******************************** */
-app.get("/neutralarticle", (req, res) => {
+/* app.get("/neutralarticle", (req, res) => {
     res.send({articles})
     console.log({articles})
-}) 
+}) */ 
 
 app.post('/neutralarticle', (req, res) => {
     console.log(req.body)
     const { article } = req.body;
-    articles.push({article});
-    console.log({articles});
-    axios.get('http://127.0.0.1:5000/neutral')
+    axios.post('http://127.0.0.1:5000/neutral', { article })
     .then(function(response){
         console.log(response);
         //res.send(response.data);
@@ -88,13 +85,15 @@ app.post('/neutralarticle', (req, res) => {
 app.get("/show", (req, res) => {
     axios.get("http://localhost:3000/articles")
    .then(function (response) {
-       console.log(response.data, "This is the response data!");
+       console.log(response.data);
        res.send(response.data);
    })
    .catch(function (error) {
-       console.log("There has been an error getting the data!");
+       console.log(error);
    })   
-})
+}) 
+
+
 app.get("/showneutral", (req, res) => {
     axios.get("http://localhost:3000/neutralarticle")
    .then(function (response) {
