@@ -1,8 +1,8 @@
 from flask import Flask, request, render_template
 import requests
 import json
-from neutral import neutral_converter 
-from gender import flip_the_script
+from text_converter.neutral_function import neutral_converter 
+from text_converter.gender_function import gender_converter
 
 app = Flask(__name__)
 
@@ -12,7 +12,7 @@ app = Flask(__name__)
 def jsInfo(): 
     data = json.loads(request.data)
     textData = data['article']
-    text=flip_the_script(textData)
+    text=gender_converter(textData)
     return(text)
 
   

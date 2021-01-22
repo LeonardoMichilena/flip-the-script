@@ -45,4 +45,4 @@ def text_transformer(switch_dict):
     return transformer
 
 
-transform_text = text_transformer(complete_switch_dict(gender_switch_dict))
+gender_converter = text_transformer(complete_switch_dict(gender_switch_dict))

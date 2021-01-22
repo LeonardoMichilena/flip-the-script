@@ -1,5 +1,5 @@
 from test.util import assert_equal
-from text_converter.gender_function import transform_text
+from text_converter.gender_function import gender_converter
 
 
 def test_gender_function():
@@ -16,4 +16,4 @@ def test_gender_function():
     ]
 
     for inp, expectation in test_cases: 
-        assert_equal(transform_text(inp), expectation)
+        assert_equal(gender_converter(inp), expectation)
