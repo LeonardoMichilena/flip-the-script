@@ -1,6 +1,6 @@
 import re
 
-from text_converter.gender_dict import gender_switch_dict
+from gender_dict import gender_switch_dict
 
 
 def reverse_dict(d):

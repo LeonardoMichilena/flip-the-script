@@ -1,8 +1,8 @@
 from flask import Flask, request, render_template
 import requests
 import json
-from text_converter.neutral_function import neutral_converter 
-from text_converter.gender_function import gender_converter
+from neutral_function import neutral_converter 
+from gender_function import gender_converter
 
 app = Flask(__name__)
 

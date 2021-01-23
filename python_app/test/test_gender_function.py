@@ -1,5 +1,5 @@
 from test.util import assert_equal
-from text_converter.gender_function import gender_converter
+from gender_function import gender_converter
 
 
 def test_gender_function():
