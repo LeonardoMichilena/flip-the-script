@@ -1,25 +1,12 @@
 .statistics {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: lightgray;
-}
-
-.statistics .part-one, .statistics .part-two {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 50%;
-}
-
-.statistics .text-container {
-    display: flex;
-    width: 50%;
+    height: 100vh;
+    padding: 2em;
+    padding-top: 15%;
     flex-direction: column;
+    background-color: white;
 }
 
-.statistics img {
-    width: 25%;
-    height: 50%;
-    margin: 1em;
+.part-one h1, .part-one p{
+    color: #FF88BA;
 }
