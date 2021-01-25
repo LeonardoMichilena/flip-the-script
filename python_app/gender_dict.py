@@ -44,7 +44,7 @@ def parse_switch_dict(data_string):
 
 
 gender_switch_data_string = u"""maleS femaleS, maleness femaleness, 
-himself herself, his her, his hers, he she, him her,
+himself herself, he she, 
 Mr Mrs, Mister Missus, Ms Mr, Master Miss, Master Mistress, 
 uncleS auntS, nephewS nieceS, sonS daughterS, grandsonS granddaughterS, stepsonS stepsisterS,
 brotherS sisterS, man woman, men women, boyS girlS, paternal maternal, paternity maternity,
