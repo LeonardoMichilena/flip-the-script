@@ -78,13 +78,3 @@ re_word = re.compile(r"\b("+words+r")\b")
 def flip_the_script(text):
   text = re_word.split(text)
   return "".join([ word+switch[gen] for word,gen in zip(text[::2],text[1::2])])+text[-1]
-
-
-text=u''''We were discussing something, and I said, “An advanced computer user knows what she needs…”, [when] a male colleague, suddenly interrupted, “Are you saying men cannot be advanced computer users?” I thought he was joking and laughed, but then realised I was the only one laughing, and he was looking at me as if I were his personal enemy'. '''
-
-result = flip_the_script(text)
-
-print("This is your reverse gendered text: " + str(result))
-
-
-

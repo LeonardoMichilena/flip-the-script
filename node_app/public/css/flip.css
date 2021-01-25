@@ -1,11 +1,29 @@
 .flip {
     display: flex;
+    height: 100vh;
+    padding: 2em;
+    padding-top: 10%;
     flex-direction: row;
-    margin: 1em;
+    background-color: white;
+    justify-content: space-evenly;
 }
-.container {
+.left-side, .right-side {
     display: flex;
-    height: 50%;
-    width: fit-content;
-    border: 2px grey solid;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    padding: 1em;
+}
+
+.text-box {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin: 1em 0 1em 0;
+    border: 2px solid grey;
+}
+
+.text-area, .text-box.right {
+    padding: 0.5em;
+
 }

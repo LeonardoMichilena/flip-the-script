@@ -3,34 +3,31 @@
 
 <link rel="stylesheet" href="/css/flip.css">
     <section class="flip">
-        <div>
-            <br>
-            <br>
-            <br>
-            <h1>Flip your script here</h1>
+        <div class="left-side">
+            <h1>Welcome,</h1>
             <form method="POST">
-                <label for="newArticle">Enter your text:</label>
-                <br>
-                <textarea id="newArticle" type="text" cols=50 rows=10 name="article"
-                    placeholder="Write or Copy & Paste your script here!"></textarea>
-               <br>
-                <button type="submit" name="reverse" formaction="/articles">Flip to Opposite</button>
-                <button type="submit" name="neutral" formaction="/neutralarticle">Flip to Gender Neutral</button>
+                
+                <div class="text-box left">
+                    <textarea class="text-area" id="newArticle" type="text" rows="5.5" cols="60" name="article"
+                    placeholder="Input your text here"></textarea>
+                </div>
+                <div class="btn-container">
+                    <button type="submit" name="reverse" formaction="/articles">Flip to Opposite</button>
+                    <button type="submit" name="neutral" formaction="/neutralarticle">Flip to Gender Neutral</button>
+                </div>
             </form>
         </div>
-        <div>
-            <br><br><br>
+        <div class="right-side">
             <% if(response) { %>
-                <div>
-                    <h1>Here is your flipped text:</h1>
-                    <p><%= response %></p>
-                    <h2> Here are the words that were changed: </h2>
+                <h1>Your new script,</h1>
+                <div class="text-box right">
+                    <%= response %>
+                </div>
+                <h3> Flipped words: </h3>
                     <p><%= flippedArray  %> </p>
                     
                     <%= articles = [] %>
-                </div>
             <% } %>
-            
         </div>
 
     </section>

@@ -1,9 +1,10 @@
 .why {
-    margin-top: 15%;
     display: flex;
     height: 200vh;
     padding: 2em;
+    padding-top: 5%;
     flex-direction: column;
+    justify-content: space-evenly;
     background-color: rgb(238, 237, 237);
 }
 
@@ -13,7 +14,7 @@
 }
 .why .text.one {
     display: flex;
-    width: 60%;
+    width: 50%;
     flex-direction: column;
     justify-content: flex-end;
 }

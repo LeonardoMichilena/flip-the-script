@@ -5,7 +5,7 @@ import re
 from collections import Counter
 from countNeutral import neutral_converter, list_string, recounting 
 from gender_function import gender_converter
-#from neutral import neutral_converter
+
 
 app = Flask(__name__)
 

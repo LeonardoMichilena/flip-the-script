@@ -12,7 +12,7 @@
 .intro p {
     font-size: 1.5em;
 }
-.intro a {
+.btn-pink {
     display: flex;
     width: fit-content;
     padding: 20px;
