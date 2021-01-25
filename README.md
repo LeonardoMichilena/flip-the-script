@@ -1,12 +1,11 @@
 # flip-the-script
-Flip the script is a team Web/App project developed by students from TechLabs Berlin.
 
 ## About project
 ![logoish](https://user-images.githubusercontent.com/60686512/105738115-fc422c80-5f36-11eb-8fd1-ef9b5cd870f9.PNG)
 
   
 ## About us
-  
+Flip the script is a team Web/App project developed by students from TechLabs Berlin.  
   
 ## Build Setup
 for python:
