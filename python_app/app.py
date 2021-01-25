@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 import requests
 import json
-from neutral_function import neutral_converter 
+from neutral_function import neutral_converter, dict_neutral 
 from gender_function import gender_converter
 
 app = Flask(__name__)
@@ -22,7 +22,7 @@ def jsInfo():
 def neutral():
     data = json.loads(request.data)
     textData = data['article']
-    text=neutral_converter(textData)
+    text=neutral_converter(textData, dict_neutral)
     return(text)
 
 
