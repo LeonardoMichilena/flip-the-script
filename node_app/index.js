@@ -18,6 +18,9 @@ app.use(methodOverride("_method"));
 app.use(express.static('public'))
 app.set('public', path.join(__dirname,'/public'));
 
+//Data variables
+sources = ["deutsche welle","the irish times","abc news","reuters","al jazeera","the new york times","cnn","newsweek","science","cnbc","npr","bbc news"];
+topics = ["business","culture","food and drinks","health","local news","people","politics","social science","sports","technology","travel","world"];
 
 function diffWords(aString, bString){
     differentWords = [];
@@ -49,8 +52,11 @@ function diffWords(aString, bString){
 // HOME
 //************* */ */
 app.get('/', (req, res) => {
-    res.render('home');
-})
+    res.render('home',{
+        sources: sources,
+        topics: topics
+    });
+});
 /* ********************************
 empty list/form page step I
 ******************************** */

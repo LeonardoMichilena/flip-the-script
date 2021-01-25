@@ -8,7 +8,7 @@
             <form method="POST">
                 
                 <div class="text-box left">
-                    <textarea id="newArticle" type="text" rows="7" cols="60" name="article"
+                    <textarea class="text-area" id="newArticle" type="text" rows="5.5" cols="60" name="article"
                     placeholder="Input your text here"></textarea>
                 </div>
                 <div class="btn-container">
@@ -19,12 +19,11 @@
         </div>
         <div class="right-side">
             <% if(response) { %>
-                <h1>Your flipped text,</h1>
+                <h1>Your new script,</h1>
                 <div class="text-box right">
-                    <textarea id="newArticle" type="text" rows="7" cols="60" name="article"
-                    placeholder="Input your text here"><%= response %></textarea>                    
+                    <%= response %>
                 </div>
-                <h3> Here are the words that were changed: </h3>
+                <h3> Flipped words: </h3>
                     <p><%= flippedArray  %> </p>
                     
                     <%= articles = [] %>

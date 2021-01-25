@@ -15,10 +15,15 @@
     padding: 1em;
 }
 
-.text-box{
+.text-box {
     display: flex;
     width: 90%;
     height: 100%;
     margin: 1em 0 1em 0;
     border: 2px solid grey;
+}
+
+.text-area, .text-box.right {
+    padding: 0.5em;
+
 }

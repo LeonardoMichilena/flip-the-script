@@ -17,7 +17,8 @@
     align-items: center;
 }
 .title {
-    font-size: 30px;
+    margin: 0.5em;
+    font-size: 1.5rem;
 }
 .list-container {
     display: flex;

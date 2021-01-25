@@ -1,7 +1,47 @@
 <link rel="stylesheet" href="/css/statistics.css">
 <section id="statistics" class="statistics">
     <div class="part-one">
-       <h1>Numbers,</h1>
-       <p>numbers</p>
+        <h1 class="pinky">Numbers,</h1>
+        <p class="pinky">numbers</p>
+    </div>
+    <div class="part-two">
+        <h1 class="pinky">Script predictor</h1>
+        <p class="pinky">Some more text here</p>
+
+        <form method="POST">
+            <div class="source-container">
+                <label for="source">Source:</label><br>
+                <input list="sources" name="source">
+                <datalist id="sources">
+                    <% for (let source of sources){ %>
+                        <option value='<%= source %>'>
+                            <% } %>
+                </datalist>
+            </div>
+            <div class="topic-container">
+                <label for="topic">Topic:</label><br>
+                <input list="topics" name="topic">
+                <datalist id="topics">
+                    <% for (let topic of topics){ %>
+                        <option value='<%= topic %>'>
+                            <% } %>
+                </datalist>
+            </div>
+            <div class="gender-container">
+                <label for="gender">Gender:</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="divers" name="gender" value="divers">
+                    <label for="divers">Divers</label>
+                </div>
+               
+            </div>
+
+            <input type="submit" name="" formaction="/"> 
+
+        </form>
     </div>
 </section>

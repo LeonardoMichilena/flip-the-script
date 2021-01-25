@@ -1,12 +1,17 @@
 .statistics {
     display: flex;
-    height: 100vh;
+    height: 200vh;
     padding: 2em;
     padding-top: 10%;
     flex-direction: column;
     background-color: white;
 }
 
-.part-one h1, .part-one p{
+.pinky{
     color: #FF88BA;
+}
+
+.part-one,.part-two {
+    height: 50%;
+
 }
