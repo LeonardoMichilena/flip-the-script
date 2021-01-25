@@ -3,9 +3,6 @@ const app = express();
 const path = require("path");
 const axios = require("axios");
 const methodOverride = require("method-override");
-//const request = require("request");
-//const mongoose = require("mongoose");
-//const AppError = require("./AppError");
 
 
 //middleware
@@ -18,17 +15,17 @@ app.use(methodOverride("_method"));
 app.use(express.static('public'))
 app.set('public', path.join(__dirname,'/public'));
 
-
+//************************
+//Counting function for difference
+//between user string and python string
+//*************************/
 function diffWords(aString, bString){
     differentWords = [];
-    //var aString = sentenceA;
-    //var bString = sentenceB;
     var compare = aString.localeCompare(bString);
     if(compare === -1 || compare === 1){
         var aStringArray = aString.split(" ");
         var bStringArray = bString.split(" ");
-        //console.log(aStringArray, " ", bStringArray);
-
+        
         if(aStringArray.length > bStringArray.length){
             var long = aStringArray;
         }
@@ -36,20 +33,32 @@ function diffWords(aString, bString){
             var long = bStringArray;
         }
         for(x=0; x<long.length; x++){
-            if(aStringArray[x] != bStringArray[x]){
-            differentWords.push(bStringArray[x]);
+            if(bStringArray[x] != aStringArray[x]){
+            differentWords.push(aStringArray[x]);
             }
         }
         console.log(differentWords)
     }else{
         console.log("no changes")
     }
-}
+}  
+
+//***************data Variables***************** */
+//Data variables
+
+//sources = ["deutsche welle","the irish times","abc news","reuters","al jazeera","the new york times","cnn","newsweek","science","cnbc","npr","bbc news"];
+//topics = ["business","culture","food and drinks","health","local news","people","politics","social science","sports","technology","travel","world"];
+
 //*****************
 // HOME
 //************* */ */
 app.get('/', (req, res) => {
     res.render('home');
+    /* res.render('home', {
+        sources: sources,
+        topics: topics
+    }); 
+    console.log(sources, topics) */
 })
 /* ********************************
 empty list/form page step I
@@ -61,12 +70,14 @@ app.get('/flip', (req, res) => {
 fem/masc path, send back to user
 **************************** */
 app.post('/articles', (req, res) => {
-    const { article } = req.body;
+    const { article } = req.body; 
+    //const {response} = req.body
+    console.log(article);
     const firstArticle = article;
     axios.post('http://127.0.0.1:5000/mascfem', { article })//////check for post request
     .then(function(response){
         diffWords(firstArticle, response.data);
-        res.render("flip", {response: response.data, flippedArray: differentWords})
+        res.render("flip", {response: response.data, flippedArray: differentWords}) 
     })
     .catch(function(error){
         console.log(error);
@@ -76,12 +87,10 @@ app.post('/articles', (req, res) => {
     neutral path, send back to user
 ******************************** */
 app.post('/neutralarticle', (req, res) => {
-    const { article } = req.body;
-    const firstArticle = article;
+    const { article } = req.body; 
     axios.post('http://127.0.0.1:5000/neutral', { article })
     .then(function(response){
-        diffWords(firstArticle, response.data)
-        res.render("flip", {response: response.data, flippedArray: differentWords});
+        res.render("flip", {response: response.data.article, flippedArray: response.data.changedWords})//, flippedArray: differentWords});
     })
     .catch(function(error){
         console.log(error);
@@ -113,6 +122,31 @@ app.get("/showneutral", (req, res) => {
        console.log(error);
    })   
 })
+
+//****************************** */
+//article categories
+//***************************** */
+
+
+app.post('/articlecat', (req, res) => {
+    console.log(req.body)
+    const{source} = req.body;
+    const{topic}= req.body;
+    const{sex}=req.body; 
+    const data=[source, topic, sex] 
+    //res.render("home")
+    axios.post("http://localhost:5000/stats", data)
+    .then(function(response){
+        res.render("home")
+    })
+    .catch(function(error){
+        console.log(error);
+    });
+    
+  })
+  
+ 
+//*************
 
 app.post('/flip', (req,res) => {
     const { script } = req.body;
