@@ -41,15 +41,9 @@ function diffWords(aString, bString){
          //console.log("DIFFERENT WORDS: ", differentWords)
         }else{
             console.log("no changes")
-            differentWords=["no changes"]
+           // differentWords=["no changes"]
         }
 }  
-
-//***************data Variables***************** */
-//Data variables
-
-//sources = ["deutsche welle","the irish times","abc news","reuters","al jazeera","the new york times","cnn","newsweek","science","cnbc","npr","bbc news"];
-//topics = ["business","culture","food and drinks","health","local news","people","politics","social science","sports","technology","travel","world"];
 
 //*****************
 // HOME
@@ -67,11 +61,11 @@ empty list/form page step I
 ******************************** */
 app.get('/flip', (req, res) => {
     res.render('flip', {response : false});
-})
+});
 
 app.get('/why-it-matters', (req, res) => {
     res.render('why-it-matters', {response : false});
-})
+});
 /***************************
 fem/masc path, send back to user
 **************************** */
@@ -161,8 +155,8 @@ app.post('/articlecat', (req, res) => {
 app.post('/flip', (req,res) => {
     const { script } = req.body;
     res.send(`Post flip response ${script}`);
-})
+});
 
 app.listen(3000, () => {
     console.log('App is listening...');
-})
+});
