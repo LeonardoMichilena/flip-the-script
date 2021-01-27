@@ -21,6 +21,7 @@
     height: 50vh;
     margin: 1em 0 1em 0;
     border: 2px solid grey;
+    overflow: scroll;
 }
 
 #form-flip{

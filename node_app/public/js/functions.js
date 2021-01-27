@@ -4,9 +4,12 @@
 //Variables
 let originalText;
 let responseText;
+let responseArrayPar;
 let responseArray;
 let flippedWords;
 let flippedWordsArray;
+
+
 
 /**
  * Executes automatically once the page is loaded (body > onload atributte)
@@ -22,9 +25,14 @@ function init(){
         //Gets the converted text from the Post request response (response)
         responseText = document.getElementById('response-text').innerText;
 
-        //Splits the responseText into an array separating it by every empty space found
-        responseArray = responseText.split(" ");
+        //Splits the responseText into an array separating it by every line break "\n" found
+        responseArrayPar = responseText.split("\n");
 
+        //Splits the each responseArrayPar items into another array separating it by every empty space found
+        for(i=0;i<responseArrayPar.length;i++){
+            responseArrayPar[i] = responseArrayPar[i].split(" ");
+        }
+        
         //Gets the flipped words text from the Post request response (flippedArray)
         flippedWords = document.getElementById('flipped-words').innerText;
         
@@ -62,40 +70,44 @@ function addHTMLResponse() {
     let k;
     
     //Checks if first the i word from the responseArray is similar to any of the words in the flippedWordsArray
-    for(i=0;i<responseArray.length;i++){ //here the responseArray[i] will start looping
-       for(j=0;j<flippedWordsArray.length;j++){ //here that word will loop to check every word inside the flippedWordsArray[j]
-           k =j; //Asings the j value to the k, to not lose it when finishing the loop
-
-           //Checks if the word is matching to execute the code
-            if(checkForMatchingWord(i,j)){
-                // Applies special HTML and adds up to the innerHTML from the response box and then ends the loop
-                responseBox.innerHTML += `<span class="pinky"> ${responseArray[i]} </span> `;
-                break;
+    for(l=0;l<responseArrayPar.length;l++){
+       // responseBox.innerHTML += `<p>`;
+        for(i=0;i<responseArrayPar[l].length;i++){ //here the responseArrayPar[l] will start looping
+            for(j=0;j<flippedWordsArray.length;j++){ //here that word will loop to check every word inside the flippedWordsArray[j]
+                k =j; //Asings the j value to the k, to not lose it when finishing the loop
+     
+                //Checks if the word is matching to execute the code
+                 if(checkForMatchingWord(l,i,j)){
+                     // Applies special HTML and adds up to the innerHTML from the response box and then ends the loop
+                     responseBox.innerHTML += `<span class="pinky"> ${responseArrayPar[l][i]} </span>`;
+                     break;
+                 }
             }
-       }
-       //When first loop (j) is finished, checks if the word was not a match and applies normal HTML and adds it up to the response's box
-       if(!checkForMatchingWord(i,k))responseBox.innerHTML += `<span> ${responseArray[i]} </span> `;
+            //When first loop (j) is finished, checks if the word was not a match and applies normal HTML and adds it up to the response's box
+            if(!checkForMatchingWord(l,i,k)) responseBox.innerHTML += `<span> ${responseArrayPar[l][i]} </span>`;
+         }
+        responseBox.innerHTML += `<br>`;
     }
+   
 } 
 
 /**
  * Checks if the word of the first array[i] matches with word form the other array[j]
- * @param {number} i index of the responseArray 
- * @param {number} j index of the flippedWordsArray
+ * @param {number} l index of the responseArray 
+ * @param {number} i index of the flippedWordsArray
+  * @param {number} j index of the flippedWordsArray
  */
-function checkForMatchingWord(i,j){
+function checkForMatchingWord(l,i,j){
 
     //Searches if the word is found inside the other word, if yes, returns 0. And the code will be executed otherwise returns false
-    if(responseArray[i].search(flippedWordsArray[j]) == 0) {
+    if(responseArrayPar[l][i].search(flippedWordsArray[j]) == 0) {
        //Checks for an equal length or +1 (punctuation mark) an returns true, if not then returns false
        // (for Example by words that contain the first word but is part of a larger word (like man and manual))
-        if(responseArray[i].length == flippedWordsArray[j].length) return true;
-        else  if(responseArray[i].length == flippedWordsArray[j].length+1) return true;
+        if(responseArrayPar[l][i].length == flippedWordsArray[j].length) return true;
+        else  if(responseArrayPar[l][i].length == flippedWordsArray[j].length+1) return true;
         else false;
     } else false;
 }
-
-
 
 ///////////////Slideshow
 
@@ -112,6 +124,10 @@ function toggleSlideshow(mode){
     //Get both elements of the section in order to manipulate them later
     let titleBox = document.getElementById('title-container');
     let slideShowBox = document.getElementById('slideshow-box');
+    let title1 = document.querySelector("#title1");
+    let title2 = document.querySelector("#title2");
+
+
 
     //If the mode "open" was passed to the function then this code will execute
     if(mode =='open') {
@@ -121,6 +137,11 @@ function toggleSlideshow(mode){
         //Deletes the closed classes and adds the open classes
         titleBox.classList.toggle('slideshow-closed');
         slideShowBox.classList.toggle('slideshow-box-closed');
+
+        title1.classList.toggle('title-shrink');
+        title2.classList.toggle('title-shrink');
+
+
         titleBox.classList.toggle('slideshow-open');
         slideShowBox.classList.toggle('slideshow-box-open');
     }
@@ -132,6 +153,10 @@ function toggleSlideshow(mode){
         slideShowBox.classList.toggle('slideshow-box-open');
         titleBox.classList.toggle('slideshow-closed');
         slideShowBox.classList.toggle('slideshow-box-closed');
+
+        title1.classList.toggle('title-shrink');
+        title2.classList.toggle('title-shrink');
+
 
         //Sets the onclick atributte after the animation is closed, so we can start over
         setTimeout(function(){document.getElementById('slideshow-box').setAttribute("onclick","toggleSlideshow('open')");},200);
@@ -175,7 +200,7 @@ function toggleConverter(mode){
     if(mode == "reverse"){
 
     }else if(mode == "neutral"){
-        
+
     }
 
 
