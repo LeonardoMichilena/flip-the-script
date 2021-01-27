@@ -38,10 +38,11 @@ function diffWords(aString, bString){
             differentWords.push(aStringArray[x]);
             }
         }
-        console.log("DIFFERENT WORDS: ", differentWords)
-    }else{
-        console.log("no changes")
-    }
+         //console.log("DIFFERENT WORDS: ", differentWords)
+        }else{
+            console.log("no changes")
+            differentWords=["no changes"]
+        }
 }  
 
 //***************data Variables***************** */
@@ -93,7 +94,7 @@ app.post('/neutralarticle', (req, res) => {
     const firstArticle = article;
     axios.post('http://127.0.0.1:5000/neutral', { article })
     .then(function(response){
-        console.log(response.data.article);
+        //console.log("hello: ", response.data.article);
         diffWords(response.data.article,firstArticle );
         res.render("flip", {firstArticle: firstArticle, response: response.data.article, flippedArray: differentWords})//, flippedArray: differentWords});
     })
