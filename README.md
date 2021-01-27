@@ -8,15 +8,29 @@
 Flip the script is a team Web/App project developed by students from TechLabs Berlin.  
   
 ## Build Setup
-for python:
+### For the Flask app: 
+#### Working with [python3](https://realpython.com/installing-python/)
+#### Use package manager [pip](https://pip.pypa.io/en/stable/) to install [Flask](https://flask.palletsprojects.com/en/1.1.x/tutorial/)
 
-Use package manager [pip](https://pip.pypa.io/en/stable/) to install [Flask](https://flask.palletsprojects.com/en/1.1.x/tutorial/)
-
+###### First, cd into the python_app folder to activate your environment.
+```bash
+python3 -m venv venv
+```
+###### Next install the packages:
+```bash
+pip install requests
+```
 ```bash
 pip install Flask
 ```
+###### To run the flask server:
+```bash
+export FLASK_APP=app.py
+export FLASK_ENV=development
+flask run
+```
 
-for express app:
+### For express app:
 
 Use package manager [npm](https://www.npmjs.com/) to install:
 [express](https://expressjs.com/)
