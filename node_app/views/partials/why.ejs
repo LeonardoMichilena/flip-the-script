@@ -1,34 +1,11 @@
 <link rel="stylesheet" href="/css/why.css">
 <section id="why" class="why">
-  <div class="text one">
+  <div id="title-container" class="text one slideshow-closed">
       <h2>Words form thoughts,</h2>
       <h2>and thoughts form words.</h2>
       <p class="">imagine the following scenario:</p>
   </div>
-  <div class="text two">
-      <div class="pink-container">
-          <p><span class="quotes">"</span>A father and a son are in a horrible car crash that kills the dad. The son is rushed to the hospital, just as he is about to go under the knife, the surgeon says: I can't operate, that boy is my son!<span class="quotes">"</span></p>
-      </div>
-  </div>
-  <div class="text three">
-<h2>86% of people didn't consider the surgeon was a woman</h2>
-<p>in the sentence above, there are 8 masculine pronouns and 1 neutral pronoun. By adding 3 female pronouns, 4 masculine and 1 neutral, we can already see a difference of 24%.</p>
-  </div>
-  <div class="text four">
-<h2>Discover more on why this is important:</h2>
-    <ul>
-        <li>
-            <iframe width="280" height="140" src="https://www.youtube.com/embed/awvWRm-f87w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h3>Why words matter</h3>
-        </li>
-        <li>
-            <iframe width="280" height="140" src="https://www.youtube.com/embed/awvWRm-f87w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h3>Why words matter</h3>
-        </li>
-        <li>
-            <iframe width="280" height="140" src="https://www.youtube.com/embed/awvWRm-f87w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h3>Why words matter</h3>
-        </li>
-    </ul>
-  </div>
+  <div id="slideshow-box" class="text two slideshow-box-closed" onclick="toggleSlideshow('open')">
+    <%- include('slideshow') %>
+</div></a>
 </section>
