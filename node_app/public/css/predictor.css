@@ -1,0 +1,10 @@
+.predictor-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10%;
+    height: 100vh;
+    background-color: pink;
+    align-items: center;
+    justify-content: center;
+
+}

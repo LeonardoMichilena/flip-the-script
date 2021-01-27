@@ -8,14 +8,19 @@
                 <form method="POST" id="form-flip">
 
                     <div class="text-box left">
-                        <textarea class="text-area" id="newArticle" type="text" rows="5.5" cols="60" name="article"
+                        <textarea class="text-area" id="newArticle" type="text" onchange="sendPost()" rows="5.5"
+                            cols="60" name="article"
                             placeholder="Input your text here"><%if(response){%><%=firstArticle%><%}%></textarea>
                     </div>
                     <div class="btn-container">
+                        <button name="reverse" onclick="toggleConverter('reverse')">Flip to Opposite</button>
+                        <button name="neutral" onclick="toggleConverter('neutral')">Flip to Gender Neutral</button>
+                    </div>
+                    <!-- <div class="btn-container">
                         <button type="submit" name="reverse" onsubmit="convertToArray()" formaction="/articles">Flip to
                             Opposite</button>
                         <button type="submit" name="neutral" onsubmit="convertToArray()" formaction="/neutralarticle">Flip to Gender Neutral</button>
-                    </div>
+                    </div> -->
                 </form>
             </div>
             <div class="right-side">
@@ -25,8 +30,14 @@
                 </div>
             </div>
             <% if(response) {%>
-            <div id="response-text" style="display:none;"><%=response%></div>
-            <div id="flipped-words" style="display:none;"><%=flippedArray%></div>
-            <% } %>
+                <div id="response-text" style="display:none;">
+                    <%=response%>
+                </div>
+                <div id="flipped-words" style="display:none;">
+                    <%=flippedArray%>
+                </div>
+                <% } %>
         </section>
         </body>
+
+        </html>

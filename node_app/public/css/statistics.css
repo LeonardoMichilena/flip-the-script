@@ -1,6 +1,6 @@
 .statistics {
     display: flex;
-    height: 200vh;
+    height: 100vh;
     padding: 2em;
     padding-top: 10%;
     flex-direction: column;

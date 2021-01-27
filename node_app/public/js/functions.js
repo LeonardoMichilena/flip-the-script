@@ -164,3 +164,19 @@ function nextSlide() {
     currentDot.classList.toggle("active");
 
 }
+
+
+
+///////////////Send post on Change
+
+
+function toggleConverter(mode){
+
+    if(mode == "reverse"){
+
+    }else if(mode == "neutral"){
+        
+    }
+
+
+}
