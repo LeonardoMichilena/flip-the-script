@@ -38,7 +38,7 @@ function diffWords(aString, bString){
             differentWords.push(aStringArray[x]);
             }
         }
-        console.log(differentWords)
+        console.log("DIFFERENT WORDS: ", differentWords)
     }else{
         console.log("no changes")
     }
@@ -77,8 +77,8 @@ app.post('/articles', (req, res) => {
     const firstArticle = article;
     axios.post('http://127.0.0.1:5000/mascfem', { article })//////check for post request
     .then(function(response){
-        diffWords(firstArticle, response.data);
-        res.render("flip", {response: response.data, flippedArray: differentWords}) 
+        diffWords(response.data,firstArticle );
+        res.render("flip", {firstArticle: firstArticle, response: response.data, flippedArray: differentWords}) 
     })
     .catch(function(error){
         console.log(error);
@@ -89,9 +89,13 @@ app.post('/articles', (req, res) => {
 ******************************** */
 app.post('/neutralarticle', (req, res) => {
     const { article } = req.body; 
+    //const {response} = req.body
+    const firstArticle = article;
     axios.post('http://127.0.0.1:5000/neutral', { article })
     .then(function(response){
-        res.render("flip", {response: response.data.article, flippedArray: response.data.changedWords})//, flippedArray: differentWords});
+        console.log(response.data.article);
+        diffWords(response.data.article,firstArticle );
+        res.render("flip", {firstArticle: firstArticle, response: response.data.article, flippedArray: differentWords})//, flippedArray: differentWords});
     })
     .catch(function(error){
         console.log(error);
