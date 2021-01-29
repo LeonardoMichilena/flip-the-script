@@ -1,12 +1,11 @@
 import re
-from collections import Counter
 
 text= u'''She is a woman'''
 
 def neutral_converter(string, substitutions):
     substrings = sorted(substitutions, key=len, reverse=True)
     regex = re.compile('|'.join(map(lambda x: '\\b' + x + '\\b', map(re.escape, substrings))))
-    return regex.sub(lambda match: substitutions[match.group(0)], string) #subn to count conversions
+    return regex.sub(lambda match: substitutions[match.group(0)], string)
 
 dict_neutral = {'United Kingdom': 'United Kingdom', 'Staunton': 'Staunton', 'taunt': 'taunt', 'The Sportsman': 'The Sportsman,', #first exceptions
                 'THE SPORTSMAN': 'THE SPORTSMAN', 'Queens, New York' : 'Queens, New York', 'emotional intelligence': 'emotional intelligence', #first exceptions
@@ -18,7 +17,7 @@ dict_neutral = {'United Kingdom': 'United Kingdom', 'Staunton': 'Staunton', 'tau
                 'woman': 'person',  'Woman': 'Person', 'women': 'people', 
                 'Women': 'People', 'WOMAN': 'PERSON', 'WOMEN': 'PEOPLE',
                 'Mr': 'Mx', 'Ms': 'Mx', 'Sir': 'Mx', 'Lady': 'Mx', 'Lord': 'Mx', 
-                'MR' : 'MX', 'MS': 'MX', 'SIR': 'MX', 'LORD': 'MX', 
+                'SIR': 'MX', 'LORD': 'MX', 
                 'lady': 'person', 'gentleman': 'person', 
                 'ladies': 'people', 'gentlemen': 'people',  
                 'LADY': 'PERSON', 'GENTLEMAN': 'PERSON', 
@@ -141,7 +140,9 @@ dict_neutral = {'United Kingdom': 'United Kingdom', 'Staunton': 'Staunton', 'tau
                 'sportswomen': 'athletes', 'Sportswomen': 'Athletes',
                 'SPORTSWOMEN': 'ATHLETES',
                 'sportsmen': 'athletes', 'Sportsmen': 'Athletes',
-                'SPORTSMEN': 'ATHLETES',              
+                'SPORTSMEN': 'ATHLETES',
+                'strongmen': 'despots', 'Strongmen': 'Despots', 'strongman' :  'despot',  
+                'Strongman': 'Despot', 'STRONGMAN': 'DESPOT', 'STRONGMEN': 'DESPOTS',           
                 'workman': 'worker', 'Workman': 'Worker',
                 'WORKMAN': 'WORKER',
                 'workmen': 'workers', 'Workmen': 'Workers',
@@ -196,8 +197,8 @@ dict_neutral = {'United Kingdom': 'United Kingdom', 'Staunton': 'Staunton', 'tau
                 'GIRLY': None,
                 'manly': None, 'Manly': None,
                 'MANLY': None,
-                'the Rev.': None,   
-                'THE REV.': None,           
+                'the Rev. ': None,   
+                'THE REV. ': None,           
                 'feminist': 'gender-equality activist', 'Feminist': 'Gender-equality activist',
                 'FEMINIST': 'GENDER-EQUALITY ACTIVIST',
                 'misandrist': 'gender-equality activist', 'Misandrist': 'Gender-equality activist',
@@ -540,7 +541,7 @@ list_string = r"""\bUnited\sKingdom\b|\bStaunton\b|\btaunt\b|\bThe\sSportsman\b|
                 |\blady\b|groom\b|\bactor\b|\ban\sactor\b|\bactress\b|\bactresses\b|\bActress\b|\bActresses\b|\ban\sactress\b|\bbusinessman\b|\bBusinessman\b|
                 |\bbusinessmen\b|\bBusinessmen\b|\bbusinesswoman\b|\bBusinesswoman\b|\bbusinesswomen\b|\bBusinesswomen\b|\bheroine\b|\bHeroine\b|\bcameraman\b|\bCameraman\b|
                 |\bcameramen\b|\bCameramen\b|\bcamerawoman\b|\bCamerawoman\b|\bcamerawomen\b|\bCamerawomen\b|\bcongressman\b|\bCongressman\b|\bcongressmen\b|\bCongressmen\b|
-                |\bcongresswoman\b|\bCongresswoman\b|\bcongresswomen\b|\bCongresswomen\b|\bcouncilman\b|\bCouncilman\b|\bchairman\b|\bChairman\b|\bchairwoman\b|vChairwoman\b|
+                |\bcongresswoman\b|\bCongresswoman\b|\bcongresswomen\b|\bCongresswomen\b|\bcouncilman\b|\bCouncilman\b|\bchairman\b|\bChairman\b|\bchairwoman\b|\bChairwoman\b|
                 |\bchairwomen\b|\bChairwomen\b|\bchairmen\b|\bChairmen\b|\bassemblyman\b|\bAssemblyman\b|\bassemblymen\b|\bAssemblymen\b|\bassemblywoman\b|\bAssemblywoman\b|
                 |\bassemblywomen\b|\bAssemblywomen\b|\bmilkmaid\b|Milkmaid\b|\bcouncilwoman\b|\bCouncilwoman\b|\bfireman\b|\bFireman\b|\bfiremen\b|\bFiremen\b|\bfreshman\b|
                 |\bFreshman\b|\bfreshmen\b|\bFreshmen\b|\bpoliceman\b|\bPoliceman\b|\bpolicemen\b|\bPolicemen\b|\bpolicewoman\b|\bPolicewoman\b|\bpolicewomen\b|\bPolicewomen\b|
@@ -553,11 +554,11 @@ list_string = r"""\bUnited\sKingdom\b|\bStaunton\b|\btaunt\b|\bThe\sSportsman\b|
                 |\bShe\sis\b|\bShe\swas\b|\bShe\shas\b|\bShe/he\b|\bshe/he\b|\bhe/she\b|\bHe/she\b|\bHe/She\b|\bHerName\b|\bHisName\b|\bhe’ll\b|\bshe’ll\b|\bhe'll\b|
                 |\bshe'll\b|\bhe’s\b|\bshe’s\b|\bhe’d\b|\bshe’d\b|\bhe's\b|\bshe's\b|\bhe'd\b|\bshe'd\b|\bHe’s\b|\bShe’s\b|\bHe’d\b|\bShe’d\b|\bHe's\b|
                 |\bShe's\b|\bHe'd\b|\bShe'd\b|\bhe\sisn’t\b|\bshe\sisn’t\b|\bhe\sisn't\b|\bshe\sisn't\b|\bHe\sisn’t\b|\bShe\sisn’t\b|\bHe\sisn't\b|\bShe\sisn't\b|
-                |\bhe\b|\bHe\b|\bHe’ll\b|\bshe\b|\bShe\b|\bShe’ll\b|\bHis\sare\b|\bHis\sis\b|\bHis\swas\b|\bHis\s\b|\bher\b|\bHers\sare\b|\bHers\swere\b|\bHer\sis\b|
+                |\bhe\b|\bHe\b|\bHe’ll\b|\bshe\b|\bShe\b|\bShe’ll\b|\bHis\sare\b|\bHis\sis\b|\bHis\swas\b|\bHis\b|\bher\b|\bHers\sare\b|\bHers\swere\b|\bHer\sis\b|
                 |\bHer\swas\b|\bHer\b|\bhers\.\b|\bher,\b|\bher\s“that\b|\bher\sthat'\b|\bher\s"that\b|\bhim\b|\bhimself\b|\bherself\b|\bhim\sboy\b|\bher\sgirl\b|\bher\sup\b|
                 |\btakes\sher\shome\b|\btake\sher\shome\b|\bhers\b|\bher\sby\b|\bfrom\sher\sis\b|\bfrom\sher\swas\b|\bFrom\sher\swas\b|\bFrom\sher\sis\b|\bfemale\b|\bFemale\b|
                 |\bfeminine\b|\bFeminine\b|\bfeminist\b|\bFeminist\b|\bmasculine\b|\bMasculine\b|\bmale\b|\bMale\b|\bdudely\b|\bDudely\b|\bwomanly\b|\bWomanly\b|
-                |\bboyish\b|\bBoyish\b|\bgirly\b|\bGirly\b|\bmanly\b|\bManly\b|\bthe Rev.\b|\bfeminism\b|\bFeminism\b|\bfemininity\b|\bmasculinity\b|\bFemininity\b|
+                |\bboyish\b|\bBoyish\b|\bgirly\b|\bGirly\b|\bmanly\b|\bManly\b|\bthe Rev\.\s\b|\bfeminism\b|\bFeminism\b|\bfemininity\b|\bmasculinity\b|\bFemininity\b|
                 |\bMasculinity\b|\bbossy\b|\bpushy\b|\bBossy\b|\bPushy\b|\bemotional\b|\bhormonal\b|\bEmotional\b|\bHormonal\b|\bditsy\b|\bfrigid\b|\bDitsy\b|\bFrigid\b|
                 |\bfrumpy\b|\bFrumpy\b|\bshrill\b|\bShrill\b|\bhysterical\b|\bHysterical\b|\bmumsy\b|\bMumsy\b|\bvirile\b|\bVirile\b|\bmisandry\b|\bMysandry\b|\bmisandrist\b|
                 |\bMisandrist\b|\bemperor\b|\bempress\b|\bEmperor\b|\bEmpress\b|\bqueen\b|\bking\b|\bQueen\b|\bKing\b|\bKingdom\b|\bkingdom\b|\bprincess\b|\bPrincess\b|\bprincesses\b|
@@ -573,121 +574,11 @@ list_string = r"""\bUnited\sKingdom\b|\bStaunton\b|\btaunt\b|\bThe\sSportsman\b|
                 |\bClergymen\b|\bClergywomen\b|\bdeacon\b|\bdeaconess\b|\bdeacons\b|\bdeaconesses\b|\bDeacon\b|\bDeaconess\b|\bDeacons\b|\bDeaconesses\b|\babbot\b|\bAbbot\b|\bnun\b|
                 |\bpriest\b|\bpriests\b|\bNun\b|\bPriest\b|\bPriests\b|\bpope\b|\bPope\b|\bpriestess\b|\bpriestesses\b|\bPriestess\b|\bPriestesses\b|\bpriest\b|\bPriest\b|
                 |\bpopes\b|\bheadmaster\b|\bheadmistress\b|\bHeadmaster\b|\bHeadmistress\b|\bheadmistresses\b|\bHeadmistresses\b|\bher\sto\b|\bhis\b|\baunt\b|\bmaid\b|
-                |\bmaids\b|\bMaid\b|\bMaids\b|\bbutler\b|\bButler\b|\bBoys\b|\bboys\b|\bgirls\s|\bGirls\b|\bsons\b|\bSons\b"""
+                |\bmaids\b|\bMaid\b|\bMaids\b|\bbutler\b|\bButler\b|\bBoys\b|\bboys\b|\bgirls\b|\bGirls\b|\bsons\b|\bSons\b|\bStrongman\b|\bStrongmen\b|\bstrongman\b|
+                |\bstrongmen\b|\bbrothers\b|\bsisters\b|\bBrothers\b|\bSisters\b|\bguys\b|\bGuys\b|\bbishops\b"""
 
 
 list_conversions = re.findall(list_string, text)
 
 print(list_conversions)
 
-counted_list = Counter(list_conversions)
-
-print(counted_list)
-
-# Working on the following lists:
-pers_pron_fem = ['she', 'she was', 'she has', 'she\sstill\shas', 'She', 'she does', 'she’s', 'she is', 'She/he', "she's", "she isn't", 
-                'She has', 'She’s', 'She was', 'she’ll', 'she’d']
-
-pers_pron_masc = ['he was', '\bhe\b', 'He', 'He’s', 'He’ll', 'he’s', 'he', 'He was', 'he is', 'He has', 'He is', 'he does', 'he has', 'He does', 'He’d',
-                'he’ll', 'She/he', "He's", "he's", 'he’s read']
-
-deter_pron_fem = ['her out', 'her over','her', 'herself', 'Her', 'HerName', 'from her is', 'takes her home', 'from her was', 'her back to', 'hers']
-
-deter_pron_masc = ['his', 'him', 'His', 'himself', 'His are', 'His was']
-
-noun_fem = ['women', 'queen', 'Queen', 'spokeswoman', 'wife', 'mother', 'Women', 'Mom ', 'mommy', 'businesswomen', 'daughter', 'businesswoman', 'woman',
-            'Woman', 'girl', 'Bride', 'Mother', 'aunt', 'congresswoman', 'congresswomen', 'sisters', 'girls', 
-            'feminism', 'lady', 'niece', 'girlhood', 'Assemblywoman', 'Daughter', 'sisters', 'Girl', 'girlfriend',
-            'sister', 'Milkmaid', 'milkmaid', 'priestess', 'Priestess', 'ladies', 'sportswoman', 'sportswomen', 
-            'Sportswoman', 'Sportswomen', 'princess', 'chairwoman', 'Chairwoman', 'chairwomen', 'Chairwomen', 
-            'maid', 'Maid', 'actress' , 'grandma']
-
-noun_masc = ['men', 'father', 'man', 'husband', 'Prince ', 'spokesman', 'Boy', 'King', 'emperor', 'Kingdom',
-            'King’', ' king ', 'Men', 'Man', 'an actor', 'actor', ' guy', ' Bishop', 'bishop', 'Pope ', 'than men', 'the Rev. ', 'good-guy',
-            'bad-guy', 'dad ', 'boy', 'Guy', 'son', 'priest ', 'priest', 'Priest ', 'nephew', 'uncle', 'brother',
-            'sportsman', 'sportsmen', 'Sportsman', 'Sportsmen', 'SPORTSMAN' , 'businessman', 'congressman', 'chairman', 'Chairman',
-            'chairmen', 'Chairmen', 'butler', 'Butler', 'grandpa', 'Son', 'Boys', 'boys', 'sons', 'Sons']
-
-adj_conn_fem = ['female ','Emotional', 'feminist ', 'emotional', 'Female ', 'femininity', 'feminine']
-adj_conn_masc = ['Male ', 'male', 'masculine']
-title_fem = ['Ms']
-title_masc = ['Mr', 'Sir']
-
-# Function that gives an integer, which is the quantity of conversions per category
-values = []
-def recounting(param):
-    for original_unit in param:
-        for key, value in counted_list.items():
-            if key == original_unit:
-                values.append(value)
-    return sum(values)
-
-
-num_fem_pron = recounting(pers_pron_fem)
-print("Quantity of female personal pronoun (she) =                 " + str(num_fem_pron))
-
-values = []
-num_male_pron = recounting(pers_pron_masc)
-print("Quantity of male personal pronoun (he) =                    " + str(num_male_pron))
-
-values = []
-num_det_fem = recounting(deter_pron_fem)
-print("Quantity of feminine determiners (her, herself) =           " + str(num_det_fem))
-
-values = []
-num_det_masc = recounting(deter_pron_masc)
-print("Quantity of masculine determiners (him, his, himself) =     " + str(num_det_masc))
-
-values = []
-num_noun_fem = recounting(noun_fem)
-print("Quantity of feminine nouns =                                " + str(num_noun_fem))
-
-values = []
-num_noun_masc = recounting(noun_masc)
-print("Quantity of masculine nouns =                               " + str(num_noun_masc))
-
-values = []
-num_adj_fem = recounting(adj_conn_fem)
-print("Quantity of adjectives with femenine connotation =          " + str(num_adj_fem))
-
-values = []
-num_adj_masc = recounting(adj_conn_masc)
-print("Quantity of adjectives with masculine connotation =         " + str(num_adj_masc))
-
-values = []
-num_title_fem = recounting(title_fem)
-print("Quantity of female titles =                                 " + str(num_title_fem))
-
-values = []
-num_title_masc = recounting(title_masc)
-print("Quantity of male titles =                                   " + str(num_title_masc))
-
-
-print("Total = " + str(num_male_pron + num_fem_pron + num_det_fem + num_det_masc + num_noun_fem + num_noun_masc + num_adj_masc + num_adj_fem + num_title_masc + num_title_fem))
-
-
-# Function that gives a list containing units converted per category
-values = []
-def recounting_special(param):
-    for original_unit in param:
-        for key, value in counted_list.items():
-            if key == original_unit:
-                 values.append(key)
-    return values
-
-print("Female nouns = " + str(recounting_special(noun_fem)))
-
-values = []
-print("Male nouns = " + str(recounting_special(noun_masc)))
-
-values = []
-print("Adjectives with masculine connotation = " + str(recounting_special(adj_conn_masc)))
-
-values = []
-print("Adjectives with femenine connotation = " + str(recounting_special(adj_conn_fem)))
-
-values = []
-print("Male titles = " + str(recounting_special(title_masc)))
-
-values = []
-print("Female titles = " + str(recounting_special(title_fem)))
