@@ -38,6 +38,8 @@ Use package manager [npm](https://www.npmjs.com/) to install:
 [ejs](https://ejs.co/)
 [method-override](https://www.npmjs.com/package/method-override)
 
+###### First, cd into the node_app folder set up your dependencies.
+
 ```bash
 npm install express axios ejs method-override
 ```
