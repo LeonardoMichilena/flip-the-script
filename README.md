@@ -8,6 +8,7 @@
 Flip the script is a team Web/App project developed by students from TechLabs Berlin.  
   
 ## Build Setup
+#build-setup
 ### For the Flask app: 
 #### Working with [python3](https://realpython.com/installing-python/)
 #### Use package manager [pip](https://pip.pypa.io/en/stable/) to install [Flask](https://flask.palletsprojects.com/en/1.1.x/tutorial/)
@@ -32,11 +33,11 @@ flask run
 
 ### For express app:
 
-Use package manager [npm](https://www.npmjs.com/) to install:
-[express](https://expressjs.com/)
-[axios](https://github.com/axios/axios)
-[ejs](https://ejs.co/)
-[method-override](https://www.npmjs.com/package/method-override)
+Use package manager [npm](https://www.npmjs.com/) to install:</br>
+[express](https://expressjs.com/)</br>
+[axios](https://github.com/axios/axios)</br>
+[ejs](https://ejs.co/)</br>
+[method-override](https://www.npmjs.com/package/method-override)</br>
 
 ###### First, cd into the node_app folder set up your dependencies.
 
@@ -47,3 +48,29 @@ npm install express axios ejs method-override
 ```bash
 npm node index.js
 ```
+## How to use:
+The site is hosted locally on your localhost:3000 and localhost:5000 </br>
+Open two different consoles to get your servers running. 
+##### Refer to [Build setup](#Build-setup)</br>
+For a reminder: </br>
+To set up Flask server navigate into the python_app folder and acvitate your environment.
+</br>
+```bash
+source venv/bin/activate
+```
+</br>
+Next, to run your Flask server:</br>
+
+```bash
+export FLASK_APP=app.py
+export FLASK_ENV=development
+flask run
+```
+</br>
+To set up Node server, navigate into the node_app folder. Run:</br>
+
+```bash
+npm node index.js
+```
+
+#### Now that your servers are running, open your browser to http://localhost:3000/
