@@ -24,7 +24,15 @@ pip install requests
 ```bash
 pip install Flask
 ```
-###### To run the flask server:
+### To run the flask server:
+###### Make sure you are in the python_app directory. 
+Begin by activating your environment:</br>
+
+```bash
+source venv/bin/activate
+```
+Next, run run the Flask server:
+
 ```bash
 export FLASK_APP=app.py
 export FLASK_ENV=development
@@ -44,7 +52,7 @@ Use package manager [npm](https://www.npmjs.com/) to install:</br>
 ```bash
 npm install express axios ejs method-override
 ```
-###### To run the Express server:
+### To run the Express server:
 ```bash
 npm node index.js
 ```
@@ -52,25 +60,5 @@ npm node index.js
 The site is hosted locally on your localhost:3000 and localhost:5000 </br>
 Open two different consoles to get your servers running. 
 ##### Refer to [Build setup](#Build-setup)</br>
-For a reminder: </br>
-To set up Flask server navigate into the python_app folder and acvitate your environment.
-</br>
-```bash
-source venv/bin/activate
-```
-</br>
-Next, to run your Flask server:</br>
-
-```bash
-export FLASK_APP=app.py
-export FLASK_ENV=development
-flask run
-```
-</br>
-To set up Node server, navigate into the node_app folder. Run:</br>
-
-```bash
-npm node index.js
-```
 
 #### Now that your servers are running, open your browser to http://localhost:3000/
