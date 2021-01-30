@@ -2,7 +2,6 @@ import re
 
 from gender_dict import gender_switch_dict
 
-text=u''''This is of hers. She called her up and jumped. We were discussing something about firemen, and I said, “An advanced computer user knows what he needs…”, [when] a female colleague, suddenly interrupted, “Are you saying women cannot be advanced computer users?” I thought she was joking and laughed, but then realised I was the only one laughing, and she was looking at me as if I were her personal enemy'. '''
 
 def reverse_dict(d):
     return {
@@ -48,7 +47,7 @@ def text_transformer(switch_dict):
 
 pre_gender_converter = text_transformer(complete_switch_dict(gender_switch_dict))
 
-result = pre_gender_converter(text)
+#result = pre_gender_converter(text)
 
 dict_pron = {' his ': ' her ', ' her ': ' his ',
               'His is': 'Her is', 'Her is': 'His is',
@@ -77,11 +76,8 @@ dict_pron = {' his ': ' her ', ' her ': ' his ',
 
 
 #Function for determiner issue (her his, her him)
-def pron_converter(string, substitutions):
+def pron_converter(string, substitutions = dict_pron):
     substrings = sorted(substitutions, key=len, reverse=True)
     regex = re.compile('|'.join(map(re.escape, substrings)))
     return regex.sub(lambda match: substitutions[match.group(0)], string) 
 
-gender_converter = pron_converter(result, dict_pron)
-
-print(gender_converter)

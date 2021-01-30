@@ -41,7 +41,7 @@ function diffWords(aString, bString){
          //console.log("DIFFERENT WORDS: ", differentWords)
         }else{
             console.log("no changes")
-           // differentWords=["no changes"]
+            differentWords=["no changes"]
         }
 }  
 
@@ -72,7 +72,7 @@ fem/masc path, send back to user
 app.post('/articles', (req, res) => {
     const { article } = req.body; 
     //const {response} = req.body
-    console.log(article);
+    //console.log(article);
     const firstArticle = article;
     axios.post('http://127.0.0.1:5000/mascfem', { article })//////check for post request
     .then(function(response){
@@ -104,7 +104,7 @@ app.post('/neutralarticle', (req, res) => {
 //******************************************************** */
 //wrap the data to send to flask
 //******************************************************** */
-app.get("/show", (req, res) => {
+/* app.get("/show", (req, res) => {
     axios.get("http://localhost:3000/articles")
    .then(function (response) {
        console.log(response.data);
@@ -125,7 +125,7 @@ app.get("/showneutral", (req, res) => {
    .catch(function (error) {
        console.log(error);
    })   
-})
+}) */
 
 //****************************** */
 //article categories

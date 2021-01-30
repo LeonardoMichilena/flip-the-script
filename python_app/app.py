@@ -3,9 +3,9 @@ import requests
 import json
 import re
 from collections import Counter
-from countNeutral import neutral_converter, list_string, recounting 
-from gender_function import gender_converter
-
+# countNeutral import neutral_converter, list_string, recounting 
+from gender_function import pre_gender_converter, pron_converter
+from neutral_function import neutral_converter, list_string 
 
 app = Flask(__name__)
 
@@ -15,8 +15,11 @@ app = Flask(__name__)
 def jsInfo(): 
     data = json.loads(request.data)
     textData = data['article']
-    text=gender_converter(textData)
-    return(text)
+    text=pre_gender_converter(textData)
+    print(text)
+    text_converted = pron_converter(text)
+    print(text_converted)
+    return(text_converted)
 
   
 
@@ -28,6 +31,7 @@ def neutral():
     text=neutral_converter(textData)
     list_conversions = re.findall(list_string, textData)
     data={'article': text, 'changedWords': list_conversions}
+    print(data)
     return(data)
 
 @app.route("/stats", methods=["GET", "POST"])

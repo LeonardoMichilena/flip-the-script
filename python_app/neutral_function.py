@@ -1,11 +1,5 @@
 import re
 
-text= u'''She is a woman'''
-
-def neutral_converter(string, substitutions):
-    substrings = sorted(substitutions, key=len, reverse=True)
-    regex = re.compile('|'.join(map(lambda x: '\\b' + x + '\\b', map(re.escape, substrings))))
-    return regex.sub(lambda match: substitutions[match.group(0)], string)
 
 dict_neutral = {'United Kingdom': 'United Kingdom', 'Staunton': 'Staunton', 'taunt': 'taunt', 'The Sportsman': 'The Sportsman,', #first exceptions
                 'THE SPORTSMAN': 'THE SPORTSMAN', 'Queens, New York' : 'Queens, New York', 'emotional intelligence': 'emotional intelligence', #first exceptions
@@ -528,10 +522,6 @@ dict_neutral = {'United Kingdom': 'United Kingdom', 'Staunton': 'Staunton', 'tau
                 
                 } #'paternalism': 'parentalism', 'misogynist': 'discriminatory', 'Misogynist': 'Discriminatory', 'matriarchal': 'egalitarian', 'patriarchal': 'egalitarian', 'Matriarchal': 'Egalitarian', 'Patriarchal': 'Egalitarian',
 
-result = neutral_converter(text, dict_neutral)
-
-
-print("This is your neutral text: " + str(result))
 
 
 list_string = r"""\bUnited\sKingdom\b|\bStaunton\b|\btaunt\b|\bThe\sSportsman\b|\bTHE\sSPORTSMAN\b|\bQueens,\sNew\sYork\b|\bemotional\sintelligence\b|\bEmotional\sintelligence\b| # exceptions first
@@ -577,8 +567,13 @@ list_string = r"""\bUnited\sKingdom\b|\bStaunton\b|\btaunt\b|\bThe\sSportsman\b|
                 |\bmaids\b|\bMaid\b|\bMaids\b|\bbutler\b|\bButler\b|\bBoys\b|\bboys\b|\bgirls\b|\bGirls\b|\bsons\b|\bSons\b|\bStrongman\b|\bStrongmen\b|\bstrongman\b|
                 |\bstrongmen\b|\bbrothers\b|\bsisters\b|\bBrothers\b|\bSisters\b|\bguys\b|\bGuys\b|\bbishops\b"""
 
+def neutral_converter(string, substitutions = dict_neutral):
+    substrings = sorted(substitutions, key=len, reverse=True)
+    regex = re.compile('|'.join(map(lambda x: '\\b' + x + '\\b', map(re.escape, substrings))))
+    return regex.sub(lambda match: substitutions[match.group(0)], string)
 
-list_conversions = re.findall(list_string, text)
 
-print(list_conversions)
+#list_conversions = re.findall(list_string, text)
+
+#print(list_conversions)
 
