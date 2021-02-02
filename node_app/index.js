@@ -50,11 +50,7 @@ function diffWords(aString, bString){
 //************* */ */
 app.get('/', (req, res) => {
     res.render('home');
-    /* res.render('home', {
-        sources: sources,
-        topics: topics
-    }); 
-    console.log(sources, topics) */
+
 })
 /* ********************************
 empty list/form page step I
@@ -71,12 +67,11 @@ fem/masc path, send back to user
 **************************** */
 app.post('/articles', (req, res) => {
     const { article } = req.body; 
-    //const {response} = req.body
-    //console.log(article);
     const firstArticle = article;
     axios.post('http://127.0.0.1:5000/mascfem', { article })//////check for post request
     .then(function(response){
-        diffWords(response.data,firstArticle );
+        diffWords(response.data,firstArticle);
+        console.log(differentWords)
         res.render("flip", {firstArticle: firstArticle, response: response.data, flippedArray: differentWords}) 
     })
     .catch(function(error){
@@ -86,50 +81,20 @@ app.post('/articles', (req, res) => {
 /* *****************************
     neutral path, send back to user
 ******************************** */
-app.post('/neutralarticle', (req, res) => {
+  app.post('/neutralarticle', (req, res) => {
     const { article } = req.body; 
-    //const {response} = req.body
     const firstArticle = article;
     axios.post('http://127.0.0.1:5000/neutral', { article })
     .then(function(response){
-        //console.log("hello: ", response.data.article);
-        diffWords(response.data.article,firstArticle );
-        res.render("flip", {firstArticle: firstArticle, response: response.data.article, flippedArray: differentWords})//, flippedArray: differentWords});
+        console.log(response.data)
+        diffWords(response.data.article, firstArticle)
+        res.render("flip", {firstArticle: firstArticle, response: response.data.article, flippedArray: differentWords})//, flippedArray: differentWords})//, flippedArray: differentWords});
     })
     .catch(function(error){
         console.log(error);
     });
     
   })
-//******************************************************** */
-//wrap the data to send to flask
-//******************************************************** */
-/* app.get("/show", (req, res) => {
-    axios.get("http://localhost:3000/articles")
-   .then(function (response) {
-       console.log(response.data);
-       res.send(response.data);
-   })
-   .catch(function (error) {
-       console.log(error);
-   })   
-}) 
-
-
-app.get("/showneutral", (req, res) => {
-    axios.get("http://localhost:3000/neutralarticle")
-   .then(function (response) {
-       console.log(response.data);
-       res.send(response.data);
-   })
-   .catch(function (error) {
-       console.log(error);
-   })   
-}) */
-
-//****************************** */
-//article categories
-//***************************** */
 
 
 app.post('/articlecat', (req, res) => {
