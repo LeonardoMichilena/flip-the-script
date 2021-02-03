@@ -1,7 +1,8 @@
 # flip-the-script
 
 ## About project
-![logoish](https://user-images.githubusercontent.com/60686512/105738115-fc422c80-5f36-11eb-8fd1-ef9b5cd870f9.PNG)
+![Flip-the-script](https://user-images.githubusercontent.com/60686512/106793505-d401ae80-6657-11eb-9b10-bf137c3ce367.png)
+
 
   
 ## About us
