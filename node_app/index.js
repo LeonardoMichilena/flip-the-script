@@ -16,35 +16,16 @@ app.use(methodOverride("_method"));
 app.use(express.static('public'))
 app.set('public', path.join(__dirname,'/public'));
 
-//************************
-//Counting function for difference
-//between user string and python string
-//*************************/
-function diffWords(aString, bString){
-    differentWords = [];
-    var compare = aString.localeCompare(bString);
-    if(compare === -1 || compare === 1){
-        var aStringArray = aString.split(" ");
-        var bStringArray = bString.split(" ");
-        
-        if(aStringArray.length > bStringArray.length){
-            var long = aStringArray;
-        }
-        else{
-            var long = bStringArray;
-        }
-        for(x=0; x<long.length; x++){
-            if(bStringArray[x] != aStringArray[x]){
-            differentWords.push(aStringArray[x]);
-            }
-        }
-         //console.log("DIFFERENT WORDS: ", differentWords)
-        }else{
-            console.log("no changes")
-            differentWords=["no changes"]
-        }
-}  
 
+/*******************
+ * Find the words that were flipped and isolate them into an array
+ * /*******************/
+ const convertedWordsArray = (a, b) => {
+    const flippedWords = []
+    for(let l of a) if(b.indexOf(l) == -1) flippedWords.push(l) 
+    return(flippedWords);
+}
+ 
 //*****************
 // HOME
 //************* */ */
@@ -70,8 +51,7 @@ app.post('/articles', (req, res) => {
     const firstArticle = article;
     axios.post('http://127.0.0.1:5000/mascfem', { article })//////check for post request
     .then(function(response){
-        diffWords(response.data,firstArticle);
-        console.log(differentWords)
+        differentWords = convertedWordsArray(response.data.split(" "), firstArticle.split(" "))
         res.render("flip", {firstArticle: firstArticle, response: response.data, flippedArray: differentWords}) 
     })
     .catch(function(error){
@@ -86,9 +66,8 @@ app.post('/articles', (req, res) => {
     const firstArticle = article;
     axios.post('http://127.0.0.1:5000/neutral', { article })
     .then(function(response){
-        console.log(response.data)
-        diffWords(response.data.article, firstArticle)
-        res.render("flip", {firstArticle: firstArticle, response: response.data.article, flippedArray: differentWords})//, flippedArray: differentWords})//, flippedArray: differentWords});
+        differentWords = convertedWordsArray(response.data.split(" "), firstArticle.split(" "))
+        res.render("flip", {firstArticle: firstArticle, response: response.data, flippedArray: differentWords})//, flippedArray: differentWords})//, flippedArray: differentWords});
     })
     .catch(function(error){
         console.log(error);
@@ -103,7 +82,6 @@ app.post('/articlecat', (req, res) => {
     const{topic}= req.body;
     const{sex}=req.body; 
     const data=[source, topic, sex] 
-    //res.render("home")
     axios.post("http://localhost:5000/stats", data)
     .then(function(response){
         res.render("home")
@@ -125,3 +103,4 @@ app.post('/flip', (req,res) => {
 app.listen(3000, () => {
     console.log('App is listening...');
 });
+
