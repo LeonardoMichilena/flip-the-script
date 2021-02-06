@@ -84,7 +84,9 @@ app.post('/articlecat', (req, res) => {
     const data=[source, topic, sex] 
     axios.post("http://localhost:5000/stats", data)
     .then(function(response){
-        res.render("home")
+        console.log(response.data)
+        res.render("partials/predictor")
+        //res.render("partials/predictor", {response: response.data})
     })
     .catch(function(error){
         console.log(error);

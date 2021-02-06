@@ -1,5 +1,6 @@
 import numpy as np
 import pickle
+#from app import stats
 
 filename = 'finalized_model.sav'
 
