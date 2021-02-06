@@ -7,19 +7,21 @@
     align-items: left;
 }
 .intro h1 {
-    font-size: 4em;
+    font-size: 3.5rem;
+    font-weight: bold;
 }
 .intro p {
-    font-size: 1.5em;
+    font-size: 1.4rem;
+    font-weight:500;
 }
-.btn-pink {
+.btn-flip {
     display: flex;
     width: fit-content;
-    padding: 20px;
-    font-size: 2em;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 15px 20px 15px 20px;
+    font-size: 1.3rem;
     border-radius: 45px;
-    box-shadow: black 2px 5px 2px;
-}
-span {
-    color: #FF88BA
+    box-shadow: #121212 2px 5px 2px;
 }
