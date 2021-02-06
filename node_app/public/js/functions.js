@@ -16,6 +16,11 @@ let flippedWordsArray;
  */
 function init(){
 
+    updateNavbarHTML();
+    updateIntroHTML();
+    updateStatisticsHTML();
+    updateWhyHTML();
+
     //Checks if the response box is not empty and executes the code
     if( document.getElementById('response-text') != null)     {
 
@@ -204,4 +209,56 @@ function toggleConverter(mode){
     }
 
 
+}
+
+
+
+/////////////////Color change
+
+let backgroundColor = "f5f5f5";
+let darkColor = "121212"
+
+let mainColors = ["#FF83A8","#76EEC6","#FFCC00","#9966FF","#6699FF","#F57B7B","#33CCCC"];
+let secondColors = ["#F8D2EB","#A0E1BA","#FCE68E","#C3B1E9","#A5C9FF","#FFB2B2","#91DCDC"];
+let thirdColors = ["#F5428D","#35E9AD","#E5B800","#7530FF","#3E7DFB","#FF6666","#3BBBBF"];
+
+let colorCounter = 0;
+
+let currentMainColor = mainColors[0];
+let currentSecondColor = secondColors[0];
+let currentThirdColor = thirdColors[0];
+
+
+
+
+
+function setNewColor(){
+
+    colorCounter++;
+    
+    if(colorCounter > mainColors.length-1) colorCounter= 0;
+
+    currentMainColor = mainColors[colorCounter];
+    currentSecondColor = secondColors[colorCounter];
+    currentThirdColor = thirdColors[colorCounter];
+
+    document.getElementById('predictor-section').style.backgroundColor = currentSecondColor;
+    init();
+
+}
+
+
+
+
+function convertHexToRGBA(hex, alpha){
+    let c;
+    if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
+        c= hex.substring(1).split('');
+        if(c.length== 3){
+            c= [c[0], c[0], c[1], c[1], c[2], c[2]];
+        }
+        c= '0x'+c.join('');
+        return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+','+alpha+')';
+    }
+    throw new Error('Bad Hex');
 }

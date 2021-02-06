@@ -4,11 +4,10 @@
     padding: 2em;
     padding-top: 10%;
     flex-direction: column;
-    background-color: white;
+    background-color: #f5f5f5;
 }
 
 
 .part-one,.part-two {
     height: 50%;
-
 }
