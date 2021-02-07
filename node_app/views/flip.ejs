@@ -1,15 +1,16 @@
 <%- include('partials/head') %>
+<title>Flip your Text</title>
+<link rel="stylesheet" href="/css/flip.css">
+</head>
+<body onload="initFlip()">
     <%- include('partials/navbar') %>
-
-        <link rel="stylesheet" href="/css/flip.css">
         <section class="flip">
             <div class="left-side">
                 <h1>Welcome,</h1>
                 <form method="POST" id="form-flip">
-
                     <div class="text-box left">
-                        <textarea class="text-area" id="newArticle" type="text" onchange="sendPost()" rows="5.5"
-                            cols="60" name="article"
+                        <textarea class="text-area" id="newArticle" type="text" onchange="sendPost()"
+                            name="article"
                             placeholder="Input your text here"><%if(response){%><%=firstArticle%><%}%></textarea>
                     </div>
                     <!-- <div class="btn-container">

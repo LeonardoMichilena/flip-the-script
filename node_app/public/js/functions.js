@@ -14,12 +14,36 @@ let flippedWordsArray;
 /**
  * Executes automatically once the page is loaded (body > onload atributte)
  */
-function init(){
+function initHome(){
 
+    
     updateNavbarHTML();
     updateIntroHTML();
     updateStatisticsHTML();
     updateWhyHTML();
+
+    drawCanvas();
+}
+function initWhy(){
+    updateNavbarHTML();
+    updateWhyHTML();
+}
+
+function initStatistics(){
+    updateNavbarHTML();
+    updateStatisticsHTML();
+}
+function initPredictor(){
+
+    updateNavbarHTML();
+    document.getElementById('predictor-section').style.backgroundColor = currentSecondColor;
+
+}
+
+function initFlip(){
+
+    updateNavbarHTML();
+
 
     //Checks if the response box is not empty and executes the code
     if( document.getElementById('response-text') != null)     {
@@ -97,7 +121,7 @@ function addHTMLResponse() {
 } 
 
 /**
- * Checks if the word of the first array[i] matches with word form the other array[j]
+ * Checks if the word of the first array[i] matches with the word form the other array[j]
  * @param {number} l index of the responseArray 
  * @param {number} i index of the flippedWordsArray
   * @param {number} j index of the flippedWordsArray
@@ -179,7 +203,7 @@ function nextSlide() {
     let currentDot = document.querySelectorAll('#dot-container .dot')[slideCounter];
 
     //Toggles the classes for the slide and dots to not be the current anymore
-    currentSlide.className = 'slide';
+    currentSlide.classList.toggle('showing');
     currentDot.classList.toggle("active");
 
     //Sets the slideCounter on the next slide available, if it's the last slide, starts from the beginning
@@ -190,14 +214,14 @@ function nextSlide() {
     currentDot = document.querySelectorAll('#dot-container .dot')[slideCounter];
 
     //Togggles the classes to be the current or active slides
-    currentSlide.className = 'slide showing';
+    currentSlide.classList.toggle('showing');
     currentDot.classList.toggle("active");
 
 }
 
 
 
-///////////////Send post on Change
+///////////////Send post on textarea Onchange
 
 
 function toggleConverter(mode){
@@ -207,45 +231,63 @@ function toggleConverter(mode){
     }else if(mode == "neutral"){
 
     }
-
-
 }
-
-
 
 /////////////////Color change
 
 let backgroundColor = "f5f5f5";
-let darkColor = "121212"
+let darkColor = "121212";
 
 let mainColors = ["#FF83A8","#76EEC6","#FFCC00","#9966FF","#6699FF","#F57B7B","#33CCCC"];
 let secondColors = ["#F8D2EB","#A0E1BA","#FCE68E","#C3B1E9","#A5C9FF","#FFB2B2","#91DCDC"];
 let thirdColors = ["#F5428D","#35E9AD","#E5B800","#7530FF","#3E7DFB","#FF6666","#3BBBBF"];
 
-let colorCounter = 0;
+let colorCounter = Math.floor(Math.random() * 7);
 
-let currentMainColor = mainColors[0];
-let currentSecondColor = secondColors[0];
-let currentThirdColor = thirdColors[0];
+let currentMainColor = mainColors[colorCounter];
+let currentSecondColor = secondColors[colorCounter];
+let currentThirdColor = thirdColors[colorCounter];
 
-
-
-
-
+/**
+ * Returns a random number that is different to the actual number between 0-6
+ * @param {number} a Number to be compared with the next random
+ */
+function nextRandomNum(a){
+    let randomNum = Math.floor(Math.random() * 7);
+    console.log(a, randomNum);
+    if(randomNum != a) {
+        colorCounter = randomNum;
+    } else nextRandomNum(a);    
+}
+/**
+ * Changes the color palette to a new color form the 3 colors arrays
+ */
 function setNewColor(){
 
-    colorCounter++;
+    //Sets a new random number(color)
+    nextRandomNum(colorCounter);
     
-    if(colorCounter > mainColors.length-1) colorCounter= 0;
-
     currentMainColor = mainColors[colorCounter];
     currentSecondColor = secondColors[colorCounter];
     currentThirdColor = thirdColors[colorCounter];
 
-    document.getElementById('predictor-section').style.backgroundColor = currentSecondColor;
-    init();
+    let pathName = document.location.pathname;
 
-}
+    console.log(pathName);
+
+    if(pathName == "/flip"){
+        initFlip();
+    } else if(pathName == "/why-it-matters"){
+        initWhy();
+    } else if(pathName == "/statistics"){
+        initStatistics();
+    } else if(pathName == "/predictor"){
+        initPredictor();
+    } else if(pathName == "/"){
+        initHome();
+    }
+
+ }
 
 
 
@@ -260,5 +302,46 @@ function convertHexToRGBA(hex, alpha){
         c= '0x'+c.join('');
         return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+','+alpha+')';
     }
-    throw new Error('Bad Hex');
 }
+
+
+
+/////Statistics charts
+
+//variables
+
+let ctx;
+let myChart;
+
+
+ function drawCanvas(){
+
+    ctx = document.getElementById('myChart').getContext('2d');
+
+    myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Male converted words','Female converted words'],
+        datasets: [{
+            label: '% of converted words by gender neutralizer',
+            data: [65,35],
+            backgroundColor: [
+                currentMainColor,
+                convertHexToRGBA(currentSecondColor,0.5)
+            ]
+        }]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                display: false,
+            }],
+            yAxes: [{
+                display: false,
+            }],
+        },
+        animation: {
+            duration: 5000,
+        }
+    }
+});} 
