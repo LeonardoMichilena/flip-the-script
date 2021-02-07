@@ -35,6 +35,7 @@ def neutral():
 @app.route("/stats", methods=["GET", "POST"])
 def statistics(): 
     stats=json.loads(request.data)
+    print(stats)
     statArray = [int(numeric_string) for numeric_string in stats]
     print(statArray)
     #return("hello")
@@ -92,7 +93,6 @@ def statistics():
     prediction = y_prediction[0]
 
     # Prediction as a string
-    print(bias[prediction])
     return(bias[prediction])
     
     
