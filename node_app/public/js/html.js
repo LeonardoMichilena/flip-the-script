@@ -28,7 +28,7 @@ function updateNavbarHTML() {
           <a href="/predictor">Predictor</a>
         </li>
         <li>
-          <a href="/#about">About Us</a>
+          <a href="/about">About Us</a>
         </li>
         <li>
           <a class="btn-start" style="background-color: ${currentMainColor};" href="/flip">Start Now</a>
@@ -167,10 +167,11 @@ function updateStatisticsHTML() {
 
 function updateDidYouKnow() {
 
-
 }
 
-function updateAboutHTML() {}
+function updateAboutHTML() {
+
+}
 
 function updateTeamHTML() {}
 

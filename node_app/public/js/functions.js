@@ -48,6 +48,12 @@ function initPredictor() {
 
 }
 
+function initAbout(){
+    updateNavbarHTML();
+    //updateAboutHTML();
+    updateFooterHTML();
+}
+
 function initFlip() {
 
     updateNavbarHTML();
