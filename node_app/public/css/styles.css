@@ -25,10 +25,10 @@ body {
 }
 p, ul {
     margin: 0;
+    list-style: none;
 }
 a {
     color: inherit;
-    text-decoration: none;
 }
 a:hover {
     text-decoration: none;

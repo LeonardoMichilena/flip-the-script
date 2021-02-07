@@ -59,6 +59,14 @@ app.get('/flip', (req, res) => {
     res.render('flip', {response : false});
 });
 
+app.get('/statistics', (req, res) => {
+    res.render('statistics', {response : false});
+});
+
+app.get('/predictor', (req, res) => {
+    res.render('predictor', {response : false});
+});
+
 app.get('/why-it-matters', (req, res) => {
     res.render('why-it-matters', {response : false});
 });

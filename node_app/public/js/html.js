@@ -1,4 +1,4 @@
-function updateNavbarHTML(){
+function updateNavbarHTML() {
 
     document.getElementById("navbar").innerHTML = `
     <div class="logo-container" id="logo-container">
@@ -19,16 +19,16 @@ function updateNavbarHTML(){
       <ul class="list">
   
         <li>
-          <a href="/#why">Why It Matters</a>
+          <a href="/why-it-matters">Why It Matters</a>
         </li>
         <li>
-          <a href="/#statistics">Statistics</a>
+          <a href="/statistics">Statistics</a>
         </li>
         <li>
-          <a href="/#predictor">Predictor</a>
+          <a href="/predictor">Predictor</a>
         </li>
         <li>
-          <a href="/#about">About Us</a>
+          <a href="#about">About Us</a>
         </li>
         <li>
           <a class="btn-start" style="background-color: ${currentMainColor};" href="/flip">Start Now</a>
@@ -37,13 +37,13 @@ function updateNavbarHTML(){
     </div>`;
 }
 
-function updateIntroHTML(){
+function updateIntroHTML() {
     document.getElementById("intro").innerHTML = ` <h1>We Care About A Fair <span style="color: ${currentMainColor};">World</span></h1>
     <p>Creating Gender Neutral Texts</p>    
     <a class="btn-flip" style="background-color: ${currentMainColor};" href="/flip">Create Your Text Now</a>`;
 }
 
-function updateWhyHTML(){
+function updateWhyHTML() {
     document.getElementById('why').innerHTML = ` <div id="title-container" class="text one slideshow-closed">
     <div class="why-titles">
       <h2 id="title1">Words form thoughts, </h2>
@@ -56,11 +56,11 @@ function updateWhyHTML(){
   </div>`;
 }
 
-function insertSLideshowHTML(){
+function insertSLideshowHTML() {
     return `
     <!-- Slideshow container -->
     <div id="slideshow-container">
-        <ul id="slideshow-list" style="background-color: ${convertHexToRGBA(currentSecondColor,0.5)};">
+        <ul id="slideshow-list" style="background-color: ${convertHexToRGBA(currentSecondColor, 0.5)};">
 
             <!-- Full-width images with number and caption text -->
             <li class="slide showing" onclick="nextSlide()">
@@ -74,63 +74,60 @@ function insertSLideshowHTML(){
                     <div class="quotes end">”</div>
                 </div>
             </li>
-            <li class="slide" onclick="nextSlide()">
+            <li class="slide two" onclick="nextSlide()">
                 <div>
                     <h1>How is this possible?</h1>
                 </div>
             </li>
 
-            <li class="slide" onclick="nextSlide()">
+            <li class="slide three" onclick="nextSlide()">
                 <div>
-                    <h3><span style="color: ${currentMainColor};">86% of people</span> didn't consider the surgeon was a <span style="color: ${currentMainColor};">woman</span></h3>
+                    <h3><span style="color: ${currentThirdColor};">86% of people</span> didn't consider the surgeon was a <span style="color: ${currentThirdColor};">woman</span></h3>
                 </div>
             </li>
 
-            <li class="slide" onclick="nextSlide()">
-                <div>
-                    <h3>Here's why</h3>
-                    <div class="quotes-container">
+            <li class="slide four" onclick="nextSlide()">
+                <h3>Here's why</h3>
+                <div class="quotes-container">
                     <div class="quotes start">“</div>
                     <div class="text-in-quotes">
-                        <p>A father and a son are in a horrible car crash that kills the dad. The son
-                        is rushed to the hospital, just as he is about to go under the knife, the surgeon says: I can't operate,
-                        that boy is my son!</p>
+                        <p>A <span style="color: ${currentThirdColor};">father</span> and <span style="color: ${currentThirdColor};">son</span> are in a horrible car crash that kills the <span style="color: ${currentThirdColor};">dad</span>. The <span style="color: ${currentThirdColor};">son</span>
+                        is rushed to the hospital, just as <span style="color: ${currentThirdColor};">he's</span> about to go under the knife, the surgeon says: I can't operate,
+                        that <span style="color: ${currentThirdColor};">boy</span> is my <span style="color: ${currentThirdColor};">son</span>!</p>
                     </div>
                     <div class="quotes end">”</div>
                 </div>
+                <div>
                     <h3>7 Male pronouns</h3>
-                    <h3>1 Neutral pronoun</h3>
-                    <h3>0 Female pronouns</h3>
-
+                    <h3><span style="color: ${currentThirdColor};">1</span> Neutral pronoun</h3>
+                    <h3><span style="color: ${currentThirdColor};">0</span> Female pronouns</h3>
                 </div>
             </li>
-            <li class="slide" onclick="nextSlide()">
-                <div>
-                    <h3>What about this</h3>
-                    <div class="quotes-container">
-                        <div class="quotes start">“</div>
-                        <div class="text-in-quotes">
-                            <p>A father and daughter are in a horrible car crash that kills the dad. The
-                            daughter is rushed to the hospital, just as she’s about to go under the knife, the surgeon says, I can’t
-                            operate, that girl is my daughter!</p>
-                        </div>
-                        <div class="quotes end">”</div>
+            <li class="slide five" onclick="nextSlide()">
+                <h3>What about this...</h3>
+                <div class="quotes-container">
+                    <div class="quotes start">“</div>
+                    <div class="text-in-quotes">
+                        <p>A father and <span style="color: ${currentThirdColor};">daughter</span> are in a horrible car crash that kills the dad. The
+                        <span style="color: ${currentThirdColor};">daughter</span> is rushed to the hospital, just as <span style="color: ${currentThirdColor};">she’s</span> about to go under the knife, the surgeon says, I can’t
+                        operate, that <span style="color: ${currentThirdColor};">girl</span> is my <span style="color: ${currentThirdColor};">daughter</span>!</p>
                     </div>
+                    <div class="quotes end">”</div>
+                </div>
+                <div>
                     <h4>4 Male pronouns</h4>
-                    <h4>1 Neutral pronoun</h4>
-                    <h4>3 Female pronouns</h4>
+                    <h4><span style="color: ${currentThirdColor};">1</span> Neutral pronoun</h4>
+                    <h4><span style="color: ${currentThirdColor};">3</span> Female pronouns</h4>
                 </div>
             </li>
-            <li class="slide" onclick="nextSlide()">
+            <li class="slide six" onclick="nextSlide()">
                 <div>
-                    <h3>What about this</h3>
-                    <p>adding less than half of female pronouns allows 24% more people to get it right.
-                    </p>
+                    <h3>Adding less than half of female pronouns allows <span style="color: ${currentThirdColor};">24% more people</span> to get it right.</h3>
                 </div>
             </li>
-            <li class="slide" onclick="nextSlide(); toggleSlideshow('close')">
+            <li class="slide seven" onclick="nextSlide(); toggleSlideshow('close')">
                 <div>
-                    <p><a href="/why-it-matters#video-section">Learn more</a> on why this matters. </p>
+                    <h3><a href="/why-it-matters#video-section" style="text-decoration-color: ${currentThirdColor};"><span style="color: ${currentThirdColor};">Learn more</span></a> on why this matters. </h3>
                 </div>
             </li>
         </ul>
@@ -146,14 +143,30 @@ function insertSLideshowHTML(){
     </div>`;
 }
 
-function updateStatisticsHTML(){
-    document.getElementById('statistics').innerHTML = `<div class="part-one">
-    <h1 style="color: ${currentMainColor};">Numbers,</h1>
-    <p style="color: ${currentMainColor};">numbers</p>
-</div>`;
+function updateStatisticsHTML() {
+    document.getElementById('statistics').innerHTML = `
+    <div class="title">
+        <h1 style="color: ${currentMainColor};">Numbers,</h1>
+        <p style="color: ${currentMainColor};">numbers</p>
+    </div>
+    <div class="content">
+        <div class="charts-area">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="text-area">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem perspiciatis at labore doloremque ex in consectetur voluptate eligendi sint distinctio illo quaerat incidunt, dolore vel repellendus aliquid voluptatibus saepe ullam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis rerum quam est recusandae? Ducimus at nobis sapiente quaerat, quam rerum laborum temporibus ea explicabo a tempora! Dolor sequi quae quod.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis rerum quam est recusandae? Ducimus at nobis sapiente quaerat, quam rerum laborum temporibus ea explicabo a tempora! Dolor sequi quae quod.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis rerum quam est recusandae? Ducimus at nobis sapiente quaerat, quam rerum laborum temporibus ea explicabo a tempora! Dolor sequi quae quod.</p>
+            <div class="btn-container">
+                <button class="btn-learn-more"></button>
+            </div>
+        </div>
+    </div>  
+    `;
 }
 
-function updateDidYouKnow(){
+function updateDidYouKnow() {
 
 
 }

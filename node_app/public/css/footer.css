@@ -1,0 +1,47 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    padding-top: 2em;
+}
+.footer-main-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer-main-container .logo-container {
+    display: flex;
+    width: 30%;
+    height: 100%;
+
+}
+.footer-main-container .links{
+    display: flex;
+    width: 50%;
+}
+.footer li {
+    margin: 1em;
+}
+.footer-main-container .logo-container a {
+    font-family: 'Roboto', sans-serif;
+    font-weight:500;
+    font-size: 1.3rem;
+}
+.links h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.links a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+
+.social-links {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: flex-end;
+}

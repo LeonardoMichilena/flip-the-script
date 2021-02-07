@@ -1,7 +1,7 @@
 .statistics {
     display: flex;
-    height: 100vh;
     padding: 2em;
+    height: fit-content;
     padding-top: 10%;
     flex-direction: column;
     background-color: #f5f5f5;
@@ -10,4 +10,13 @@
 
 .part-one,.part-two {
     height: 50%;
+}
+
+#myChart {
+    display: flex;
+    width: 100%;
+}
+.chart-content {
+    display: flex;
+    width:100%;
 }
