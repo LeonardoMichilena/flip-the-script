@@ -170,7 +170,23 @@ function updateDidYouKnow() {
 }
 
 function updateAboutHTML() {
+    document.getElementById('about').innerHTML = `<h2 id="title1">We believe, </h2>
+      <h2 id="title2"> we can all make change <span style="color: ${currentMainColor};"> happen<span>.</h2>
+    </div>
+        <link rel="stylesheet" href="/css/about.css">
+            
+        <div class="text-box-two" id="text">
 
+            We are Stephanie, Leticia, Leonardo and Luciana, a team of four motivated and engaged participants of TechLabs Berlin. We started Flip The Script because we recognized an issue in the way society sees gender.The way language works in our conscious and subconscious mind is often underestimated, and so is the way it affects how we perceive gender. 38% of the world’s population speaks a gendered language as a native speaker. World Bank economist Owen Ozier delivered, in 2019, a crash course on linguistics and its relationship to gender norms. According to Ozier, existing research has already hinted at a link between grammar and gender. Recent experiments in political science have shown that gendered languages that classify nouns as female, male, or neutral are associated with more regressive gender attitudes. How is it, then, that even though English, a language spoken by 1.5 billion people, isn't a gendered language, yet is highly pointed for being a biased language? The reason is, grammatical gender is only one among many of the linguistic structures we use that influences the way we see our society through a gendered lens.
+            
+            Research made by Janet A. Sniezek and Christine H. Jazwinski in the Journal of Applied Social Psychology found that “generic” masculine nouns, pronouns, and adjectives function similarly to gender specific masculine terms. That certain grammatically “neutral” terms are in fact rated as relatively masculine. This evidence demonstrates that the use of “generic” masculine and even other grammatically neutral terms in effect serves to exclude women and not binary people from the English language. This can be observed when an identifying noun, such as policemen, is used to identify a group of police officers. In effect, anyone who does not identify as a man is erased from the statement. Another example can be observed when a gender neutral word, such as scientist, is perceived with a male connotation. As a result, we often hear and read about "female scientists", as though scientists are all men and women are just an exception. The resulting masculine bias in our language reflects and reinforces the pattern that the male form is the default.
+            
+            But we want to change this. And we understand that we can all create change because we all use language. Flip The Script is aimed to be used as a tool for change and education about our language use by offering users the option to consciously decide for a fairer language. Furthermore, we want to offer visitors the option to learn more about language use and patters and why it is important. You can find, on the statistics page, our results from collecting and analyzing news articles from various sources across the web.
+            
+            <a class="btn-start" id="contact-button" style="background-color: ${currentMainColor};" href="/contact">Contact Us</a>
+            
+        </div>
+        `;
 }
 
 function updateTeamHTML() {}

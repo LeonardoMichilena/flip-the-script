@@ -1,3 +1,8 @@
+body {
+    display: flex;
+    flex-direction: column;
+    }
+    
 .about {
     display: flex;
     height: 100vh;
@@ -5,6 +10,27 @@
     padding-top: 15%;
     flex-direction: column;
     background-color: white;
+}
+
+#title1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    font-family: "Sarabun", sans-serif;
+    transition: all 2s;
+}
+
+#title2 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    font-family: "Sarabun", sans-serif;
+}
+
+
+#contact-button {
+    font-size: 1rem;
+    font-weight: medium;
+    font-family: "Sarabun", sans-serif;
+    padding:5px 3em 5px 3em;
 }
 
 .about .text-box-two {
@@ -15,22 +41,15 @@
     align-items: center;
 }
 
-.title {
-    font-size: 3.5rem;
-    font-weight: semibold;
-    font-family: Sarabun;
-}
-
-.subtitle {
-    font-size: 2.6rem;
-    font-weight: semibold;
-    font-family: Sarabun;
-}
 
 .text {
     font-size: .7rem;
     font-weight: Medium;
-    font-family: Sarabun;
+    font-family: "Sarabun", sans-serif;
 }
 
-
+.btn-start {
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 121212 2px 5px 2px;
+}

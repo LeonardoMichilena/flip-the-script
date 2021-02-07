@@ -55,6 +55,7 @@ app.get('/why-it-matters', (req, res) => {
 app.get("/about", (req, res) => {
     res.render("aboutUs", {response : false});
 });
+
 /***************************
 fem/masc path, send back to user
 **************************** */

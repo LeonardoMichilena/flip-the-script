@@ -50,7 +50,7 @@ function initPredictor() {
 
 function initAbout(){
     updateNavbarHTML();
-    //updateAboutHTML();
+    updateAboutHTML();
     updateFooterHTML();
 }
 
