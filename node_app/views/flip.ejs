@@ -9,8 +9,7 @@
                 <h1>Welcome,</h1>
                 <form method="POST" id="form-flip">
                     <div class="text-box left">
-                        <textarea class="text-area" id="newArticle" type="text" onchange="sendPost()"
-                            name="article"
+                        <textarea class="text-area" id="newArticle" type="text" name="article"
                             placeholder="Input your text here"><%if(response){%><%=firstArticle%><%}%></textarea>
                     </div>
                     <!-- <div class="btn-container">
@@ -18,9 +17,8 @@
                         <button name="neutral" onclick="toggleConverter('neutral')">Flip to Gender Neutral</button>
                     </div> -->
                     <div class="btn-container">
-                        <button type="submit" name="reverse" onsubmit="convertToArray()" formaction="/articles">Flip to
-                            Opposite</button>
-                        <button type="submit" name="neutral" onsubmit="convertToArray()" formaction="/neutralarticle">Flip to Gender Neutral</button>
+                        <button type="submit" name="reverse" formaction="/articles">Flip to Opposite</button>
+                        <button type="submit" name="neutral" formaction="/neutralarticle">Flip to Gender Neutral</button>
                     </div>
                 </form>
             </div>
