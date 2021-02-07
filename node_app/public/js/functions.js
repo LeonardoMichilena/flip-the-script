@@ -43,7 +43,7 @@ function initStatistics() {
 function initPredictor() {
 
     updateNavbarHTML();
-    document.getElementById('predictor-section').style.backgroundColor = currentSecondColor;
+    updatePredictorHTML();
     updateFooterHTML();
 
 }
@@ -61,7 +61,7 @@ function initFlip() {
 
     //Checks if the response box is not empty and executes the code
     if (document.getElementById('response-text') != null) {
-
+        console.log(document.getElementById('response-text'));
         //Gets the original text from the Post request response (firstArticle)
         originalText = document.getElementById('newArticle').value;
 
@@ -109,7 +109,7 @@ function addHTMLResponse() {
 
     //Selects the response-box 
     let responseBox = document.getElementById("response-box");
-
+    responseBox.innerHTML = '';
     let k;
 
     //Checks if first the i word from the responseArray is similar to any of the words in the flippedWordsArray
@@ -157,6 +157,9 @@ function checkForMatchingWord(l, i, j) {
 //Variables
 let totalSlides = 7;
 let slideCounter = 0;
+
+let predictorTotalSlides = 3;
+let predictorSlideCounter = 0;
 
 /**
  * Toggles the slideshow to open and close
@@ -233,19 +236,19 @@ function nextSlide() {
 
 }
 
+function predictorNextSlide(){
+    
+    let currentSlide = document.querySelectorAll('.predictor-slideshow .predictor-slide')[predictorSlideCounter];
+    currentSlide.classList.toggle('showing');
 
+    predictorSlideCounter++;
 
-///////////////Send post on textarea Onchange
+    currentSlide = document.querySelectorAll('.predictor-slideshow .predictor-slide')[predictorSlideCounter];
+    currentSlide.classList.toggle('showing');
 
-
-function toggleConverter(mode) {
-
-    if (mode == "reverse") {
-
-    } else if (mode == "neutral") {
-
-    }
 }
+
+
 
 /////////////////Color change
 
@@ -289,7 +292,7 @@ function setNewColor() {
 
     console.log(pathName);
 
-    if (pathName == "/flip") {
+    if (pathName == "/flip" || pathName == "/neutralarticle" || pathName == "/articles") {
         initFlip();
     } else if (pathName == "/why-it-matters") {
         initWhy();

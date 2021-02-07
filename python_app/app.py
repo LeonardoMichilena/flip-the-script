@@ -92,6 +92,7 @@ def statistics():
     prediction = y_prediction[0]
 
     # Prediction as a string
+    print(bias[prediction])
     return(bias[prediction])
     
     

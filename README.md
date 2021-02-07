@@ -18,7 +18,7 @@ As well as the text conversion, you can explore our statistics page, which inclu
 #build-setup
 ### For the Flask app: 
 #### Working with [python3](https://realpython.com/installing-python/)
-#### Use package manager [pip](https://pip.pypa.io/en/stable/) to install [Flask](https://flask.palletsprojects.com/en/1.1.x/tutorial/)
+#### Use package manager [pip](https://pip.pypa.io/en/stable/) to install [Flask](https://flask.palletsprojects.com/en/1.1.x/tutorial/), [numpy](https://numpy.org/), and [Sklearn](https://scikit-learn.org/stable/)
 
 ###### First, cd into the python_app folder to activate your environment.
 ```bash
@@ -27,6 +27,12 @@ python3 -m venv venv
 ###### Next install the packages:
 ```bash
 pip install requests
+```
+```bash
+pip install scikit-learn
+```
+```bash
+pip install numpy
 ```
 ```bash
 pip install Flask

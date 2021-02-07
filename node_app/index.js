@@ -100,11 +100,11 @@ app.post('/articlecat', (req, res) => {
         console.log(response.data)
         //res.render("predictor")
         res.render("predictor", {response: response.data})
+
     })
     .catch(function(error){
         console.log(error);
     });
-    
   })
   
  

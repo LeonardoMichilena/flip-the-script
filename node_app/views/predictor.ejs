@@ -1,66 +1,21 @@
 <%- include('partials/head') %>
     <title>Predictor</title>
     <link rel="stylesheet" href="/css/predictor.css">
-</head>
-<body onload="initPredictor()">
-    <%- include('partials/navbar') %>
+    </head>
 
-    <section class="predictor-section" id="predictor-section">
-        <h1>Predictions, predictions</h1>
-        <p>to know how likely it is that an article is gender biased, please select the source:</p>
-    
-        <form action="/articlecat" method="POST">
-            <div class="source-container">
-            <label for="source">Source: </label>
-            <select name="source" id="source">
-                <option value="1">ABC News</option>
-                <option value="2">Al Jazeera</option>
-                <option value="3">BBC news</option>
-                <option value="4">CNN</option>
-                <option value="5">Deutsche Welle</option>
-                <option value="6">Newsweek</option>
-                <option value="7">Reuters</option>
-                <option value="8">The Irish Times</option>
-                <option value="9">The New York Times</option>
-                <option value="10">Science Mag</option>
-                <option value="11">CNBC</option>
-                <option value="12">NPR</option>
-            </select>
-            </div>
-            <div class="topic-container">
-            <label for="topic">Topic: </label>
-            <select name="topic" id="topic">
-                <option value="1">Business</option>
-                <option value="2">Culture</option>
-                <option value="3">Food and Drinks</option>
-                <option value="4">Health</option>
-                <option value="5">Local News</option>
-                <option value="6">People</option>
-                <option value="7">Politics</option>
-                <option value="8">Sports</option>
-                <option value="9">Technology</option>
-                <option value="10">Travel</option>
-                <option value="11">World</option>
-                <option value="12">Social Science</option>
-            </select>
-            </div>
-            <div class="gender-container">
-            <input type="radio" id="male" name="sex" value="0">
-            <label for="male">Male</label> 
-            <input type="radio" id="female" name="sex" value="1">
-            <label for="female">Female</label>
-            <button type="submit">Submit</button>
-        </div>
-        </form>
-        <section>
-            <div>
-                <h2>prediction</h2>
-            <p><%=response%></p>
-            </div>
-           </section>
-    </section>
+    <body onload="initPredictor()">
+        <%- include('partials/navbar') %>
 
-    <%- include('partials/footer') %>
+            <section class="predictor-section" id="predictor-section">
+               
+            </section>
+            <section class="how-to-predictor">
+                <h2>How Do Our</h2>
+                <h2>Predictions Work?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt praesentium mollitia non in voluptatum voluptates a. Quisquam ab assumenda accusantium repellendus odio, adipisci esse pariatur ipsum cumque fugit, incidunt delectus.</p>
+            </section>
+            <%- include('partials/footer') %>
 
-</body>
-</html>
+    </body>
+
+    </html>

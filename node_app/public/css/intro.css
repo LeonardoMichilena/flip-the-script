@@ -25,3 +25,14 @@
     border-radius: 45px;
     box-shadow: #121212 2px 5px 2px;
 }
+/* #intro {
+    background-image: url("../img/blackDeco.png");
+
+} */
+
+#intro img {
+    display: flex;
+    position: fixed;
+    width: 50%;
+    height: 50%;
+}

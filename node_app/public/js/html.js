@@ -188,6 +188,87 @@ function updateAboutHTML() {
         </div>
         `;
 }
+function updatePredictorHTML(){
+    document.getElementById('predictor-section').style.backgroundColor = convertHexToRGBA(currentThirdColor,0.5);
+    document.getElementById('predictor-section').innerHTML = `
+    <form method="POST">
+
+    <div class="predictor-slideshow">
+        <ul class="predictor-slideshow-list">
+            <li class="predictor-slide showing">
+                <h1>Predictions, Predictions</h1>
+                <p>to know how likely it is that an article is gender biased, please select the source:
+                </p>
+                <div class="source-container">
+                    <label for="source"></label>
+                    <select class="form-select" aria-label="Default" name="source" id="source">
+                        <option value="1">ABC News</option>
+                        <option value="2">Al Jazeera</option>
+                        <option value="3">BBC news</option>
+                        <option value="4">CNN</option>
+                        <option value="5">Deutsche Welle</option>
+                        <option value="6">Newsweek</option>
+                        <option value="7">Reuters</option>
+                        <option value="8">The Irish Times</option>
+                        <option value="9">The New York Times</option>
+                        <option value="10">Science Mag</option>
+                        <option value="11">CNBC</option>
+                        <option value="12">NPR</option>
+                    </select>
+                </div>
+                <button style="background-color:${currentMainColor}" class="btn-next" type="button" onclick="predictorNextSlide()">Next</button>
+
+            </li>
+            <li class="predictor-slide">
+                <h1>What's The Topic Of The Article?</h1>
+                <div class="topic-container">
+                    <label for="topic"></label>
+                    <select name="topic" id="topic">
+                        <option value="1">Business</option>
+                        <option value="2">Culture</option>
+                        <option value="3">Food and Drinks</option>
+                        <option value="4">Health</option>
+                        <option value="5">Local News</option>
+                        <option value="6">People</option>
+                        <option value="7">Politics</option>
+                        <option value="8">Sports</option>
+                        <option value="9">Technology</option>
+                        <option value="10">Travel</option>
+                        <option value="11">World</option>
+                        <option value="12">Social Science</option>
+                    </select>
+                </div>
+                <button class="btn-next" style="background-color:${currentMainColor}" type="button" onclick="predictorNextSlide()">Next</button>
+
+            </li>
+            <li class="predictor-slide">
+                <h1>What's The Gender Of The Author?</h1>
+                <!-- <div class="gender-container">
+                    <button class="btn-next" name="sex" style="background-color:${currentMainColor}" type="submit" formaction="/neutralarticle" onclick="predictorNextSlide()">Female</button>
+                    <button class="btn-next" name="sex" style="background-color:${currentMainColor}" type="submit" formaction="/neutralarticle" onclick="predictorNextSlide()">Male</button>
+                    <button class="btn-next" style="background-color:${currentMainColor}" type="submit" formaction="/neutralarticle" onclick="predictorNextSlide()">Non-Binary</button>
+                    <button class="btn-next" style="background-color:${currentMainColor}" type="submit" formaction="/neutralarticle" onclick="predictorNextSlide()">Unknown</button>
+                </div> -->
+                <div class="gender-container">
+                    <input type="radio" id="male" name="sex" value="0">
+                    <label for="male">Male</label> 
+                    <input type="radio" id="female" name="sex" value="1">
+                    <label for="female">Female</label>
+                </div>
+                <button class="btn-skip" type="submit" onclick="predictorNextSlide()" formaction="/neutralarticle"><span style="color:${currentThirdColor}">Check the results</span></button>
+            </li>
+            <li class="predictor-slide">
+                <h1>The Predictor says this article might be:</h1>
+                <div class="response-container">
+                </div>
+                <a class="btn-next" href="/predictor"><span style="color:${currentThirdColor}">New Prediction</span></a>
+            </li>
+        </ul>
+    </div>
+</form>
+    `;
+
+}
 
 function updateTeamHTML() {}
 
