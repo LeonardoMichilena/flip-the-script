@@ -28,7 +28,7 @@ function updateNavbarHTML() {
           <a href="/predictor">Predictor</a>
         </li>
         <li>
-          <a href="#about">About Us</a>
+          <a href="/#about">About Us</a>
         </li>
         <li>
           <a class="btn-start" style="background-color: ${currentMainColor};" href="/flip">Start Now</a>
@@ -149,18 +149,17 @@ function updateStatisticsHTML() {
         <h1 style="color: ${currentMainColor};">Numbers,</h1>
         <p style="color: ${currentMainColor};">numbers</p>
     </div>
-    <div class="content">
+    <div class="statistics-content">
         <div class="charts-area">
-            <canvas id="myChart"></canvas>
+            <canvas id="myChartDoughnut"></canvas>
+            <canvas id="myChartBars"></canvas>
         </div>
         <div class="text-area">
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem perspiciatis at labore doloremque ex in consectetur voluptate eligendi sint distinctio illo quaerat incidunt, dolore vel repellendus aliquid voluptatibus saepe ullam.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis rerum quam est recusandae? Ducimus at nobis sapiente quaerat, quam rerum laborum temporibus ea explicabo a tempora! Dolor sequi quae quod.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis rerum quam est recusandae? Ducimus at nobis sapiente quaerat, quam rerum laborum temporibus ea explicabo a tempora! Dolor sequi quae quod.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis rerum quam est recusandae? Ducimus at nobis sapiente quaerat, quam rerum laborum temporibus ea explicabo a tempora! Dolor sequi quae quod.</p>
-            <div class="btn-container">
-                <button class="btn-learn-more"></button>
-            </div>
+            <a class="btn-learn-more" style="background-color: ${currentMainColor};" href="/statistics">Learn More</a>
         </div>
     </div>  
     `;
@@ -169,4 +168,60 @@ function updateStatisticsHTML() {
 function updateDidYouKnow() {
 
 
+}
+
+function updateAboutHTML() {}
+
+function updateTeamHTML() {}
+
+function updateFooterHTML(){
+    document.getElementById('footer').innerHTML = `
+    <div class="footer-main-container" style="background-color: ${currentSecondColor}">
+    <div class="logo-container" id="logo-container">
+        <svg onclick="setNewColor()" id="logo" width="50" height="50" viewBox="0 0 50 50" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle r="23" transform="matrix(-1 0 0 1 25 25)" stroke="${currentMainColor}" stroke-width="4" />
+            <path
+                d="M14.4504 25.0336C14.4504 30.8414 19.1586 35.5496 24.9664 35.5496C30.7742 35.5496 35.4824 30.8414 35.4824 25.0336C35.4824 19.2258 30.7742 14.5176 24.9664 14.5176C19.1586 14.5176 14.4504 19.2258 14.4504 25.0336Z"
+                stroke="${currentMainColor}" stroke-width="3" />
+            <path
+                d="M32.0426 8.48049L28.4718 13.7708L26.7337 13.9185L25.0333 13.6478L27.735 10.2521L30.1401 7.20951L30.4739 7.00925L30.6741 6.94249L30.8744 6.87574L31.0747 6.84236L31.3083 6.80898L31.542 6.84236L31.7781 6.9057L31.9091 7.076L31.9759 7.24289L32.0426 7.47654L32.076 7.64343L32.1094 7.87707V8.07734V8.17747V8.2776L32.076 8.37774L32.0426 8.48049Z"
+                fill="${currentMainColor}" stroke="${currentMainColor}" />
+            <path
+                d="M17.557 41.4858L21.1278 36.1955L22.866 36.0479L24.5663 36.3185L21.8646 39.7142L19.4595 42.7568L19.1257 42.9571L18.9255 43.0238L18.7252 43.0906L18.5249 43.124L18.2913 43.1573L18.0577 43.124L17.8215 43.0606L17.6905 42.8903L17.6237 42.7234L17.557 42.4898L17.5236 42.3229L17.4902 42.0892V41.889V41.7888V41.6887L17.5236 41.5886L17.557 41.4858Z"
+                fill="${currentMainColor}" stroke="${currentMainColor}" />
+            <rect width="2.73698" height="9.21228" transform="matrix(-1 0 0 1 26.3687 10.3472)" fill="transparent" />
+            <rect width="2.73698" height="9.21228" transform="matrix(-1 0 0 1 26.3687 31.4419)" fill="transparent" />
+        </svg>
+        <a class="title" href="/">Flip The Script</a>
+    </div>
+    <div class="links">
+        <div class="information">
+            <ul>
+                <li>
+                    <h3>Information</h3>
+                </li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/contact-us">Contact Us</a></li>
+                <li><a href="/why-this-matters">Why This Matters</a></li>
+            </ul>
+        </div>
+        <div class="actions">
+            <ul>
+                <li>
+                    <h3>Actions</h3>
+                </li>
+                <li><a href="/flip">Flip Your Script</a></li>
+                <li><a href="/predictor">Predictions</a></li>
+                <li><a href="/statistics">Statistics</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="social-links" style="background-color: ${currentThirdColor}">
+    <a href="#"><img class="social-icons" src="/img/facebook" alt="Facebook Icon"></a>
+    <a href="#"><img class="social-icons" src="/img/instagram" alt="Instagram Icon"></a>
+    <a href="#"><img class="social-icons" src="/img/tumblr" alt="Tumblr Icon"></a>
+</div>
+    `;
 }

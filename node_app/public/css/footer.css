@@ -1,13 +1,13 @@
 .footer {
     display: flex;
     flex-direction: column;
-    padding: 1em;
-    padding-top: 2em;
 }
 .footer-main-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding: 1em;
+    padding-top: 2em;
 }
 .footer-main-container .logo-container {
     display: flex;

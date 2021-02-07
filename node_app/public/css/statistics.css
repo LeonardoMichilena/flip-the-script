@@ -11,12 +11,37 @@
 .part-one,.part-two {
     height: 50%;
 }
-
-#myChart {
+.statistics-content{
     display: flex;
-    width: 100%;
+    justify-content: space-evenly;
 }
-.chart-content {
+
+.charts-area {
     display: flex;
-    width:100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em;
+    width: 40%;
+}
+.text-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    padding: 1em;
+}
+.text-area p {
+    margin: 1em;
+}
+
+.btn-learn-more {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 50px 10px 50px;
+    margin-top: 1em;
+    font-size: 1rem;
+    border-radius: 45px;
+    box-shadow: #121212 2px 5px 2px;
 }
