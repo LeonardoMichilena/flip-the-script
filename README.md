@@ -10,9 +10,9 @@ We are Stephanie, Leticia, Leonardo and Luciana, a team of four motivated and en
 Flip The Script is aimed to be used as a tool for change and education about our language use by offering users the option to consciously decide for a fairer language. Furthermore, we want to offer visitors the option to learn more about language use and patters and why it is important. You can find, on the statistics page, our results from collecting and analyzing news articles from various sources across the web. </br>
 
 ### What can you expect from our app? </br>
-Our app presents itself as a text converter or, perhaps even, a text translator. A user can submit a text, wether this is a news article you found on the web, a paper you wrote yourself, and anything else that involves text. The text is then returned back to the user in the possibiity of two different forms. One, the user can choose to reverse all the pronouns. Two, the user can choose to change all pronouns to gender neutral. </br>
+Our app presents itself as a text converter or, perhaps even, a text translator. A user can submit a text, whether  this is a news article you found on the web, a paper you wrote yourself, and anything else that involves text. The text is then returned back to the user in the possibility of two different forms. One, the user can choose to reverse all the pronouns. Two, the user can choose to change all pronouns to gender neutral. </br>
 
-As well as the text conversion, you can explore our statistics page, which includes a deep look into the data we collected from Dec 2020 to Feb 2021. In this data, we exoplore how gendered language is represented in news articles from various sources across the web.  
+As well as the text conversion, you can explore our statistics page, which includes a deep look into the data we collected from Dec 2020 to Feb 2021. In this data, we explore how gendered language is represented in news articles from various sources across the web.  
 
 ## Build Setup
 #build-setup
