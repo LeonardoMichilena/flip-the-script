@@ -1,0 +1,22 @@
+<%- include('partials/head') %>
+    <title>Predictor</title>
+    <link rel="stylesheet" href="/css/predictor.css">
+    </head>
+
+    
+        <%- include('partials/navbar') %>
+
+            <section class="predictor-section" id="predictor-section">
+               
+                <li class="predictor-slide">
+                    <h1>The Predictor says this article might be:</h1>
+                    <%=response%>
+                    <div class="response-container">
+                    </div>
+                    <a class="btn-next" href="/predictor">New Prediction</span></a>
+                </li>
+            <%- include('partials/footer') %>
+
+    </body>
+
+    </html>
