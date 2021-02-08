@@ -20,7 +20,7 @@ This is a point in the project that was one of the most difficult for me. I knew
 
 I felt over my head and was nervous about what my capabilities were. NodeJS was already foreign enough, but learning how to set up a Flask server seemed even more confusing.
 
-So, what I did was smart small; a method I learned as a way to tackle larger coding problems and will subsequently always apply in the future. My goal was a classic "hello world" app.
+So, what I did was start small; a method I learned as a way to tackle larger coding problems and will subsequently always apply in the future. My goal was a classic "hello world" app.
 After I read the Flask documentation and watched some videos to learn some basic python, I set up a path in the Flask app that would return the string 'hello world'. This was one of the most challenging parts of the projects, yet now, looking back, it seems so simple. The experience serves as another insight I learned over the course of the project; that sometimes, challenges seem big and impossible, but once they are solved, look tiny and simple.
 
 When the first completed python function was pushed to GitHub, I began my next challenge. This was passing text data from a user form, in the NodeJS app, to the python function in the Flask app and then the converted data back to the NodeJS app.
