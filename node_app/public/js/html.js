@@ -249,19 +249,14 @@ function updatePredictorHTML(){
             </li>
             <li class="predictor-slide">
                 <h1>What's The Gender Of The Author?</h1>
-                <!-- <div class="gender-container">
-                    <button class="btn-next" name="sex" style="background-color:${currentMainColor}" type="submit" formaction="/neutralarticle" onclick="predictorNextSlide()">Female</button>
-                    <button class="btn-next" name="sex" style="background-color:${currentMainColor}" type="submit" formaction="/neutralarticle" onclick="predictorNextSlide()">Male</button>
-                    <button class="btn-next" style="background-color:${currentMainColor}" type="submit" formaction="/neutralarticle" onclick="predictorNextSlide()">Non-Binary</button>
-                    <button class="btn-next" style="background-color:${currentMainColor}" type="submit" formaction="/neutralarticle" onclick="predictorNextSlide()">Unknown</button>
-                </div> -->
+              
                 <div class="gender-container">
                     <input type="radio" id="male" name="sex" value="0">
                     <label for="male">Male</label> 
                     <input type="radio" id="female" name="sex" value="1">
                     <label for="female">Female</label>
                 </div>
-                <button class="btn-skip" type="submit" onclick="predictorNextSlide()" formaction="/neutralarticle"><span style="color:${currentThirdColor}">Check the results</span></button>
+                <button class="btn-skip" type="submit" onclick="predictorNextSlide()" formaction="articlecat"><span style="color:${currentThirdColor}">Check the results</span></button>
             </li>
             <li class="predictor-slide">
                 <h1>The Predictor says this article might be:</h1>
