@@ -194,10 +194,12 @@ function updateAboutHTML() {
         </div>
     `;
 }
-function updatePredictorHTML(){
-    document.getElementById('predictor-section').style.backgroundColor = convertHexToRGBA(currentThirdColor,0.5);
+
+
+function updatePredictorHTML() {
+    document.getElementById('predictor-section').style.backgroundColor = convertHexToRGBA(currentThirdColor, 0.5);
     document.getElementById('predictor-section').innerHTML = `
-    <form method="POST">
+    <form id="predictor-form" method="POST">
 
     <div class="predictor-slideshow">
         <ul class="predictor-slideshow-list">
@@ -251,29 +253,39 @@ function updatePredictorHTML(){
                 <h1>What's The Gender Of The Author?</h1>
               
                 <div class="gender-container">
-                    <input type="radio" id="male" name="sex" value="0">
-                    <label for="male">Male</label> 
-                    <input type="radio" id="female" name="sex" value="1">
-                    <label for="female">Female</label>
+                <button type="button" onclick="checkGenderForm(id)" id="male-btn" class='btn-next'>Male</button>
+                <button type="button" onclick="checkGenderForm(id)" id="female-btn" class='btn-next'>Female</button>
+
+                    <input class="d-none" type="radio" id="male" name="sex" value="0">
+                    <label class="d-none"for="male">Male</label> 
+                    <input class="d-none"type="radio" id="female" name="sex" value="1">
+                    <label class="d-none" for="female">Female</label>
                 </div>
-                <button class="btn-skip" type="submit" onclick="predictorNextSlide()" formaction="articlecat"><span style="color:${currentThirdColor}">Check the results</span></button>
-            </li>
-            <li class="predictor-slide">
-                <h1>The Predictor says this article might be:</h1>
-                <div class="response-container">
-                </div>
-                <a class="btn-next" href="/predictor"><span style="color:${currentThirdColor}">New Prediction</span></a>
+                <button id="btn-results" class="btn-skip v-hidden" formaction="articlecat"><span style="color:${currentThirdColor}">Check the results</span></button>
             </li>
         </ul>
     </div>
 </form>
     `;
+}
+
+function updatePredictorResultHTML() {
+    document.getElementById('predictor-result-section').style.backgroundColor = convertHexToRGBA(currentThirdColor, 0.5);
+    document.getElementById('predictor-result-section').innerHTML = `<ul class="predictor-slideshow-list">
+<li class="predictor-slide">
+    <h1>The Predictor says this article might be:</h1>
+    <div class="response-container" id="response-container">
+    </div>
+    <a class="btn-next" href="/predictor" style="background-color:${currentMainColor}">New Prediction</a>
+</li>
+</ul>`;
 
 }
 
+
 function updateTeamHTML() {
 
-    document.getElementById('team-section').style.backgroundColor = convertHexToRGBA(currentSecondColor,0.5);
+    document.getElementById('team-section').style.backgroundColor = convertHexToRGBA(currentSecondColor, 0.5);
     document.getElementById('team-section').innerHTML = `
     <div class="title-container">
         <h1>The Team</h1>
@@ -312,7 +324,7 @@ function updateTeamHTML() {
     `;
 }
 
-function updateFooterHTML(){
+function updateFooterHTML() {
     document.getElementById('footer').innerHTML = `
     <div class="footer-main-container" style="background-color: ${currentSecondColor}">
     <div class="logo-container" id="logo-container">

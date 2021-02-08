@@ -44,11 +44,42 @@ function initStatistics() {
 
 }
 function initPredictor() {
-
     updateNavbarHTML();
     updatePredictorHTML();
     updateFooterHTML();
+}
 
+function checkGenderForm(gender){
+    console.log(gender);
+    let maleOption = document.getElementById('male');
+    let maleButton = document.getElementById('male-btn');
+    let femaleOption = document.getElementById('female');
+    let femaleButton = document.getElementById('female-btn');
+
+    if(gender == "male-btn"){
+        maleOption.checked = true;
+        maleButton.style.backgroundColor = currentMainColor;
+        femaleButton.style.backgroundColor = '#f5f5f5';
+
+    } else if(gender == "female-btn"){
+        femaleOption.checked = true;
+        femaleButton.style.backgroundColor = currentMainColor;
+        maleButton.style.backgroundColor = '#f5f5f5';
+    } 
+    document.getElementById("btn-results").classList.remove('v-hidden');
+    
+}
+function initPredictorResult(){
+    updateNavbarHTML();
+    updatePredictorResultHTML();
+    updateFooterHTML();
+
+    if(document.getElementById('hidden-response') != 'false') {
+        let response = document.getElementById('hidden-response').innerText;
+        document.getElementById('response-container').innerHTML = `<p>${response}</p>`;
+    }
+    currentSlide = document.querySelectorAll('.predictor-slideshow-list .predictor-slide')[predictorSlideCounter];
+    currentSlide.classList.add('showing');
 }
 
 function initAboutUs(){
@@ -244,15 +275,15 @@ function nextSlide() {
 }
 
 function predictorNextSlide(){
-    
+
+
     let currentSlide = document.querySelectorAll('.predictor-slideshow .predictor-slide')[predictorSlideCounter];
-    currentSlide.classList.toggle('showing');
+    currentSlide.classList.remove('showing');
 
     predictorSlideCounter++;
-
+  
     currentSlide = document.querySelectorAll('.predictor-slideshow .predictor-slide')[predictorSlideCounter];
-    currentSlide.classList.toggle('showing');
-
+    currentSlide.classList.add('showing');
 }
 
 

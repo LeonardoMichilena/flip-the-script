@@ -96,7 +96,7 @@ app.post('/articlecat', (req, res) => {
 
         console.log(response.data)
         //res.render("partials/predictor")
-        res.render("predictor", {response: response.data}) 
+        res.render("predictor-result", {response: response.data})
     })
     .catch(function(error){
         console.log(error);
