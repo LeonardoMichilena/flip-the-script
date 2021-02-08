@@ -31,11 +31,8 @@ app.set('public', path.join(__dirname,'/public'));
 //************* */ */
 app.get('/', (req, res) => {
     res.render('home');
-
 })
-/* ********************************
-empty list/form page step I
-******************************** */
+
 app.get('/flip', (req, res) => {
     res.render('flip', {response : false});
 });
@@ -84,8 +81,7 @@ app.post('/articles', (req, res) => {
     })
     .catch(function(error){
         console.log(error);
-    });
-    
+    });   
   })
 
 
@@ -100,9 +96,7 @@ app.post('/articlecat', (req, res) => {
 
         console.log(response.data)
         //res.render("partials/predictor")
-        res.render("predictor", {response: response.data})
-
-    
+        res.render("predictor", {response: response.data}) 
     })
     .catch(function(error){
         console.log(error);
