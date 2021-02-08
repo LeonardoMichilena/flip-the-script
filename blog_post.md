@@ -10,6 +10,8 @@ The MVP that we are presenting is a web app that essentially takes a user submit
 Here, you will find a deep dive into the process of building the app, the challenges we faced, and an explanation about the deliverable we created.
 
 # Front-end
+
+# Back-end
 After our first meeting, discussing vaguely what an MVP could look like, it became apparent that NodeJS alone would not work. The data scientists are working in python and writing functions that are necessary for working with the web page in real time. This includes the dictionaries and converting functions that scan an article and flip the words. Meike informed us that in order for python functions to work with the NodeJS app, we would need to find a way to connect the two languages.
 Being brand new to coding and the concepts of back-end, I understood quickly that I had a lot to learn.
 So, to complete my first task of the project, I had to find a way to connect the NodeJS app with python. Flask seemed like the best option.
@@ -74,8 +76,6 @@ Next, it is important to convert the data from JSON with json.loads and continui
 
 
 
-
-# Back-end
 
 # Data Science
 
