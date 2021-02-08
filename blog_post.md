@@ -116,7 +116,7 @@ After reaching 100 analyzed articles, I started plotting. For this purpose, I us
 
 In late January I completed the analysis of 276 articles, the dataset was done. In this way, I could finish my plots for machine learning and some of them are similar to the following ones:
 
-![plots](https://user-images.githubusercontent.com/73216174/107207077-264c2200-6a00-11eb-81c4-570a762e7bad.png)
+   ![plots](https://user-images.githubusercontent.com/73216174/107207077-264c2200-6a00-11eb-81c4-570a762e7bad.png)
 
 The next step was to develop a prediction using an algorithm from scikitlearn. Due to the nature of the dataset "categorical data", I decided on using KNeighbors. All the steps I took were through troubleshooting. I created another csv file, where I labeled every article according to some parameters that I established. Mean() was the key function for every calculation and after getting these values, I crossed information according to three attributes: Topic, Source and Global mean (all articles). The labels were established as below:
 
