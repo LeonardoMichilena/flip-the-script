@@ -38,9 +38,10 @@ function updateNavbarHTML() {
 }
 
 function updateIntroHTML() {
-    document.getElementById("intro").innerHTML = ` <h1>We Care About A Fair <span style="color: ${currentMainColor};">World</span></h1>
+    document.getElementById("intro").innerHTML = ` <img src="../img/blackDeco.png" alt=""><h1>We Care About A Fair <span style="color: ${currentMainColor};">World</span></h1>
     <p>Creating Gender Neutral Texts</p>    
-    <a class="btn-flip" style="background-color: ${currentMainColor};" href="/flip">Create Your Text Now</a>`;
+    <a class="btn-flip" style="background-color: ${currentMainColor};" href="/flip">Create Your Text Now</a>
+`;
 }
 
 function updateWhyHTML() {
@@ -76,6 +77,7 @@ function insertSLideshowHTML() {
             </li>
             <li class="slide two" onclick="nextSlide()">
                 <div>
+                    <div id="bubleSlide2">${bubleSlide2SVG()}</div>
                     <h1>How is this possible?</h1>
                 </div>
             </li>
@@ -126,6 +128,7 @@ function insertSLideshowHTML() {
                 </div>
             </li>
             <li class="slide seven" onclick="nextSlide(); toggleSlideshow('close')">
+                <div id="bubleSlide7">${bubleSlide7SVG()}</div>
                 <div>
                     <h3><a href="/why-it-matters#video-section" style="text-decoration-color: ${currentThirdColor};"><span style="color: ${currentThirdColor};">Learn more</span></a> on why this matters. </h3>
                 </div>
@@ -145,6 +148,7 @@ function insertSLideshowHTML() {
 
 function updateStatisticsHTML() {
     document.getElementById('statistics').innerHTML = `
+    <img src="../img/blackDeco.png" alt="">
     <div class="title">
         <h1 style="color: ${currentMainColor};">Numbers,</h1>
         <p style="color: ${currentMainColor};">numbers</p>
@@ -170,23 +174,25 @@ function updateDidYouKnow() {
 }
 
 function updateAboutHTML() {
-    document.getElementById('about').innerHTML = `<h2 id="title1">We believe, </h2>
-      <h2 id="title2"> we can all make change <span style="color: ${currentMainColor};"> happen<span>.</h2>
-    </div>
+
+    document.getElementById('about').style.backgroundColor = backgroundColor;
+    document.getElementById('about').innerHTML = `
+    <h2 id="title1">We believe, </h2>
+    <h2 id="title2"> we can all make change <span style="color: ${currentMainColor};"> happen.<span></h2>
         <link rel="stylesheet" href="/css/about.css">
             
-        <div class="text-box-two" id="text">
+        <div class="text-box two">
 
-            We are Stephanie, Leticia, Leonardo and Luciana, a team of four motivated and engaged participants of TechLabs Berlin. We started Flip The Script because we recognized an issue in the way society sees gender.The way language works in our conscious and subconscious mind is often underestimated, and so is the way it affects how we perceive gender. 38% of the world’s population speaks a gendered language as a native speaker. World Bank economist Owen Ozier delivered, in 2019, a crash course on linguistics and its relationship to gender norms. According to Ozier, existing research has already hinted at a link between grammar and gender. Recent experiments in political science have shown that gendered languages that classify nouns as female, male, or neutral are associated with more regressive gender attitudes. How is it, then, that even though English, a language spoken by 1.5 billion people, isn't a gendered language, yet is highly pointed for being a biased language? The reason is, grammatical gender is only one among many of the linguistic structures we use that influences the way we see our society through a gendered lens.
-            
-            Research made by Janet A. Sniezek and Christine H. Jazwinski in the Journal of Applied Social Psychology found that “generic” masculine nouns, pronouns, and adjectives function similarly to gender specific masculine terms. That certain grammatically “neutral” terms are in fact rated as relatively masculine. This evidence demonstrates that the use of “generic” masculine and even other grammatically neutral terms in effect serves to exclude women and not binary people from the English language. This can be observed when an identifying noun, such as policemen, is used to identify a group of police officers. In effect, anyone who does not identify as a man is erased from the statement. Another example can be observed when a gender neutral word, such as scientist, is perceived with a male connotation. As a result, we often hear and read about "female scientists", as though scientists are all men and women are just an exception. The resulting masculine bias in our language reflects and reinforces the pattern that the male form is the default.
-            
-            But we want to change this. And we understand that we can all create change because we all use language. Flip The Script is aimed to be used as a tool for change and education about our language use by offering users the option to consciously decide for a fairer language. Furthermore, we want to offer visitors the option to learn more about language use and patters and why it is important. You can find, on the statistics page, our results from collecting and analyzing news articles from various sources across the web.
-            
+            <p>We are Stephanie, Leticia, Leonardo and Luciana, a team of four motivated and engaged participants of TechLabs Berlin. We started Flip The Script because we recognized an issue in the way society sees gender.The way language works in our conscious and subconscious mind is often underestimated, and so is the way it affects how we perceive gender. 38% of the world’s population speaks a gendered language as a native speaker. World Bank economist Owen Ozier delivered, in 2019, a crash course on linguistics and its relationship to gender norms. According to Ozier, existing research has already hinted at a link between grammar and gender. Recent experiments in political science have shown that gendered languages that classify nouns as female, male, or neutral are associated with more regressive gender attitudes. How is it, then, that even though English, a language spoken by 1.5 billion people, isn't a gendered language, yet is highly pointed for being a biased language? The reason is, grammatical gender is only one among many of the linguistic structures we use that influences the way we see our society through a gendered lens.</p>
+            <p id="hidden-text1" class="d-none">Research made by Janet A. Sniezek and Christine H. Jazwinski in the Journal of Applied Social Psychology found that “generic” masculine nouns, pronouns, and adjectives function similarly to gender specific masculine terms. That certain grammatically “neutral” terms are in fact rated as relatively masculine. This evidence demonstrates that the use of “generic” masculine and even other grammatically neutral terms in effect serves to exclude women and not binary people from the English language. This can be observed when an identifying noun, such as policemen, is used to identify a group of police officers. In effect, anyone who does not identify as a man is erased from the statement. Another example can be observed when a gender neutral word, such as scientist, is perceived with a male connotation. As a result, we often hear and read about "female scientists", as though scientists are all men and women are just an exception. The resulting masculine bias in our language reflects and reinforces the pattern that the male form is the default.</p>
+            <p id="hidden-text2" class="d-none">But we want to change this. And we understand that we can all create change because we all use language. Flip The Script is aimed to be used as a tool for change and education about our language use by offering users the option to consciously decide for a fairer language. Furthermore, we want to offer visitors the option to learn more about language use and patters and why it is important. You can find, on the statistics page, our results from collecting and analyzing news articles from various sources across the web.</p>
             <a class="btn-start" id="contact-button" style="background-color: ${currentMainColor};" href="/contact">Contact Us</a>
             
         </div>
-        `;
+        <div id="about-people">
+        ${people1SVG()}
+        </div>
+    `;
 }
 function updatePredictorHTML(){
     document.getElementById('predictor-section').style.backgroundColor = convertHexToRGBA(currentThirdColor,0.5);
@@ -265,7 +271,46 @@ function updatePredictorHTML(){
 
 }
 
-function updateTeamHTML() {}
+function updateTeamHTML() {
+
+    document.getElementById('team-section').style.backgroundColor = convertHexToRGBA(currentSecondColor,0.5);
+    document.getElementById('team-section').innerHTML = `
+    <div class="title-container">
+        <h1>The Team</h1>
+        <h2>Behind <span style="color:${currentThirdColor};">Flip The Script</span></h2>
+    </div>
+    <div class="team-container">
+        <div class="team-member">
+            <img src="../img/person1.png" alt="">
+            <div class="description">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur distinctio reprehenderit vitae, asperiores ullam harum. Voluptate quibusdam explicabo et soluta tempora iure, optio eveniet eligendi illo similique quisquam nihil ipsa.</p>
+                <a href="">Check My Work</a>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="../img/person1.png" alt="">
+            <div class="description">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur distinctio reprehenderit vitae, asperiores ullam harum. Voluptate quibusdam explicabo et soluta tempora iure, optio eveniet eligendi illo similique quisquam nihil ipsa.</p>
+                <a href="">Check My Work</a>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="../img/person1.png" alt="">
+            <div class="description">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur distinctio reprehenderit vitae, asperiores ullam harum. Voluptate quibusdam explicabo et soluta tempora iure, optio eveniet eligendi illo similique quisquam nihil ipsa.</p>
+                <a href="">Check My Work</a>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="../img/person1.png" alt="">
+            <div class="description">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur distinctio reprehenderit vitae, asperiores ullam harum. Voluptate quibusdam explicabo et soluta tempora iure, optio eveniet eligendi illo similique quisquam nihil ipsa.</p>
+                <a href="">Check My Work</a>
+            </div>
+        </div>
+    </div>
+    `;
+}
 
 function updateFooterHTML(){
     document.getElementById('footer').innerHTML = `

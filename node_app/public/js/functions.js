@@ -16,14 +16,17 @@ let flippedWordsArray;
  */
 function initHome() {
 
-
+ 
     updateNavbarHTML();
     updateIntroHTML();
-    updateStatisticsHTML();
     updateWhyHTML();
+    updateStatisticsHTML();
+    updateAboutHTML();
+    document.getElementById("hidden-text1").classList.add("d-none");
+    document.getElementById("hidden-text2").classList.add("d-none");
+    updateTeamHTML();
     updateFooterHTML();
-
-
+    
     drawCanvas();
 }
 function initWhy() {
@@ -48,9 +51,13 @@ function initPredictor() {
 
 }
 
-function initAbout(){
+function initAboutUs(){
+    
     updateNavbarHTML();
     updateAboutHTML();
+    document.getElementById("hidden-text1").classList.remove("d-none");
+    document.getElementById("hidden-text2").classList.remove("d-none");
+    updateTeamHTML();
     updateFooterHTML();
 }
 

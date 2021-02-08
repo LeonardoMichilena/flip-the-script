@@ -1,0 +1,39 @@
+#intro img {
+    display: flex;
+    position: absolute;
+    right: -40%;
+    height: 50%;
+    width: 100%;
+    z-index: -1;
+    transform: rotate(0deg);
+}
+
+#statistics img {
+    display: flex;
+    position: absolute;
+    left: -40%;
+    bottom: 30%;
+    height: 35%;
+    width: 100%;
+    z-index: -1;
+}
+
+#about-people {
+    display: flex;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+#bubleSlide2 {
+    display: flex;
+    position: absolute;
+    bottom: -10%;
+    z-index: -2;
+}
+
+#bubleSlide7 {
+    display: flex;
+    position: absolute;
+    bottom: 0%;
+}
