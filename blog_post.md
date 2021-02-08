@@ -134,7 +134,7 @@ Having this labeled csv file, I got many errors related to the type of data when
 
 *Accuracy of training set: 0.41*
 
-*Accuracy of test set: 0.48*
+*Accuracy of set: 0.48*
 
 The dataset didn’t have enough attributes in order to increase accuracy. At the beginning, my model had a 63% accuracy without splitting data into train and test. Nevertheless, when I talked about the model in the weekly meeting, as a group we decided to add two extra options for author's gender: "non-binary" and "I don't know", which were summarized in "none". There are few articles in the dataset, which don't include gender. In this way, the model must predict data that doesn't exist in the dataset. Splitting was a must. I tuned the model with: StandardScale(), GridSearchCV(), which resulted in:
 
