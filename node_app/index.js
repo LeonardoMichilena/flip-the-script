@@ -94,10 +94,10 @@ app.post('/articlecat', (req, res) => {
     const{source} = req.body;
     const{topic}= req.body;
     const{sex}=req.body; 
-    const data=[source, topic, sex] 
+    const data=[source, topic, sex];
     axios.post("http://localhost:5000/stats", data)
     .then(function(response){
-        console.log(response.data)
+        console.log("THIS IS A RESPONSEE",response.data)
         //res.render("predictor")
         res.render("predictor", {response: response.data})
 
