@@ -70,7 +70,7 @@ Next, it is important to convert the data from JSON with json.loads and continui
 
 
 
-
+Looking at this code and where I am now with my understanding of it, I am in a much different mindset than when I began. Through this process, I was able to grasp the concept of REST API's and how to pass data through the response and request objects. I am also very thankful to have been able to experiment with python and Flask, as this helped reinforce the different types of REST API frameworks and how to extract and send data from one to the other.
 
 
 
