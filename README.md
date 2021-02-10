@@ -65,6 +65,7 @@ Use package manager [npm](https://www.npmjs.com/) to install:</br>
 npm install express axios ejs method-override
 ```
 ### To run the Express server:
+###### Make sure you are in the node_app directory.
 ```bash
 npm node index.js
 ```
