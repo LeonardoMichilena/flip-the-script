@@ -14,7 +14,7 @@ Our app presents itself as a text converter or, perhaps even, a text translator.
 As well as the text conversion, you can explore our statistics page, which includes a deep look into the data we collected from Dec 2020 to Feb 2021. In this data, we explore how gendered language is represented in news articles from various sources across the web.  
 
 ## Build Setup
-#build-setup
+### This guide requires a BASH shell. If you are using Windows, please visit the documentation for all linked dependencies for Windows commands. 
 ### For the Flask app: 
 #### Working with [python3](https://realpython.com/installing-python/)
 #### Use package manager [pip](https://pip.pypa.io/en/stable/) to install [Flask](https://flask.palletsprojects.com/en/1.1.x/tutorial/), [numpy](https://numpy.org/), and [Sklearn](https://scikit-learn.org/stable/)
