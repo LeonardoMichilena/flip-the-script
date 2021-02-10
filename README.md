@@ -63,6 +63,7 @@ Open two different consoles to get your servers running.
 
 #### Now that your servers are running, open your browser to http://localhost:3000/
 
+
 ## How to run on Windows
 #build-setup
 ### For the Flask app: 
