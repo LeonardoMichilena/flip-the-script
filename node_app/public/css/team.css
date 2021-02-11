@@ -2,7 +2,6 @@
     display: flex;
     width: 100%;
     padding: 2em;
-    justify-content: space-around;
     height: fit-content;
     
 }
@@ -16,20 +15,21 @@
     align-items: center;
 }
 
-.team-member img {
-    display: flex;
-    width: 70%;
-    height: auto;
-    border-radius: 120px;
-}
+
 .team-member .description {
     display: flex;
     flex-direction: column;
+    width: 100%;
     align-items: center;
+    justify-content: center;
+    text-justify: center;
     font-size: 1rem;
 }
 .col img {
     display: flex;
-    height: 50%;
-    width: auto;
+    width: 150px;
+    height: auto;
+    margin: 1em auto 1em auto;
+    align-self: center;
+    border-radius: 120px;
 }
