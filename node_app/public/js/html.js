@@ -302,9 +302,7 @@ function updateTeamHTML() {
             <img src="../img/member3.png" alt="">
             <div class="description">
                 <p>Hi!, I am Luciana, born in Bogota and based in Berlin. 
-                I am the designer of the team. I enjoy designing for users, but more than that I enjoy designing for people. Currently studying Computer Science and I have a passion for design, art and dance. Trying to save the world by redesigning it bit by bit. You can check out my work here: 
-                </p>
-                
+                I am the designer of the team. I enjoy designing for users, but more than that I enjoy designing for people. Currently studying Computer Science and I have a passion for design, art and dance. Trying to save the world by redesigning it bit by bit.</p> 
             </div>
         </div>
         
@@ -312,24 +310,21 @@ function updateTeamHTML() {
             <div class="col">
             <img src="../img/member2.png" alt="">
             <div class="description">
-                <p>Hello! I am Leticia, Data Scientist and Software Developer of the team. My academic background is Applied Linguistics and currently I'm an aspiring IT specialist living in Berlin.
-                It fascinates me how words shape people and the impact of language on our lives. In this digital age where our information diet is overwhelmed by the media, I want to create tools with which people can be aware of objectivity. When not programming, I enjoy hiking, blogging and doing kusudamas. You can see my portfolio on:</p>
-                
+                <p>Hello! I am Leticia, Data Scientist and Software Developer of the team. My academic background is Applied Linguistics and currently I'm an aspiring IT specialist living in Berlin. 
+                It fascinates me how words shape people and the impact of language on our lives. In this digital age where our information diet is overwhelmed by the media, I want to create tools with which people can be aware of objectivity. When not programming, I enjoy hiking, blogging and doing kusudamas.</p>   
             </div>
             </div>
         
             <div class="col">
             <img src="../img/member1.png" alt="">
             <div class="description">
-                <p>Hello! I am Stephanie and am currently studying software development. I am passionate about broadening the world of tech to be more inclusive and available for everyone. I also believe that tech is a force that is changing society and want to use it for positive change and to give back to communities.</p>
-                
+                <p>Hello! I am Stephanie and am currently studying software development. I am passionate about broadening the world of tech to be more inclusive and available for everyone. I also believe that tech is a force that is changing society and want to use it for positive change and to give back to communities.</p>  
             </div>
         </div>
         <div class="col">
-            <img src="../img/member3.png" alt="">
+            <img src="../img/leo.jpg" alt="">
             <div class="description">
-                <p>Hi! I am Leo, the front-end developer of the team.</p>
-                <a href="">Check My Work</a>
+                <p>Hi there! I'm Leonardo, an a frontend developer of the team. I love bringing designs to life and developing software that can help others. Although my past was not as a Web Dev, I am sure that my future will be all about it!</p>
             </div>
             </div>
         </div>
