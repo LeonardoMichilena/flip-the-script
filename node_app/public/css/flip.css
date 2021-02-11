@@ -1,10 +1,11 @@
+
 .flip {
     display: flex;
     height: 100vh;
     padding: 2em;
     padding-top: 10%;
     flex-direction: row;
-    background-color: grey;
+    background-color: rgb(250, 244, 244);
     justify-content: space-evenly;
 }
 .left-side, .right-side {
@@ -13,7 +14,11 @@
     width: 50%;
     height: 100%;
 }
-
+#blackimg{
+    background-image: url("../img/blackDeco.png");
+    background-position: bottom 20px left 1000px;
+    background-repeat: no-repeat;
+}
 .text-box {
     display: flex;
     width: 90%;
@@ -41,18 +46,33 @@
     position: relative;
     justify-content: space-between;
     flex-direction: column;
+    background-color: white;
 }
 
 .btn-container {
     display: flex;
     width: 90%;
-    justify-content: center;
+    justify-content: left;
 }
 .btn-container button {
     display: flex;
-    margin: 1em;
-    padding: 0.5em 1em 0.5em 1em ;
-    border-radius: 25px;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 15px 20px 15px 20px;
+    font-size: 1.3rem;
+    border-radius: 45px;
+    box-shadow: #121212 2px 5px 2px;;
+}
+
+#flipbut{
+    margin-left: 20px;
+    margin-right: 50px
+}
+
+#neutralbut{
+    margin-left: 5px;
 }
 
 #response-box {
@@ -80,6 +100,7 @@ button:focus {
     animation: btnClickedAni 0.2s;
     
 }
+
 
 @keyframes btnClickedAni {
     0% {
