@@ -23,6 +23,7 @@ body {
     position: absolute;
     width: 100vw;
     background-color: #f5f5f5;
+    overflow-x: hidden
 }
 p, ul {
     margin: 0;
