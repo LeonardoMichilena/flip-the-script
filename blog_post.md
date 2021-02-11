@@ -11,6 +11,22 @@ Here, you will find a deep dive into the process of building the app, the challe
 
 # Front-end
 
+After our first meeting we agreed on what each our roles in the project will be, and visualise, after some brainstorming, what our first MVP should aim for. Although I was following the back-end Web Dev learning path. We decided that I could take care of the front-end part of the project along with Luciana, our UI/UX designer. And since I had some previous experience and I love front-end, I was quite happy to do so.
+All my previous experience was mostly just me, coding. So I was happy to be part of a smart and easy-going team that effectively worked together on bringing results week by week.
+Once we defined that first MVP, we still had no idea about what it even should look like or how exactly it should work. I couldn’t start to code yet. So I started to learn a bit from our designer about all the research that should be done before even starting to design anything. I was helping with some ideas and questions that we used in order to get some feedback from potential users.
+Even though at the beginning our project was just an idea and seemed difficult for it to take form. Each of our team members worked towards making this idea the real and solid project that we now have.
+Once our data-science experts Leticia and Paula (one of the members who had to leave the project) got the core functionalities working in python, I started to code with Angular which I previously knew and it seemed just the right thing to do.
+After a couple of days I stopped and started all over. Since this is a project for and about learning. I decided that I wanted to try to code for the first time with Express, which is what I learnt on my track, so I could put to practise some of the recent acquired knowledge.
+Express is mostly used for building APIs and was fundamental for our project to work, and although It was taught in my back-end learning path, I used express only to code the front-end, because we already had Stephanie M as a our back-end lead who took care of transmitting the data back and forth the python and node apps, and to help me understand and fix the data flow whenever I had problems when creating a new functionality.
+Once I got right and practised all the basics about working with express as a front-end framework, I started to slowly make improvements to the code and apply new functionalities with the “magic” of HTML,CSS and Javascript working together.
+I like to spend my time trying out all kinds of different code, and our project gave me just the perfect challenges for me to explore many of the endless possibilities of javascript.
+The biggest challenges I had were:
+2. Show the response with a special highlighting format meanwhile conserving the original line breaks.
+3. Make the original text to stay in the box once the POST request was sent.
+4. The random not repeating changing color functionality
+5. Transforming the predictor simple form, into the pretty slideshow-like form from the designs
+6. Git -> I had to forget about the way I had been using git and Github for my personal projects, and learn to work as a part of a team.
+In a nutshell, this project has been a real taste of what working as a developer in a team feels like. And all I can say is: I’M READY FOR IT.
 
 # Back-end
 After our first meeting, discussing vaguely what an MVP could look like, it became apparent that NodeJS alone would not work. The data scientists are working in python and writing functions that are necessary for working with the web page in real time. This includes the dictionaries and converting functions that scan an article and flip the words. Meike informed us that in order for python functions to work with the NodeJS app, we would need to find a way to connect the two languages.

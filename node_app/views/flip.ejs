@@ -25,7 +25,10 @@
             <div class="right-side">
                 <h1>Your new script,</h1>
                 <div class="text-box right">
-                    <p id="response-box"></p>
+                    <p id="response-box" onclick="copyToClipboard()"></p>
+                    <div class="response-footer">
+                        <div><span>Converted words:<% if(response) {%> <%= flippedArray.length %><% } %></span><span class="d-none">The text was copied to your clipboard!</span></div>
+                    </div>
                 </div>
             </div>
             <% if(response) {%>
