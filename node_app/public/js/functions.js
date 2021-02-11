@@ -43,6 +43,13 @@ function initStatistics() {
     drawCanvas();
 
 }
+
+function initStatisticsSite() {
+    updateNavbarHTML();
+    updateFooterHTML();
+    drawCanvas();
+
+}
 function initPredictor() {
     updateNavbarHTML();
     updatePredictorHTML();
@@ -121,7 +128,7 @@ function initFlip() {
         flippedWordsArray = flippedWords.split(",");
 
         //Cleans empty spaces in the flippedWordsArray
-        cleanFLippedWordsArray();
+        cleanFlippedWordsArray();
 
         if (responseText) {
             addHTMLResponse();
@@ -134,14 +141,14 @@ function initFlip() {
  *  When separating the flippedWords by every ",", there were sometimes empty indexes in the 
  * array made when the split method finds two commas ",,", so that needed to be gone with this function
  */
-function cleanFLippedWordsArray() {
+function cleanFlippedWordsArray() {
     for (i = 0; i < flippedWordsArray.length; i++) {
         if (flippedWordsArray[i].length <= 1) flippedWordsArray.splice(i, 1);
     }
 }
 
 /**
- * The HTML that will appear as a response on the front end response's box
+ * The HTML that will appear as a response on the frontend response's box
  */
 function addHTMLResponse() {
 
@@ -152,7 +159,7 @@ function addHTMLResponse() {
 
     //Checks if first the i word from the responseArray is similar to any of the words in the flippedWordsArray
     for (l = 0; l < responseArrayPar.length; l++) {
-        // responseBox.innerHTML += `<p>`;
+        // responseBox.innerHTML += `<p> `;
         for (i = 0; i < responseArrayPar[l].length; i++) { //here the responseArrayPar[l] will start looping
             for (j = 0; j < flippedWordsArray.length; j++) { //here that word will loop to check every word inside the flippedWordsArray[j]
                 k = j; //Asings the j value to the k, to not lose it when finishing the loop
@@ -160,16 +167,15 @@ function addHTMLResponse() {
                 //Checks if the word is matching to execute the code
                 if (checkForMatchingWord(l, i, j)) {
                     // Applies special HTML and adds up to the innerHTML from the response box and then ends the loop
-                    responseBox.innerHTML += `<span style="color: ${currentThirdColor}"> ${responseArrayPar[l][i]} </span>`;
+                    responseBox.innerHTML += `<span style="color:${currentThirdColor}">${responseArrayPar[l][i]}</span>`;
                     break;
                 }
             }
             //When first loop (j) is finished, checks if the word was not a match and applies normal HTML and adds it up to the response's box
-            if (!checkForMatchingWord(l, i, k)) responseBox.innerHTML += `<span> ${responseArrayPar[l][i]} </span>`;
+            if (!checkForMatchingWord(l, i, k)) responseBox.innerHTML += `<span>${responseArrayPar[l][i]}</span>`;
         }
         responseBox.innerHTML += `<br>`;
     }
-
 }
 
 /**
@@ -345,8 +351,16 @@ function setNewColor() {
 }
 
 
+function copyToClipboard(){
+    let responseTextArea = document.getElementById('response-box');
+    responseTextArea.addEventListener('click', function(event) {
+        let copyTextArea = document.getElementById('response-box');
+        copyTextArea.focus();
+        copyTextArea.select();
+        document.execCommand('copy');
+    });
 
-
+}
 function convertHexToRGBA(hex, alpha) {
     let c;
     if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
@@ -365,8 +379,13 @@ function convertHexToRGBA(hex, alpha) {
 
 //variables
 
-let ctx;
-let myChart;
+let ctx1;
+let ctx2;
+let ctx3;
+
+let myChartDoughnut;
+let myChartBars;
+let myChartBars2;
 
 
 function drawCanvas() {
@@ -437,4 +456,40 @@ function drawCanvas() {
         }
     });
 
+
+    ctx3 = document.getElementById('myChartBars2').getContext('2d');
+
+    myChartBars2 = new Chart(ctx3, {
+        type: 'horizontalBar',
+        data: {
+            labels: ["Male personal pronouns","Masculine determiners","Female personal pronouns","Masculine nouns","Femenine determiners","Femenine nouns","Male titles","Adjectives with female connotation","Female titles","Adjectives with male connotation"],
+            datasets: [{
+                label: 'Ratio of words converted from all articles',
+                data: [3,2.1,1.5,1.1,0.9,0.9,0.3,0.1,0.1,0.02],
+                    backgroundColor: [
+                    currentMainColor,
+                    currentMainColor,
+                    convertHexToRGBA(currentSecondColor, 0.5),
+                    currentMainColor,
+                    convertHexToRGBA(currentSecondColor, 0.5),
+                    convertHexToRGBA(currentSecondColor, 0.5),
+                    currentMainColor,
+                    convertHexToRGBA(currentSecondColor, 0.5),
+                    convertHexToRGBA(currentSecondColor, 0.5),
+                    currentMainColor
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                }],
+                yAxes: [{
+                }],
+            },
+            animation: {
+                duration: 5000,
+            }
+        }
+    });
 } 

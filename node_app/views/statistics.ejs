@@ -1,10 +1,51 @@
+<link rel="stylesheet" href="/css/statistics.css">
 <%- include('partials/head') %>
     <title>Statistics</title>
-</head>
-<body onload="initStatistics()"></body>
-    <%- include('partials/navbar') %>
-    <%- include('partials/statistics') %>
-    <%- include('partials/footer') %>
+    </head>
 
-</body>
-</html>
+    <body onload="initStatisticsSite()"></body>
+    <%- include('partials/navbar') %>
+        <div class="statistics">
+            <div class="title">
+                <h1 style="color: ${currentMainColor};">Numbers,</h1>
+                <p style="color: ${currentMainColor};">numbers</p>
+            </div>
+            <div class="statistics-content">
+                <div class="blackDecoStats second" id="blackDecoStats">
+                    <img src="../img/blackDeco.png" alt="">
+                </div>
+
+                <div class="charts-area">
+                    <div class="canvas-container">
+                        <canvas id="myChartBars"></canvas>
+                    </div>
+                    <div class="canvas-container">
+                        <canvas id="myChartDoughnut"></canvas>
+                    </div>
+                    <div class="cavnas-container"><canvas id="myChartBars2"></canvas></div>
+                </div>
+                <div class="text-area">
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem qui iste, voluptas consequatur
+                            magnam cumque reiciendis sunt fuga non alias, quisquam dolore veniam labore? Porro ut odio
+                            et aliquid mollitia.</p>
+                    </div>
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem qui iste, voluptas consequatur
+                            magnam cumque reiciendis sunt fuga non alias, quisquam dolore veniam labore? Porro ut odio
+                            et aliquid mollitia.</p>
+                    </div>
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem qui iste, voluptas consequatur
+                            magnam cumque reiciendis sunt fuga non alias, quisquam dolore veniam labore? Porro ut odio
+                            et aliquid mollitia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include('partials/footer') %>
+
+            </body>
+
+            </html>

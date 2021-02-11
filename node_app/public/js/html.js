@@ -197,7 +197,7 @@ function updateAboutHTML() {
 
 
 function updatePredictorHTML() {
-    document.getElementById('predictor-section').style.backgroundColor = convertHexToRGBA(currentThirdColor, 0.5);
+    document.getElementById('predictor-section').style.backgroundColor = convertHexToRGBA(currentSecondColor, 0.5);
     document.getElementById('predictor-section').innerHTML = `
     <form id="predictor-form" method="POST">
 
@@ -324,6 +324,9 @@ function updateTeamHTML() {
     `;
 }
 
+function updateFlipHTML(){
+
+}
 function updateFooterHTML() {
     document.getElementById('footer').innerHTML = `
     <div class="footer-main-container" style="background-color: ${currentSecondColor}">
@@ -351,9 +354,9 @@ function updateFooterHTML() {
                 <li>
                     <h3>Information</h3>
                 </li>
-                <li><a href="/#about">About</a></li>
+                <li><a href="/about">About</a></li>
                 <li><a href="/contact-us">Contact Us</a></li>
-                <li><a href="/why-this-matters">Why This Matters</a></li>
+                <li><a href="/why-it-matters">Why This Matters</a></li>
             </ul>
         </div>
         <div class="actions">
@@ -369,9 +372,9 @@ function updateFooterHTML() {
     </div>
 </div>
 <div class="social-links" style="background-color: ${currentThirdColor}">
-    <a href="#"><img class="social-icons" src="/img/facebook" alt="Facebook Icon"></a>
-    <a href="#"><img class="social-icons" src="/img/instagram" alt="Instagram Icon"></a>
-    <a href="#"><img class="social-icons" src="/img/tumblr" alt="Tumblr Icon"></a>
+    <a href="#"><img class="social-icons" src="/img/facebook.png" alt="Facebook Icon"></a>
+    <a href="#"><img class="social-icons" src="/img/instagram.png" alt="Instagram Icon"></a>
+    <a href="#"><img class="social-icons" src="/img/tumblr.png" alt="Tumblr Icon"></a>
 </div>
     `;
 }
