@@ -4,7 +4,7 @@
     padding: 2em;
     padding-top: 10%;
     flex-direction: row;
-    background-color: grey;
+    background-color: rgba(233, 233, 233, 0.973);
     justify-content: space-evenly;
 }
 .left-side, .right-side {
@@ -50,9 +50,14 @@
 }
 .btn-container button {
     display: flex;
-    margin: 1em;
-    padding: 0.5em 1em 0.5em 1em ;
-    border-radius: 25px;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 50px 10px 50px;
+    margin-top: 1em;
+    font-size: 1rem;
+    border-radius: 45px;
+    box-shadow: #121212 2px 5px 2px;
 }
 
 #response-box {
