@@ -102,7 +102,14 @@ function initAboutUs(){
 function initFlip() {
 
     updateNavbarHTML();
-
+    function buttonColor1(){
+        document.getElementById("flipbut").style.backgroundColor = currentMainColor;
+    }
+    function buttonColor2(){
+        document.getElementById("neutralbut").style.backgroundColor = currentMainColor;
+    }
+    buttonColor1();
+    buttonColor2();
 
     //Checks if the response box is not empty and executes the code
     if (document.getElementById('response-text') != null) {
@@ -166,7 +173,7 @@ function addHTMLResponse() {
                 //Checks if the word is matching to execute the code
                 if (checkForMatchingWord(l, i, j)) {
                     // Applies special HTML and adds up to the innerHTML from the response box and then ends the loop
-                    responseBox.innerHTML += `<span style="color:${currentThirdColor}"> ${responseArrayPar[l][i]} </span>`;
+                    responseBox.innerHTML += `<span style="color:${currentThirdColor}; font-weight: bold;"> ${responseArrayPar[l][i]} </span>`;
                     break;
                 }
             }

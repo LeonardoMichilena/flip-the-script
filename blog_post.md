@@ -114,7 +114,7 @@ In early January I defined the three main attributes, which should be used for p
 
 *Author's Gender: 'male', 'female', 'none'*
 
-I used the Counter library, created another functions for text analysis and categorized the units, which were converted, grammatically into eight groups:
+I used the Counter library, created another functions for text analysis and categorized the units, which were converted, grammatically into ten groups:
 
 1. *'female personal pronoun (she)',*
 2. *'male personal pronoun (he)',*

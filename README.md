@@ -1,6 +1,5 @@
 # flip-the-script
 
-## About project
 ![logi](https://user-images.githubusercontent.com/60686512/106793744-20e58500-6658-11eb-91a0-866f6c89f1b1.png)
 
   
@@ -15,7 +14,7 @@ Our app presents itself as a text converter or, perhaps even, a text translator.
 As well as the text conversion, you can explore our statistics page, which includes a deep look into the data we collected from Dec 2020 to Feb 2021. In this data, we explore how gendered language is represented in news articles from various sources across the web.  
 
 ## Build Setup
-#build-setup
+#### This guide requires a BASH shell. If you are using Windows, please visit the documentation for all linked dependencies for Windows commands. 
 ### For the Flask app: 
 #### Working with [python3](https://realpython.com/installing-python/)
 #### Use package manager [pip](https://pip.pypa.io/en/stable/) to install [Flask](https://flask.palletsprojects.com/en/1.1.x/tutorial/), [numpy](https://numpy.org/), and [Sklearn](https://scikit-learn.org/stable/)
@@ -66,6 +65,7 @@ Use package manager [npm](https://www.npmjs.com/) to install:</br>
 npm install express axios ejs method-override
 ```
 ### To run the Express server:
+###### Make sure you are in the node_app directory.
 ```bash
 npm node index.js
 ```
@@ -75,3 +75,13 @@ Open two different consoles to get your servers running.
 ##### Refer to [Build setup](#Build-setup)</br>
 
 #### Now that your servers are running, open your browser to http://localhost:3000/
+
+
+## Usage
+Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+
+## Authors and acknowledgment
+Show your appreciation to those who have contributed to the project.
+
+## Project status
+If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
