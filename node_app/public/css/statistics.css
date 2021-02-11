@@ -33,6 +33,7 @@
     justify-content: space-evenly;
     width: 50%;
     padding: 1em;
+    padding-left: 3em;
 }
 .text-area p {
    margin: 1em;
