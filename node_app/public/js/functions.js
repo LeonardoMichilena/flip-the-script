@@ -351,12 +351,14 @@ function setNewColor() {
 
 
 function copyToClipboard(){
+    
+    document.getElementById("copied-element").innerText = "The text was copied!";
 
-    console.log("Copy to clipboard works!");
-    let copyTextArea = document.getElementById('response-text');
-    copyTextArea.focus();
-    copyTextArea.select();
-    document.execCommand('copy');
+    document.getElementById("copied-element").classList.toggle("v-hidden");
+
+
+   // document.getElementById("copied-element").classList.toggle("d-none");
+
 }
 
 

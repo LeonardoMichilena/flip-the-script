@@ -72,18 +72,19 @@
     display: flex;
     width: 100%;
     margin: 0;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-left: 0.5em;
-    background-color: lightgray;
+    background-color: rgba(211, 211, 211,0.7);
 }
 
 button:focus {
-
     outline:none;
     animation: btnClickedAni 0.2s;
-    
 }
 
+#copied-element {
+    transition: all 5s;
+}
 @keyframes btnClickedAni {
     0% {
         transform: translateY(0); 
