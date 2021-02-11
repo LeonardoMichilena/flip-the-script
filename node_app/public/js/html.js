@@ -292,32 +292,40 @@ function updateTeamHTML() {
         <h2>Behind <span style="color:${currentThirdColor};">Flip The Script</span></h2>
     </div>
     <div class="team-container">
-        <div class="team-member">
-            <img src="../img/person1.png" alt="">
+    <div class="row">
+        <div class="col">
+            <img src="../img/member3.png" alt="">
             <div class="description">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur distinctio reprehenderit vitae, asperiores ullam harum. Voluptate quibusdam explicabo et soluta tempora iure, optio eveniet eligendi illo similique quisquam nihil ipsa.</p>
-                <a href="">Check My Work</a>
+                <p>Hi!, I am Luciana, born in Bogota and based in Berlin. 
+                I am the designer of the team. I enjoy designing for users, but more than that I enjoy designing for people. Currently studying Computer Science and I have a passion for design, art and dance. Trying to save the world by redesigning it bit by bit. You can check out my work here: 
+                </p>
+                
             </div>
         </div>
-        <div class="team-member">
-            <img src="../img/person1.png" alt="">
+        
+        
+            <div class="col">
+            <img src="../img/member2.png" alt="">
             <div class="description">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur distinctio reprehenderit vitae, asperiores ullam harum. Voluptate quibusdam explicabo et soluta tempora iure, optio eveniet eligendi illo similique quisquam nihil ipsa.</p>
-                <a href="">Check My Work</a>
+                <p>Hello! I am Leticia, Data Scientist and Software Developer of the team. My academic background is Applied Linguistics and currently I'm an aspiring IT specialist living in Berlin.
+                It fascinates me how words shape people and the impact of language on our lives. In this digital age where our information diet is overwhelmed by the media, I want to create tools with which people can be aware of objectivity. When not programming, I enjoy hiking, blogging and doing kusudamas. You can see my portfolio on:</p>
+                
+            </div>
+            </div>
+        
+            <div class="col">
+            <img src="../img/member1.png" alt="">
+            <div class="description">
+                <p>Hello! I am Stephanie and am currently studying software development. I am passionate about broadening the world of tech to be more inclusive and available for everyone. I also believe that tech is a force that is changing society and want to use it for positive change and to give back to communities.</p>
+                
             </div>
         </div>
-        <div class="team-member">
-            <img src="../img/person1.png" alt="">
+        <div class="col">
+            <img src="../img/member3.png" alt="">
             <div class="description">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur distinctio reprehenderit vitae, asperiores ullam harum. Voluptate quibusdam explicabo et soluta tempora iure, optio eveniet eligendi illo similique quisquam nihil ipsa.</p>
+                <p>Hi! I am Leo, the front-end developer of the team.</p>
                 <a href="">Check My Work</a>
             </div>
-        </div>
-        <div class="team-member">
-            <img src="../img/person1.png" alt="">
-            <div class="description">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur distinctio reprehenderit vitae, asperiores ullam harum. Voluptate quibusdam explicabo et soluta tempora iure, optio eveniet eligendi illo similique quisquam nihil ipsa.</p>
-                <a href="">Check My Work</a>
             </div>
         </div>
     </div>
