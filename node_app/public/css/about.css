@@ -1,9 +1,4 @@
-body {
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-}
-    
+  
 .about {
     display: flex;
     height: fit-content;
@@ -35,13 +30,23 @@ body {
     font-family: "Sarabun", sans-serif;
     padding:5px 3em 5px 3em;
 }
-
+.text-contain{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 50%;
+    padding-top: 1em;
+    
+}
 .text-box.two {
     display: flex;
     width: 40%;
     font-size: 0.7rem;
+    margin: auto;
     flex-direction: column;  
     align-items: center;
+    justify-content: left;
 }
 
 .btn-start {

@@ -159,10 +159,12 @@ function updateStatisticsHTML() {
             <canvas id="myChartBars"></canvas>
         </div>
         <div class="text-area">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem perspiciatis at labore doloremque ex in consectetur voluptate eligendi sint distinctio illo quaerat incidunt, dolore vel repellendus aliquid voluptatibus saepe ullam.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis rerum quam est recusandae? Ducimus at nobis sapiente quaerat, quam rerum laborum temporibus ea explicabo a tempora! Dolor sequi quae quod.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis rerum quam est recusandae? Ducimus at nobis sapiente quaerat, quam rerum laborum temporibus ea explicabo a tempora! Dolor sequi quae quod.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis rerum quam est recusandae? Ducimus at nobis sapiente quaerat, quam rerum laborum temporibus ea explicabo a tempora! Dolor sequi quae quod.</p>
+            <p>Our data scientist Leti conducted a research analysing different articles applying our gender neutralizer. She found out that 65% of the gendered words converted were male. The biggest part of it being male personal pronouns, followed by male determiners. </br>
+        
+            The research was made with 270  different articles from 12 different sources. </br>
+            
+            Do you want to check out more numbers?
+            
             <a class="btn-learn-more" style="background-color: ${currentMainColor};" href="/statistics">Learn More</a>
         </div>
     </div>  
@@ -180,14 +182,15 @@ function updateAboutHTML() {
     <h2 id="title1">We believe, </h2>
     <h2 id="title2"> we can all make change <span style="color: ${currentMainColor};"> happen.<span></h2>
         <link rel="stylesheet" href="/css/about.css">
-            
-        <div class="text-box two">
+          
+        <div id="text-box two" class="text-contain">
 
             <p>We are Stephanie, Leticia, Leonardo and Luciana, a team of four motivated and engaged participants of TechLabs Berlin. We started Flip The Script because we recognized an issue in the way society sees gender.The way language works in our conscious and subconscious mind is often underestimated, and so is the way it affects how we perceive gender. 38% of the world’s population speaks a gendered language as a native speaker. World Bank economist Owen Ozier delivered, in 2019, a crash course on linguistics and its relationship to gender norms. According to Ozier, existing research has already hinted at a link between grammar and gender. Recent experiments in political science have shown that gendered languages that classify nouns as female, male, or neutral are associated with more regressive gender attitudes. How is it, then, that even though English, a language spoken by 1.5 billion people, isn't a gendered language, yet is highly pointed for being a biased language? The reason is, grammatical gender is only one among many of the linguistic structures we use that influences the way we see our society through a gendered lens.</p>
             <p id="hidden-text1" class="d-none">Research made by Janet A. Sniezek and Christine H. Jazwinski in the Journal of Applied Social Psychology found that “generic” masculine nouns, pronouns, and adjectives function similarly to gender specific masculine terms. That certain grammatically “neutral” terms are in fact rated as relatively masculine. This evidence demonstrates that the use of “generic” masculine and even other grammatically neutral terms in effect serves to exclude women and not binary people from the English language. This can be observed when an identifying noun, such as policemen, is used to identify a group of police officers. In effect, anyone who does not identify as a man is erased from the statement. Another example can be observed when a gender neutral word, such as scientist, is perceived with a male connotation. As a result, we often hear and read about "female scientists", as though scientists are all men and women are just an exception. The resulting masculine bias in our language reflects and reinforces the pattern that the male form is the default.</p>
             <p id="hidden-text2" class="d-none">But we want to change this. And we understand that we can all create change because we all use language. Flip The Script is aimed to be used as a tool for change and education about our language use by offering users the option to consciously decide for a fairer language. Furthermore, we want to offer visitors the option to learn more about language use and patters and why it is important. You can find, on the statistics page, our results from collecting and analyzing news articles from various sources across the web.</p>
             <a class="btn-start" id="contact-button" style="background-color: ${currentMainColor};" href="/contact">Contact Us</a>
             
+        
         </div>
         <div id="about-people">
         ${people1SVG()}
@@ -197,7 +200,7 @@ function updateAboutHTML() {
 
 
 function updatePredictorHTML() {
-    document.getElementById('predictor-section').style.backgroundColor = convertHexToRGBA(currentThirdColor, 0.5);
+    document.getElementById('predictor-section').style.backgroundColor = convertHexToRGBA(currentSecondColor, 0.5);
     document.getElementById('predictor-section').innerHTML = `
     <form id="predictor-form" method="POST">
 
@@ -292,38 +295,49 @@ function updateTeamHTML() {
         <h2>Behind <span style="color:${currentThirdColor};">Flip The Script</span></h2>
     </div>
     <div class="team-container">
-        <div class="team-member">
-            <img src="../img/person1.png" alt="">
+    <div class="row">
+        <div class="col">
+            <img src="../img/member3.png" alt="">
             <div class="description">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur distinctio reprehenderit vitae, asperiores ullam harum. Voluptate quibusdam explicabo et soluta tempora iure, optio eveniet eligendi illo similique quisquam nihil ipsa.</p>
-                <a href="">Check My Work</a>
+                <p>Hi!, I am Luciana, born in Bogota and based in Berlin. 
+                I am the designer of the team. I enjoy designing for users, but more than that I enjoy designing for people. Currently studying Computer Science and I have a passion for design, art and dance. Trying to save the world by redesigning it bit by bit. You can check out my work here: 
+                </p>
+                
             </div>
         </div>
-        <div class="team-member">
-            <img src="../img/person1.png" alt="">
+        
+        
+            <div class="col">
+            <img src="../img/member2.png" alt="">
             <div class="description">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur distinctio reprehenderit vitae, asperiores ullam harum. Voluptate quibusdam explicabo et soluta tempora iure, optio eveniet eligendi illo similique quisquam nihil ipsa.</p>
-                <a href="">Check My Work</a>
+                <p>Hello! I am Leticia, Data Scientist and Software Developer of the team. My academic background is Applied Linguistics and currently I'm an aspiring IT specialist living in Berlin.
+                It fascinates me how words shape people and the impact of language on our lives. In this digital age where our information diet is overwhelmed by the media, I want to create tools with which people can be aware of objectivity. When not programming, I enjoy hiking, blogging and doing kusudamas. You can see my portfolio on:</p>
+                
+            </div>
+            </div>
+        
+            <div class="col">
+            <img src="../img/member1.png" alt="">
+            <div class="description">
+                <p>Hello! I am Stephanie and am currently studying software development. I am passionate about broadening the world of tech to be more inclusive and available for everyone. I also believe that tech is a force that is changing society and want to use it for positive change and to give back to communities.</p>
+                
             </div>
         </div>
-        <div class="team-member">
-            <img src="../img/person1.png" alt="">
+        <div class="col">
+            <img src="../img/member3.png" alt="">
             <div class="description">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur distinctio reprehenderit vitae, asperiores ullam harum. Voluptate quibusdam explicabo et soluta tempora iure, optio eveniet eligendi illo similique quisquam nihil ipsa.</p>
+                <p>Hi! I am Leo, the front-end developer of the team.</p>
                 <a href="">Check My Work</a>
             </div>
-        </div>
-        <div class="team-member">
-            <img src="../img/person1.png" alt="">
-            <div class="description">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur distinctio reprehenderit vitae, asperiores ullam harum. Voluptate quibusdam explicabo et soluta tempora iure, optio eveniet eligendi illo similique quisquam nihil ipsa.</p>
-                <a href="">Check My Work</a>
             </div>
         </div>
     </div>
     `;
 }
 
+function updateFlipHTML(){
+
+}
 function updateFooterHTML() {
     document.getElementById('footer').innerHTML = `
     <div class="footer-main-container" style="background-color: ${currentSecondColor}">
@@ -351,9 +365,9 @@ function updateFooterHTML() {
                 <li>
                     <h3>Information</h3>
                 </li>
-                <li><a href="/#about">About</a></li>
+                <li><a href="/about">About</a></li>
                 <li><a href="/contact-us">Contact Us</a></li>
-                <li><a href="/why-this-matters">Why This Matters</a></li>
+                <li><a href="/why-it-matters">Why This Matters</a></li>
             </ul>
         </div>
         <div class="actions">
@@ -369,9 +383,9 @@ function updateFooterHTML() {
     </div>
 </div>
 <div class="social-links" style="background-color: ${currentThirdColor}">
-    <a href="#"><img class="social-icons" src="/img/facebook" alt="Facebook Icon"></a>
-    <a href="#"><img class="social-icons" src="/img/instagram" alt="Instagram Icon"></a>
-    <a href="#"><img class="social-icons" src="/img/tumblr" alt="Tumblr Icon"></a>
+    <a href="#"><img class="social-icons" src="/img/facebook.png" alt="Facebook Icon"></a>
+    <a href="#"><img class="social-icons" src="/img/instagram.png" alt="Instagram Icon"></a>
+    <a href="#"><img class="social-icons" src="/img/tumblr.png" alt="Tumblr Icon"></a>
 </div>
     `;
 }
