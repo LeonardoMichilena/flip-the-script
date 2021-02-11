@@ -1,3 +1,4 @@
+
 .flip {
     display: flex;
     height: 100vh;
@@ -13,7 +14,11 @@
     width: 50%;
     height: 100%;
 }
-
+#blackimg{
+    background-image: url("../img/blackDeco.png");
+    background-position: bottom 20px left 1000px;
+    background-repeat: no-repeat;
+}
 .text-box {
     display: flex;
     width: 90%;
@@ -95,6 +100,7 @@ button:focus {
     animation: btnClickedAni 0.2s;
     
 }
+
 
 @keyframes btnClickedAni {
     0% {

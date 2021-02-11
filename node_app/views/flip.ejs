@@ -4,7 +4,7 @@
 </head>
 <body onload="initFlip()">
     <%- include('partials/navbar') %>
-        <section class="flip">
+            <section class="flip" id="blackimg">
             <div class="left-side">
                 <h1>Welcome,</h1>
                 <form method="POST" id="form-flip">
@@ -12,10 +12,6 @@
                         <textarea class="text-area" id="newArticle" type="text" name="article"
                             placeholder="Input your text here"><%if(response){%><%=firstArticle%><%}%></textarea>
                     </div>
-                    <!-- <div class="btn-container">
-                        <button name="reverse" onclick="toggleConverter('reverse')">Flip to Opposite</button>
-                        <button name="neutral" onclick="toggleConverter('neutral')">Flip to Gender Neutral</button>
-                    </div> -->
                     <div class="btn-container">
                         <button id="flipbut" type="submit" name="reverse" formaction="/articles">Flip to Opposite</button>
                         <button id="neutralbut" type="submit" name="neutral" formaction="/neutralarticle">Flip to Gender Neutral</button>
