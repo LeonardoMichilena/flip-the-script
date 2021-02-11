@@ -174,7 +174,7 @@ function addHTMLResponse() {
                 //Checks if the word is matching to execute the code
                 if (checkForMatchingWord(l, i, j)) {
                     // Applies special HTML and adds up to the innerHTML from the response box and then ends the loop
-                    responseBox.innerHTML += `<span style="color:${currentThirdColor}"> ${responseArrayPar[l][i]} </span>`;
+                    responseBox.innerHTML += `<span style="color:${currentThirdColor}; font-weight: bold;"> ${responseArrayPar[l][i]} </span>`;
                     break;
                 }
             }
