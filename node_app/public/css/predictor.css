@@ -99,10 +99,8 @@
 }
 
 button:focus {
-
     outline:none;
     animation: btnClickedAni 0.5s;
-    
 }
 
 @keyframes btnClickedAni {

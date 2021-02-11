@@ -113,7 +113,6 @@ function initFlip() {
 
     //Checks if the response box is not empty and executes the code
     if (document.getElementById('response-text') != null) {
-        console.log(document.getElementById('response-text'));
         //Gets the original text from the Post request response (firstArticle)
         originalText = document.getElementById('newArticle').value;
 
@@ -359,15 +358,17 @@ function setNewColor() {
 
 
 function copyToClipboard(){
-    let responseTextArea = document.getElementById('response-box');
-    responseTextArea.addEventListener('click', function(event) {
-        let copyTextArea = document.getElementById('response-box');
-        copyTextArea.focus();
-        copyTextArea.select();
-        document.execCommand('copy');
-    });
+    
+    document.getElementById("copied-element").innerText = "The text was copied!";
+
+    document.getElementById("copied-element").classList.toggle("v-hidden");
+
+
+   // document.getElementById("copied-element").classList.toggle("d-none");
 
 }
+
+
 function convertHexToRGBA(hex, alpha) {
     let c;
     if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
