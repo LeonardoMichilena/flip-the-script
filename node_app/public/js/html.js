@@ -100,9 +100,11 @@ function insertSLideshowHTML() {
                     <div class="quotes end">”</div>
                 </div>
                 <div>
-                    <h4>7 Male pronouns</h4>
-                    <h4><span style="color: ${currentThirdColor};">1</span> Neutral pronoun</h4>
-                    <h4><span style="color: ${currentThirdColor};">0</span> Female pronouns</h4>
+
+                <h4>7 Male pronouns</h4>
+                <h4><span style="color: ${currentThirdColor};">1</span> Neutral pronoun</h4>
+                <h4><span style="color: ${currentThirdColor};">0</span> Female pronouns</h4>
+
                 </div>
             </li>
             <li class="slide five" onclick="nextSlide()">
