@@ -24,6 +24,7 @@
 }
 #newArticle {
     display: flex;
+    padding: 1em;
     width: 100%;
     height: 100%;
     outline: none;
@@ -55,10 +56,10 @@
 }
 
 #response-box {
-    display: flex;
     height: 100%;
     resize: none;
     cursor: pointer;
+    padding: 1em;
 }
 .copy-btn {
     border: none;

@@ -167,12 +167,12 @@ function addHTMLResponse() {
                 //Checks if the word is matching to execute the code
                 if (checkForMatchingWord(l, i, j)) {
                     // Applies special HTML and adds up to the innerHTML from the response box and then ends the loop
-                    responseBox.innerHTML += `<span style="color:${currentThirdColor}">${responseArrayPar[l][i]}</span>`;
+                    responseBox.innerHTML += `<span style="color:${currentThirdColor}"> ${responseArrayPar[l][i]} </span>`;
                     break;
                 }
             }
             //When first loop (j) is finished, checks if the word was not a match and applies normal HTML and adds it up to the response's box
-            if (!checkForMatchingWord(l, i, k)) responseBox.innerHTML += `<span>${responseArrayPar[l][i]}</span>`;
+            if (!checkForMatchingWord(l, i, k)) responseBox.innerHTML += `<span> ${responseArrayPar[l][i]} </span>`;
         }
         responseBox.innerHTML += `<br>`;
     }
@@ -457,39 +457,42 @@ function drawCanvas() {
     });
 
 
-    ctx3 = document.getElementById('myChartBars2').getContext('2d');
+    if(document.location.pathname == "/statistics") {
 
-    myChartBars2 = new Chart(ctx3, {
-        type: 'horizontalBar',
-        data: {
-            labels: ["Male personal pronouns","Masculine determiners","Female personal pronouns","Masculine nouns","Femenine determiners","Femenine nouns","Male titles","Adjectives with female connotation","Female titles","Adjectives with male connotation"],
-            datasets: [{
-                label: 'Ratio of words converted from all articles',
-                data: [3,2.1,1.5,1.1,0.9,0.9,0.3,0.1,0.1,0.02],
-                    backgroundColor: [
-                    currentMainColor,
-                    currentMainColor,
-                    convertHexToRGBA(currentSecondColor, 0.5),
-                    currentMainColor,
-                    convertHexToRGBA(currentSecondColor, 0.5),
-                    convertHexToRGBA(currentSecondColor, 0.5),
-                    currentMainColor,
-                    convertHexToRGBA(currentSecondColor, 0.5),
-                    convertHexToRGBA(currentSecondColor, 0.5),
-                    currentMainColor
-                ]
-            }]
-        },
-        options: {
-            scales: {
-                xAxes: [{
-                }],
-                yAxes: [{
-                }],
+        ctx3 = document.getElementById('myChartBars2').getContext('2d');
+
+        myChartBars2 = new Chart(ctx3, {
+            type: 'horizontalBar',
+            data: {
+                labels: ["Male personal pronouns","Masculine determiners","Female personal pronouns","Masculine nouns","Femenine determiners","Femenine nouns","Male titles","Adjectives with female connotation","Female titles","Adjectives with male connotation"],
+                datasets: [{
+                    label: 'Ratio of words converted from all articles',
+                    data: [3,2.1,1.5,1.1,0.9,0.9,0.3,0.1,0.1,0.02],
+                        backgroundColor: [
+                        currentMainColor,
+                        currentMainColor,
+                        convertHexToRGBA(currentSecondColor, 0.5),
+                        currentMainColor,
+                        convertHexToRGBA(currentSecondColor, 0.5),
+                        convertHexToRGBA(currentSecondColor, 0.5),
+                        currentMainColor,
+                        convertHexToRGBA(currentSecondColor, 0.5),
+                        convertHexToRGBA(currentSecondColor, 0.5),
+                        currentMainColor
+                    ]
+                }]
             },
-            animation: {
-                duration: 5000,
+            options: {
+                scales: {
+                    xAxes: [{
+                    }],
+                    yAxes: [{
+                    }],
+                },
+                animation: {
+                    duration: 5000,
+                }
             }
-        }
-    });
+        });
+    } 
 } 
