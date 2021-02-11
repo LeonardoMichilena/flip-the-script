@@ -112,7 +112,6 @@ function initFlip() {
     buttonColor2();
     //Checks if the response box is not empty and executes the code
     if (document.getElementById('response-text') != null) {
-        console.log(document.getElementById('response-text'));
         //Gets the original text from the Post request response (firstArticle)
         originalText = document.getElementById('newArticle').value;
 
@@ -358,15 +357,15 @@ function setNewColor() {
 
 
 function copyToClipboard(){
-    let responseTextArea = document.getElementById('response-box');
-    responseTextArea.addEventListener('click', function(event) {
-        let copyTextArea = document.getElementById('response-box');
-        copyTextArea.focus();
-        copyTextArea.select();
-        document.execCommand('copy');
-    });
 
+    console.log("Copy to clipboard works!");
+    let copyTextArea = document.getElementById('response-text');
+    copyTextArea.focus();
+    copyTextArea.select();
+    document.execCommand('copy');
 }
+
+
 function convertHexToRGBA(hex, alpha) {
     let c;
     if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {

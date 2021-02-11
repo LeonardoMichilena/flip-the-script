@@ -39,6 +39,8 @@
 .text-area, .text-box.right {
     display: flex;
     position: relative;
+    height: fit-content;
+    min-height: 50vh;
     justify-content: space-between;
     flex-direction: column;
 }
@@ -64,6 +66,7 @@
     height: 100%;
     resize: none;
     cursor: pointer;
+    overflow: scroll;
     padding: 1em;
 }
 .copy-btn {
@@ -74,7 +77,7 @@
     display: flex;
     width: 100%;
     margin: 0;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-left: 0.5em;
     background-color: lightgray;
 }
