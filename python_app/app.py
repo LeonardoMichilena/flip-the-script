@@ -16,9 +16,7 @@ def jsInfo():
     data = json.loads(request.data)
     textData = data['article']
     text=pre_gender_converter(textData)
-    print(text)
     text_converted = pron_converter(text)
-    print(text_converted)
     return(text_converted)
 
   
@@ -38,10 +36,9 @@ def statistics():
     print(stats)
     statArray = [int(numeric_string) for numeric_string in stats]
     print(statArray)
-    #return("hello")
     import numpy as np
     import pickle
-    #from app import stats
+    
 
     filename = 'finalized_model.sav'
 
