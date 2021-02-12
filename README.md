@@ -78,10 +78,19 @@ Open two different consoles to get your servers running.
 
 
 ## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+Our text translator will convert your text in two ways. </br>
+1. Gender binary=> from male to female, female to male. </br>
+2. Gender neutral => gender neutral inclusive language. </br
+<br>
+![textTranslator](https://user-images.githubusercontent.com/60686512/107754203-70474780-6d21-11eb-8525-6b46b2940259.PNG)
 
 ## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+1. UX: [Luciana Wills]
+2. DS: [Leticia Valladares](https://github.com/lavf)
+3. WD: [Stephanie Mennear](https://github.com/Ostend)
+4. WD: [Leo Michilena](https://github.com/LeonardoMichilena)
 
 ## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+We would all like to continue working on the project. 
+We would like to build our database, extend our language dictionaries, and add features such as a google extension. 
+Any help for collecting data and collaboration is welcome!
