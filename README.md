@@ -80,7 +80,7 @@ Open two different consoles to get your servers running.
 ## Usage
 Our text translator will convert your text in two ways. </br>
 1. Gender binary=> from male to female, female to male. </br>
-2. Gender neutral => gender neutral inclusive language. </br
+2. Gender neutral => gender neutral inclusive language. </br>
 </br>
 ![textTranslator](https://user-images.githubusercontent.com/60686512/107754203-70474780-6d21-11eb-8525-6b46b2940259.PNG)
 
