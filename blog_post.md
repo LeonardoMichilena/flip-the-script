@@ -88,18 +88,20 @@ Next, it is important to convert the data from JSON with json.loads and continui
 ## Other insights of the project phase
 One of the major challenges that I came across what figuring out how to extract data from the python functions. At first, I nested all of the functions in the HTTP routes located in the app.py file. As the functions and dictionaries became more extensive, it became clear that the functions needed to reside in an python file outside of the app.py file that was making the HTTP calls. My challenge here was learning how to put the functions in a new file, and learning how to link the two python files together, as well as extract the correct data for sending to the Express app. </br>
 - Image one: how to import certain functions from an outside python file to another.
-- Image two: the route for the gender_converter. Here, from the files called gender_function.py, there are two functions that are imported into app.py. The data from the Express app is passed through each function, going from data, to textData, and so on, to finally be returned as text_converted to the Express app. You can refer to the [final working version](# Final-working-version) to explore what happens to the data.
+- Image two: the route for the gender_converter. Here, from the files called gender_function.py, there are two functions that are imported into app.py. The data from the Express app is passed through each function, going from data, to textData, and so on, to finally be returned as text_converted to the Express app. You can refer to the [final working version](#final-working-version) to explore what happens to the data.
 
 ![app_pyimports](https://user-images.githubusercontent.com/60686512/107756991-4132d500-6d25-11eb-89b9-9465ca81ff1f.PNG)
 ![httpcall](https://user-images.githubusercontent.com/60686512/107757189-85be7080-6d25-11eb-8d32-cc060bc6f962.PNG)
 
 </br>
 ### Machine learning module
+
 Finally, my last challenge was figuring out how to pass data from user to the machine module and back. Leticia set up the module to accept an array of numbers [1, 1, 1], for example. Three critereas: the news source, the topic, and the authors gender. My challenge was to create a form to return numbers that matched Leticia's machine module. I created a form that returned numbered values (which can be seen in the node_app/public/js/html.js file, under the updatePredictorResultHTML function). </br>
 I was able to send to flask an array of three numbers. The challenged I encountered, was that because the array went through the json.loads function, it was turned into a string, instead of array of numbers. So, the array because ['1', '1', '1'], and the machine would not accept this. </br>
 After some research I discovered how to transform an array of strings to an array of numbers in python.
 - Image one: You can see in the image below, on line 37, the function that casts the variables to integers. This was challenging to figure out the logic and syntax, but again, looking back, it looks very simple. </br>
 - Image two: The path in the Express app, that sends an array of data from the user submitted form to Flask. After Flask returns the response from the machine learning module, the response is sent to its corresponding EJS file.
+
 ![arraypython](https://user-images.githubusercontent.com/60686512/107758578-61639380-6d27-11eb-96a2-7f3272a1cfa1.PNG)
 ![indexjsmachine](https://user-images.githubusercontent.com/60686512/107758924-d9ca5480-6d27-11eb-8fe1-80d5143ea9e0.PNG)
 
