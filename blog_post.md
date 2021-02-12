@@ -50,7 +50,7 @@ It was during this challenge that I learned about python's request library and h
 The process was challenging and the resulting code was messy, but I was able to set up a working app in which a user could submit text in a form and it would return to them converted. Below are some images of the first versions of the app.
 You will see, that my API calls are circular and I am not using GET and POST requests correctly.
 
-## First working version:
+#### First working version:
 
 Below are four images that show the (incorrect) use of REST APIs. While they did work for its intended purpose, they are redundant, circular, and incorrect.
 
@@ -66,7 +66,7 @@ Below are four images that show the (incorrect) use of REST APIs. While they did
 
   ![NodeReverse1post](https://user-images.githubusercontent.com/60686512/107198595-930def00-69f5-11eb-9e65-0ab49ec97080.PNG)
 
-## Final working version:
+#### Final working version:
 
 After I received feedback that the GET and POST requests were not correct, I spent some more time reviewing documentation for Flask, NodeJS, and Axios, as well as review online tutorials I could find on REST routes.  Below are some images of the final version, which will show the corrected routes.    
 
@@ -85,7 +85,7 @@ Next, it is important to convert the data from JSON with json.loads and continui
 
   ![flipFUnction](https://user-images.githubusercontent.com/60686512/107198571-8e493b00-69f5-11eb-84f6-01702b5c77d9.PNG)
 
-## Other insights of the project phase
+#### Other insights of the project phase
 One of the major challenges that I came across what figuring out how to extract data from the python functions. At first, I nested all of the functions in the HTTP routes located in the app.py file. As the functions and dictionaries became more extensive, it became clear that the functions needed to reside in an python file outside of the app.py file that was making the HTTP calls. My challenge here was learning how to put the functions in a new file, and learning how to link the two python files together, as well as extract the correct data for sending to the Express app. </br>
 - Image one: how to import certain functions from an outside python file to another.
 - Image two: the route for the gender_converter. Here, from the files called gender_function.py, there are two functions that are imported into app.py. The data from the Express app is passed through each function, going from data, to textData, and so on, to finally be returned as text_converted to the Express app. You can refer to the [final working version](#final-working-version) to explore what happens to the data.
@@ -93,8 +93,8 @@ One of the major challenges that I came across what figuring out how to extract 
 ![app_pyimports](https://user-images.githubusercontent.com/60686512/107756991-4132d500-6d25-11eb-89b9-9465ca81ff1f.PNG)
 ![httpcall](https://user-images.githubusercontent.com/60686512/107757189-85be7080-6d25-11eb-8d32-cc060bc6f962.PNG)
 
-</br>
-### Machine learning module
+
+#### Machine learning module
 
 Finally, my last challenge was figuring out how to pass data from user to the machine module and back. Leticia set up the module to accept an array of numbers [1, 1, 1], for example. Three critereas: the news source, the topic, and the authors gender. My challenge was to create a form to return numbers that matched Leticia's machine module. I created a form that returned numbered values (which can be seen in the node_app/public/js/html.js file, under the updatePredictorResultHTML function). </br>
 I was able to send to flask an array of three numbers. The challenged I encountered, was that because the array went through the json.loads function, it was turned into a string, instead of array of numbers. So, the array because ['1', '1', '1'], and the machine would not accept this. </br>
@@ -105,10 +105,10 @@ After some research I discovered how to transform an array of strings to an arra
 ![arraypython](https://user-images.githubusercontent.com/60686512/107758578-61639380-6d27-11eb-96a2-7f3272a1cfa1.PNG)
 ![indexjsmachine](https://user-images.githubusercontent.com/60686512/107758924-d9ca5480-6d27-11eb-8fe1-80d5143ea9e0.PNG)
 
-## Side notes
+#### Side notes
 Because we lost a DS member of our team, I helped Leticia collect the articles for building our dataset. I started to organize the data into different tables, in hopes to collect more insights into the data for our users. I used SQL in Excel to structure and filter the data. Unfortunately, due to our time constraints and my lack of knowledge in data science, we were not able to use the data that I collected. This data includes all articles filtered by male versus female authors, organized by topics, and defined by what gender the author is writing about. In the future, as we build our data sets, we will also build our data visuals and statistics, to further explore how gender is represented in media.
 
-## Final thoughts
+#### Final thoughts
 Looking at this code and where I am now with my understanding of it, I am in a much different mindset than when I began. Through this process, I was able to grasp the concept of REST API's and how to pass data through the response and request objects. I am also very thankful to have been able to experiment with python and Flask, as this helped reinforce the different types of REST API frameworks and how to extract and send data from one to the other.
 
 # Data Science
