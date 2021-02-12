@@ -108,8 +108,13 @@ function initFlip() {
     function buttonColor2(){
         document.getElementById("neutralbut").style.backgroundColor = currentMainColor;
     }
+    function flipWordColor(){
+        document.getElementById("flipWord").style.color = currentMainColor;
+        document.getElementById("flipWord").style.fontWeight = "bold";
+    }
     buttonColor1();
     buttonColor2();
+    flipWordColor();
 
     //Checks if the response box is not empty and executes the code
     if (document.getElementById('response-text') != null) {
