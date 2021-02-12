@@ -16,16 +16,16 @@ All my previous experience was mostly just me, coding. So I was happy to be part
 Once we defined that first MVP, we still had no idea about what it even should look like or how exactly it should work. I couldn’t start to code yet. So I started to learn a bit from our designer about all the research that should be done before even starting to design anything. I was helping with some ideas and questions that we used in order to get some feedback from potential users.
 Even though at the beginning our project was just an idea and seemed difficult for it to take form. Each of our team members worked towards making this idea the real and solid project that we now have.
 Once our data-science experts Leticia and Paula (one of the members who had to leave the project) got the core functionalities working in python, I started to code with Angular which I previously knew and it seemed just the right thing to do.
-After a couple of days I stopped and started all over. Since this is a project for and about learning. I decided that I wanted to try to code for the first time with Express, which is what I learnt on my track, so I could put to practise some of the recent acquired knowledge.
+After a couple of days I stopped and started all over. Since this is a project for and about learning. I decided that I wanted to try to code for the first time with Express, which is what I learnt on my track, so I could put to practice some of the recent acquired knowledge.
 Express is mostly used for building APIs and was fundamental for our project to work, and although It was taught in my back-end learning path, I used express only to code the front-end, because we already had Stephanie M as a our back-end lead who took care of transmitting the data back and forth the python and node apps, and to help me understand and fix the data flow whenever I had problems when creating a new functionality.
-Once I got right and practised all the basics about working with express as a front-end framework, I started to slowly make improvements to the code and apply new functionalities with the “magic” of HTML,CSS and Javascript working together.
-I like to spend my time trying out all kinds of different code, and our project gave me just the perfect challenges for me to explore many of the endless possibilities of javascript.
+Once I got right and practiced all the basics about working with express as a front-end framework, I started to slowly make improvements to the code and apply new functionalities with the “magic” of HTML,CSS and JavaScript working together.
+I like to spend my time trying out all kinds of different code, and our project gave me just the perfect challenges for me to explore many of the endless possibilities of JavaScript.
 The biggest challenges I had were:
 2. Show the response with a special highlighting format meanwhile conserving the original line breaks.
 3. Make the original text to stay in the box once the POST request was sent.
 4. The random not repeating changing color functionality
 5. Transforming the predictor simple form, into the pretty slideshow-like form from the designs
-6. Git -> I had to forget about the way I had been using git and Github for my personal projects, and learn to work as a part of a team.
+6. Git -> I had to forget about the way I had been using git and GitHub for my personal projects, and learn to work as a part of a team.
 In a nutshell, this project has been a real taste of what working as a developer in a team feels like. And all I can say is: I’M READY FOR IT.
 
 # Back-end
@@ -85,14 +85,34 @@ Next, it is important to convert the data from JSON with json.loads and continui
 
   ![flipFUnction](https://user-images.githubusercontent.com/60686512/107198571-8e493b00-69f5-11eb-84f6-01702b5c77d9.PNG)
 
+## Other insights of the project phase
+One of the major challenges that I came across what figuring out how to extract data from the python functions. At first, I nested all of the functions in the HTTP routes located in the app.py file. As the functions and dictionaries became more extensive, it became clear that the functions needed to reside in an python file outside of the app.py file that was making the HTTP calls. My challenge here was learning how to put the functions in a new file, and learning how to link the two python files together, as well as extract the correct data for sending to the Express app. </br>
+- Image one: how to import certain functions from an outside python file to another.
+- Image two: the route for the gender_converter. Here, from the files called gender_function.py, there are two functions that are imported into app.py. The data from the Express app is passed through each function, going from data, to textData, and so on, to finally be returned as text_converted to the Express app. You can refer to the [final working version](# Final-working-version) to explore what happens to the data.
 
+![app_pyimports](https://user-images.githubusercontent.com/60686512/107756991-4132d500-6d25-11eb-89b9-9465ca81ff1f.PNG)
+![httpcall](https://user-images.githubusercontent.com/60686512/107757189-85be7080-6d25-11eb-8d32-cc060bc6f962.PNG)
 
+</br>
+### Machine learning module
+Finally, my last challenge was figuring out how to pass data from user to the machine module and back. Leticia set up the module to accept an array of numbers [1, 1, 1], for example. Three critereas: the news source, the topic, and the authors gender. My challenge was to create a form to return numbers that matched Leticia's machine module. I created a form that returned numbered values (which can be seen in the node_app/public/js/html.js file, under the updatePredictorResultHTML function). </br>
+I was able to send to flask an array of three numbers. The challenged I encountered, was that because the array went through the json.loads function, it was turned into a string, instead of array of numbers. So, the array because ['1', '1', '1'], and the machine would not accept this. </br>
+After some research I discovered how to transform an array of strings to an array of numbers in python.
+- Image one: You can see in the image below, on line 37, the function that casts the variables to integers. This was challenging to figure out the logic and syntax, but again, looking back, it looks very simple. </br>
+- Image two: The path in the Express app, that sends an array of data from the user submitted form to Flask. After Flask returns the response from the machine learning module, the response is sent to its corresponding EJS file.
+![arraypython](https://user-images.githubusercontent.com/60686512/107758578-61639380-6d27-11eb-96a2-7f3272a1cfa1.PNG)
+![indexjsmachine](https://user-images.githubusercontent.com/60686512/107758924-d9ca5480-6d27-11eb-8fe1-80d5143ea9e0.PNG)
+
+## Side notes
+Because we lost a DS member of our team, I helped Leticia collect the articles for building our dataset. I started to organize the data into different tables, in hopes to collect more insights into the data for our users. I used SQL in Excel to structure and filter the data. Unfortunately, due to our time constraints and my lack of knowledge in data science, we were not able to use the data that I collected. This data includes all articles filtered by male versus female authors, organized by topics, and defined by what gender the author is writing about. In the future, as we build our data sets, we will also build our data visuals and statistics, to further explore how gender is represented in media.
+
+## Final thoughts
 Looking at this code and where I am now with my understanding of it, I am in a much different mindset than when I began. Through this process, I was able to grasp the concept of REST API's and how to pass data through the response and request objects. I am also very thankful to have been able to experiment with python and Flask, as this helped reinforce the different types of REST API frameworks and how to extract and send data from one to the other.
 
 # Data Science
 From our first meeting, I could better understand our target and what we wanted from Flip-The-Script. On the same day I started developing a function and doing some research. There were some algorithms related to the subject but as I thought, they covered part of our MVP and not all the requirements.
 
-RegEx was the key in the functions, therefore, I had to learn it. After the first implementations, I realized that the program ran faster and without any problem. Basically the function used a long string as a dictionary and by every match with the text (user input), the function delivered the conversion. This applied morphological and ortographic distinctions, and provided a conversion in accordance to these rules.
+RegEx was the key in the functions, therefore, I had to learn it. After the first implementations, I realized that the program ran faster and without any problem. Basically the function used a long string as a dictionary and by every match with the text (user input), the function delivered the conversion. This applied morphological and orthographic distinctions, and provided a conversion in accordance to these rules.
 
 The next day I could deliver screenshots to show that it was possible to create a gender converter so with that the other members could start doing their tasks. My first steps in this project were as a Software Developer more than as a Data Scientist.
 
@@ -143,7 +163,7 @@ The next step was to develop a prediction using an algorithm from scikitlearn. D
 
 *Biased: Equal to or more than the mean value.*
 
-After comparing the three labels from the three aforementioned attributes, I assigned one unique label, which summarized the other three and was the most frequently occuring label.
+After comparing the three labels from the three aforementioned attributes, I assigned one unique label, which summarized the other three and was the most frequently occurring label.
 
 Having this labeled csv file, I got many errors related to the type of data when creating the model. Then I used KNeighbors from scratch (euclidean distance) and successfully got predictions. As our mentor recommended me, I tried once again with scikitlearn and I could successfully get predictions with the following scores:
 
@@ -165,7 +185,7 @@ Finally I used the library Pickle in order to save the model as a sav file and i
 
 The estimates delivered by the algorithm should be used as a reference since the dataset is not large enough to set a precedent. The research consisting of: 276 articles from 12 sources about 12 topics most of them published between December 2020 and the first week of February 2021, can give an insight that gendered language does exist in the media and varies according to source, topic and author's gender. Future studies and extension of the dataset will help the algorithm to be robust and a link between the neutral converter and the model could provide a direct bias prediction with higher accuracy using units converted and categories.
 
-These softwares together with the algorithm were intended to encourage users to reflect about these questions. 
+These softwares together with the algorithm were intended to encourage users to reflect about these questions.
 
 Gender converter:
 
