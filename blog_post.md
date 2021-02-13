@@ -8,7 +8,7 @@ Flip The Script is aimed to be used as a tool for change and education about our
 The MVP that we are presenting is a web app that essentially takes a user submitted text and flips the pronouns in the text to either the opposite gender's pronouns, or to gender neutral pronouns. While this is a centering topic of our MVP, it is not the only feature that our app provides. We have several different processes that make up our app, including a machine learning module, an analysis of data we collected over the duration of the project phase, and special design features.
 
 Here, you will find a deep dive into the process of building the app, the challenges we faced, and an explanation about the deliverable we created.
-
+---
 # Front-end
 
 After our first meeting we agreed on what each our roles in the project will be, and visualise, after some brainstorming, what our first MVP should aim for. Although I was following the back-end Web Dev learning path. We decided that I could take care of the front-end part of the project along with Luciana, our UI/UX designer. And since I had some previous experience and I love front-end, I was quite happy to do so.
@@ -27,7 +27,7 @@ The biggest challenges I had were:
 5. Transforming the predictor simple form, into the pretty slideshow-like form from the designs
 6. Git -> I had to forget about the way I had been using git and GitHub for my personal projects, and learn to work as a part of a team.
 In a nutshell, this project has been a real taste of what working as a developer in a team feels like. And all I can say is: I’M READY FOR IT.
-
+---
 # Back-end
 After our first meeting, discussing vaguely what an MVP could look like, it became apparent that NodeJS alone would not work. The data scientists are working in python and writing functions that are necessary for working with the web page in real time. This includes the dictionaries and converting functions that scan an article and flip the words. Meike informed us that in order for python functions to work with the NodeJS app, we would need to find a way to connect the two languages.
 Being brand new to coding and the concepts of back-end, I understood quickly that I had a lot to learn.
@@ -111,6 +111,7 @@ Because we lost a DS member of our team, I helped Leticia collect the articles f
 #### Final thoughts
 Looking at this code and where I am now with my understanding of it, I am in a much different mindset than when I began. Through this process, I was able to grasp the concept of REST API's and how to pass data through the response and request objects. I am also very thankful to have been able to experiment with python and Flask, as this helped reinforce the different types of REST API frameworks and how to extract and send data from one to the other.
 
+---
 # Data Science
 From our first meeting, I could better understand our target and what we wanted from Flip-The-Script. On the same day I started developing a function and doing some research. There were some algorithms related to the subject but as I thought, they covered part of our MVP and not all the requirements.
 
@@ -203,7 +204,7 @@ Model:
 
 * Is there a reason why the media use certain words instead of neutral options?
 * Do topics or the author's gender have an influence on how articles are written?
-
+---
 # UX
 ## The Process Behind Flip The Script
 ### How it started
@@ -297,6 +298,9 @@ Our application changes colors every time the user ends up in a new page. This c
 4. Iteration is an incredible tool. Don't get in love with any idea or design.
 5. Knowing which questions to ask isn't as easy as it seems.
 6. Most of the user decisions are influenced by a lot of factors we wouldn't think they would. Being good at this means being aware of those little details.
+
+---
+
 # Conclusion
 
 Our team of four motivated techies formed a work environment that allowed for everyone to express full creativity and decision making. We all gave full trust and confidence in each other. Because of this, our team of four was able to produce an app that is comprehensive, creative, and functional in just six weeks. </br>
@@ -320,6 +324,6 @@ To conclude our journey, here are some insights we are walking away with:
 
 >"Stop and take a break when you are stuck. After, when you come back to the same code, the mistake or solution is obvious"
 
--Leonardo (WD)
-</br>
+-Leonardo (WD) </br>
+
 Our journey with Techlabs is irreplaceable and has taught us not only to learn the educational content of our respective tracks, but also how to use and apply that knowledge in a real life scenario. Techlabs motivated us to  explore even further into tech world. </br>
