@@ -229,7 +229,6 @@ I started creating personas even before the results of the surveys and interview
 With help of the personas I also created scenarios. Same as with the personas, I created them at first to help me articulate the questions of the survey and interview. And after the findings, I created new scenarios. I can say, the user research phase was definitely an iterative process.
 
 ![persona_one](https://user-images.githubusercontent.com/60686512/107855072-930c5580-6e20-11eb-8587-f9d08f9ab951.png)
-![persona_two](https://user-images.githubusercontent.com/60686512/107855073-943d8280-6e20-11eb-8066-24cc99a4f809.png)
 
 ### Creating requirements and strategy
 In the strategy board I stated all different possible requirements, based on the user research, and organized it by what is the most important for the user, and what is feasible for my team bearing in mind constraints like time, money, and skills. Based on that board, I build the requirements for our application.
