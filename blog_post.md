@@ -37,6 +37,13 @@ The biggest challenges I had were:
 6. Git -> I had to forget about the way I had been using git and GitHub for my personal projects, and learn to work as a part of a team.
 In a nutshell, this project has been a real taste of what working as a developer in a team feels like. And all I can say is: I’M READY FOR IT.
 
+###### Navigation: 
+[Front End](#front-end) </br>
+[Back End](#back-end) </br>
+[Data Science](#data-science) </br>
+[UX/UI](#ux) </br>
+[Final Thoughts](#conclusion) </br> 
+
 ---
 
 # Back-end
@@ -121,6 +128,14 @@ Because we lost a DS member of our team, I helped Leticia collect the articles f
 
 #### Final thoughts
 Looking at this code and where I am now with my understanding of it, I am in a much different mindset than when I began. Through this process, I was able to grasp the concept of REST API's and how to pass data through the response and request objects. I am also very thankful to have been able to experiment with python and Flask, as this helped reinforce the different types of REST API frameworks and how to extract and send data from one to the other.
+
+
+###### Navigation: 
+[Front End](#front-end) </br>
+[Back End](#back-end) </br>
+[Data Science](#data-science) </br>
+[UX/UI](#ux) </br>
+[Final Thoughts](#conclusion) </br>
 
 ---
 # Data Science
@@ -215,6 +230,15 @@ Model:
 
 * Is there a reason why the media use certain words instead of neutral options?
 * Do topics or the author's gender have an influence on how articles are written?
+
+
+###### Navigation: 
+[Front End](#front-end) </br>
+[Back End](#back-end) </br>
+[Data Science](#data-science) </br>
+[UX/UI](#ux) </br>
+[Final Thoughts](#conclusion) </br>
+
 ---
 # UX
 ## The Process Behind Flip The Script
@@ -310,6 +334,13 @@ Our application changes colors every time the user ends up in a new page. This c
 5. Knowing which questions to ask isn't as easy as it seems.
 6. Most of the user decisions are influenced by a lot of factors we wouldn't think they would. Being good at this means being aware of those little details.
 
+###### Navigation: 
+[Front End](#front-end) </br>
+[Back End](#back-end) </br>
+[Data Science](#data-science) </br>
+[UX/UI](#ux) </br>
+[Final Thoughts](#conclusion) </br>
+
 ---
 
 # Conclusion
@@ -338,3 +369,11 @@ To conclude our journey, here are some insights we are walking away with:
 -Leonardo (WD) </br>
 
 Our journey with Techlabs is irreplaceable and has taught us not only to learn the educational content of our respective tracks, but also how to use and apply that knowledge in a real life scenario. Techlabs motivated us to  explore even further into tech world. </br>
+
+
+###### Navigation: 
+[Front End](#front-end) </br>
+[Back End](#back-end) </br>
+[Data Science](#data-science) </br>
+[UX/UI](#ux) </br>
+[Final Thoughts](#conclusion) </br>
