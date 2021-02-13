@@ -84,7 +84,7 @@ Our text translator will convert your text in two ways. </br>
 ![textTranslator](https://user-images.githubusercontent.com/60686512/107754203-70474780-6d21-11eb-8525-6b46b2940259.PNG)
 
 ## Authors and acknowledgment
-1. UX: [Luciana Wills]
+1. UX: [Luciana Wills](https://uxfol.io/project/035c89a3/Flip-The-Script-)
 2. DS: [Leticia Valladares](https://github.com/lavf)
 3. WD: [Stephanie Mennear](https://github.com/Ostend)
 4. WD: [Leo Michilena](https://github.com/LeonardoMichilena)
