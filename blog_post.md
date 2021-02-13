@@ -38,7 +38,7 @@ The biggest challenges I had were:
 In a nutshell, this project has been a real taste of what working as a developer in a team feels like. And all I can say is: I’M READY FOR IT.
 
 ###### Navigation: 
-[Front End](#front-end) </br>
+[Intro](#introduction)</br>
 [Back End](#back-end) </br>
 [Data Science](#data-science) </br>
 [UX/UI](#ux) </br>
@@ -131,8 +131,8 @@ Looking at this code and where I am now with my understanding of it, I am in a m
 
 
 ###### Navigation: 
+[Intro](#introduction)</br>
 [Front End](#front-end) </br>
-[Back End](#back-end) </br>
 [Data Science](#data-science) </br>
 [UX/UI](#ux) </br>
 [Final Thoughts](#conclusion) </br>
@@ -233,9 +233,9 @@ Model:
 
 
 ###### Navigation: 
+[Intro](#introduction)</br>
 [Front End](#front-end) </br>
 [Back End](#back-end) </br>
-[Data Science](#data-science) </br>
 [UX/UI](#ux) </br>
 [Final Thoughts](#conclusion) </br>
 
@@ -335,10 +335,10 @@ Our application changes colors every time the user ends up in a new page. This c
 6. Most of the user decisions are influenced by a lot of factors we wouldn't think they would. Being good at this means being aware of those little details.
 
 ###### Navigation: 
+[Intro](#introduction)</br>
 [Front End](#front-end) </br>
 [Back End](#back-end) </br>
 [Data Science](#data-science) </br>
-[UX/UI](#ux) </br>
 [Final Thoughts](#conclusion) </br>
 
 ---
@@ -372,8 +372,9 @@ Our journey with Techlabs is irreplaceable and has taught us not only to learn t
 
 
 ###### Navigation: 
+[Intro](#Introduction) </br>
 [Front End](#front-end) </br>
 [Back End](#back-end) </br>
 [Data Science](#data-science) </br>
 [UX/UI](#ux) </br>
-[Final Thoughts](#conclusion) </br>
+
