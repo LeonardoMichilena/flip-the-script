@@ -8,7 +8,9 @@ Flip The Script is aimed to be used as a tool for change and education about our
 The MVP that we are presenting is a web app that essentially takes a user submitted text and flips the pronouns in the text to either the opposite gender's pronouns, or to gender neutral pronouns. While this is a centering topic of our MVP, it is not the only feature that our app provides. We have several different processes that make up our app, including a machine learning module, an analysis of data we collected over the duration of the project phase, and special design features.
 
 Here, you will find a deep dive into the process of building the app, the challenges we faced, and an explanation about the deliverable we created.
+
 ---
+
 # Front-end
 
 After our first meeting we agreed on what each our roles in the project will be, and visualise, after some brainstorming, what our first MVP should aim for. Although I was following the back-end Web Dev learning path. We decided that I could take care of the front-end part of the project along with Luciana, our UI/UX designer. And since I had some previous experience and I love front-end, I was quite happy to do so.
@@ -27,7 +29,9 @@ The biggest challenges I had were:
 5. Transforming the predictor simple form, into the pretty slideshow-like form from the designs
 6. Git -> I had to forget about the way I had been using git and GitHub for my personal projects, and learn to work as a part of a team.
 In a nutshell, this project has been a real taste of what working as a developer in a team feels like. And all I can say is: I’M READY FOR IT.
+
 ---
+
 # Back-end
 After our first meeting, discussing vaguely what an MVP could look like, it became apparent that NodeJS alone would not work. The data scientists are working in python and writing functions that are necessary for working with the web page in real time. This includes the dictionaries and converting functions that scan an article and flip the words. Meike informed us that in order for python functions to work with the NodeJS app, we would need to find a way to connect the two languages.
 Being brand new to coding and the concepts of back-end, I understood quickly that I had a lot to learn.
