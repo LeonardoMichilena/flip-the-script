@@ -298,3 +298,28 @@ Our application changes colors every time the user ends up in a new page. This c
 5. Knowing which questions to ask isn't as easy as it seems.
 6. Most of the user decisions are influenced by a lot of factors we wouldn't think they would. Being good at this means being aware of those little details.
 # Conclusion
+
+Our team of four motivated techies formed a work environment that allowed for everyone to express full creativity and decision making. We all gave full trust and confidence in each other. Because of this, our team of four was able to produce an app that is comprehensive, creative, and functional in just six weeks. </br>
+To conclude our journey, here are some insights we are walking away with:
+> "You can do it! Even if you're a beginner. There is always so much to learn and it's not easy... but as long as you have the motivation, you can overcome the challenges. And call it a day when you're stuck on a coding problem! (most of my mistakes were made due to lack of sleep)"
+
+ -Leticia (DS)
+
+> "Sometimes all coding is, is a series f trouble shooting problems until you get a correct response"
+>"When faced with a big coding problem, break it down all the way to the smallest version possible. Ask yourself, how you can apply the simple "hello world" to the problem. Then start building from there.
+>"GitHub is a powerful tool and can be best learned through making mistakes. Don't be afraid of GitHub"
+
+-Stephanie (WD)
+
+>"Personas and story telling in general is a powerful tool to empathize and find flaws in the design"
+>"You're gonna screw it up and that's great"
+>"your design can be like a relationship. at some point you're gonna feel you're starting to hate it and will want to start a new one. avoid the toxic dynamic by getting some distance and space from it to get more perspective, but of course maybe you'll realize after getting some space that you actually have to start a new one after all... just don't fall in love with your design it will make your life easier :)"
+>"try and be organized on Figma. design systems are your friends. it will allow you to save so much time at the end"
+
+-Luciana (UX/UI)
+
+>"Stop and take a break when you are stuck. After, when you come back to the same code, the mistake or solution is obvious"
+
+-Leonardo (WD)
+</br>
+Our journey with Techlabs is irreplaceable and has taught us not only to learn the educational content of our respective tracks, but also how to use and apply that knowledge in a real life scenario. Techlabs motivated us to  explore even further into tech world. </br>
