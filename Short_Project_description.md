@@ -2,4 +2,5 @@ We started Flip The Script because we recognized an issue in the way society see
 Flip The Script is aimed to be used as a tool for change and education about our language use by offering users the option to consciously decide for a fairer language. Furthermore, we want to offer visitors the option to learn more about language use and patters and why it is important. </br>
 We offer a text translater which will alter the submitted text in two different ways. One, the user can flip the text based on the gender binary. Two, the user can flip the text to gender neutral language. In addition, users can view a data visualization of the results from collecting and analyzing news articles from various sources across the web.</br>
 Our technologies include Axios, Express, Flask, Notion, Figma, Dribble, Anaconda, Matplotlib, Seaborn, Scikit-lean, Streamlit. </br>
+Our app is built with JavaScript, Python, HTML, and CSS. </br>
 Our team consisted one from each of the following: data scientist, user exerpience/interface designer, front-end developer, back-end developer.
