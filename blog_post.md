@@ -9,6 +9,13 @@ The MVP that we are presenting is a web app that essentially takes a user submit
 
 Here, you will find a deep dive into the process of building the app, the challenges we faced, and an explanation about the deliverable we created.
 
+Navigation: </br>
+[Front End](#front-end) </br>
+[Back End](#back-end) </br>
+[Data Science](#data-science) </br>
+[UX/UI](#ux) </br>
+[Final Thoughts](#conclusion) </br>
+
 ---
 
 # Front-end
