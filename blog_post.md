@@ -351,16 +351,26 @@ To conclude our journey, here are some insights we are walking away with:
 
  -Leticia (DS)
 
-> "Sometimes all coding is, is a series f trouble shooting problems until you get a correct response"
+> "Sometimes all coding is, is a series of trouble shooting problems until you get a correct response"
+
+
 >"When faced with a big coding problem, break it down all the way to the smallest version possible. Ask yourself, how you can apply the simple "hello world" to the problem. Then start building from there.
+
+
 >"GitHub is a powerful tool and can be best learned through making mistakes. Don't be afraid of GitHub"
 
 -Stephanie (WD)
 
 >"Personas and story telling in general is a powerful tool to empathize and find flaws in the design"
+
+
 >"You're gonna screw it up and that's great"
->"your design can be like a relationship. at some point you're gonna feel you're starting to hate it and will want to start a new one. avoid the toxic dynamic by getting some distance and space from it to get more perspective, but of course maybe you'll realize after getting some space that you actually have to start a new one after all... just don't fall in love with your design it will make your life easier :)"
->"try and be organized on Figma. design systems are your friends. it will allow you to save so much time at the end"
+
+
+>"Your design can be like a relationship. at some point you're gonna feel you're starting to hate it and will want to start a new one. avoid the toxic dynamic by getting some distance and space from it to get more perspective, but of course maybe you'll realize after getting some space that you actually have to start a new one after all... just don't fall in love with your design it will make your life easier :)"
+
+
+>"Try and be organized on Figma. design systems are your friends. it will allow you to save so much time at the end"
 
 -Luciana (UX/UI)
 
