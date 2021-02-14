@@ -5,15 +5,29 @@ Flip The Script is aimed to be used as a tool for change and education about our
 
 The main functionality is a translator which alters the submitted text in two different ways:</br>
 
-1. One, the user can flip the text based on the gender binary standards.
+1. Flips the text based on the gender binary standards.
 
-2. Two, the user can flip the text to gender neutral language.
+2. Flips the text to gender neutral language.
 
 In the "Statistics" section, users can check different data visualizations of the results from collecting and analyzing news articles from various sources across the web.</br>
 We also added an extra functionality called "Predictor". That uses that same data analysis and implements a machine learning algorithm to predict how biased an article will be.</br>
 
-Our technologies include Axios, Express, Flask, Notion, Figma, Dribble, Anaconda, Matplotlib, Seaborn, Scikit-lean, Streamlit, Bootstrap. </br>
-Our app is built with JavaScript, Python, HTML, and CSS. </br>
+#### Our Tech Stack includes:
+- Front/back-end: Express, Flask, Axios, Bootstrap, Charts.js
+- Project and task management: Slack, Notion
+- UX/UI design: Figma, Dribble
+- Data processing & visualization: Anaconda, Matplotlib, Seaborn, Scikit-learn, Streamlit. </br>
+</br>
+Base programming languages:
+- JavaScript
+- Python
+</br>
+Markup and Styling:
+- HTML
+- CSS
+</br>
+
+#### Our Team
 
 Our team consists in one person from each of the following fields:
 - Data Science
