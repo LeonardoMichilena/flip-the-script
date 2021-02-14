@@ -1,18 +1,6 @@
 
-///////////////Response array and hightligh 
-
-//Variables
-let originalText;
-let responseText;
-let responseArrayPar;
-let responseArray;
-let flippedWords;
-let flippedWordsArray;
-
-
-
 /**
- * Executes automatically once the page is loaded (body > onload atributte)
+ * Executes automatically once the page is loaded (body > onload atributte), applies for all initX functions down below
  */
 function initHome() {
 
@@ -29,6 +17,7 @@ function initHome() {
     
     drawCanvas();
 }
+
 function initWhy() {
     updateNavbarHTML();
     updateWhyHTML();
@@ -56,26 +45,6 @@ function initPredictor() {
     updateFooterHTML();
 }
 
-function checkGenderForm(gender){
-    console.log(gender);
-    let maleOption = document.getElementById('male');
-    let maleButton = document.getElementById('male-btn');
-    let femaleOption = document.getElementById('female');
-    let femaleButton = document.getElementById('female-btn');
-
-    if(gender == "male-btn"){
-        maleOption.checked = true;
-        maleButton.style.backgroundColor = currentMainColor;
-        femaleButton.style.backgroundColor = '#f5f5f5';
-
-    } else if(gender == "female-btn"){
-        femaleOption.checked = true;
-        femaleButton.style.backgroundColor = currentMainColor;
-        maleButton.style.backgroundColor = '#f5f5f5';
-    } 
-    document.getElementById("btn-results").classList.remove('v-hidden');
-    
-}
 function initPredictorResult(){
     updateNavbarHTML();
     updatePredictorResultHTML();
@@ -98,6 +67,18 @@ function initAboutUs(){
     updateTeamHTML();
     updateFooterHTML();
 }
+
+
+
+///////////////Response array and hightligh on the converter (flip) site
+
+//Variables
+let originalText;
+let responseText;
+let responseArrayPar;
+let responseArray;
+let flippedWords;
+let flippedWordsArray;
 
 function initFlip() {
 
@@ -207,6 +188,7 @@ function checkForMatchingWord(l, i, j) {
     } else false;
 }
 
+
 ///////////////Slideshow
 
 //Variables
@@ -222,13 +204,11 @@ let predictorSlideCounter = 0;
  */
 function toggleSlideshow(mode) {
 
-    //Get both elements of the section in order to manipulate them later
+    //Gets both elements of the section in order to manipulate them later
     let titleBox = document.getElementById('title-container');
     let slideShowBox = document.getElementById('slideshow-box');
     let title1 = document.querySelector("#title1");
     let title2 = document.querySelector("#title2");
-
-
 
     //If the mode "open" was passed to the function then this code will execute
     if (mode == 'open') {
@@ -241,7 +221,6 @@ function toggleSlideshow(mode) {
 
         title1.classList.toggle('title-shrink');
         title2.classList.toggle('title-shrink');
-
 
         titleBox.classList.toggle('slideshow-open');
         slideShowBox.classList.toggle('slideshow-box-open');
@@ -266,7 +245,7 @@ function toggleSlideshow(mode) {
 }
 
 /**
- * Changes to the next slide
+ * Changes to the next slide from the Why it matters slideshow
  */
 function nextSlide() {
 
@@ -288,9 +267,11 @@ function nextSlide() {
     //Togggles the classes to be the current or active slides
     currentSlide.classList.toggle('showing');
     currentDot.classList.toggle("active");
-
 }
 
+/**
+ * Sets the next slide on the predictor page
+ */
 function predictorNextSlide(){
 
 
@@ -304,11 +285,10 @@ function predictorNextSlide(){
 }
 
 
+/////////////////Color change functionality settings
 
-/////////////////Color change
-
-let backgroundColor = "f5f5f5";
-let darkColor = "121212";
+let backgroundColor = "#f5f5f5";
+let darkColor = "#121212";
 
 let mainColors = ["#FF83A8", "#76EEC6", "#FFCC00", "#9966FF", "#6699FF", "#F57B7B", "#33CCCC"];
 let secondColors = ["#F8D2EB", "#A0E1BA", "#FCE68E", "#C3B1E9", "#A5C9FF", "#FFB2B2", "#91DCDC"];
@@ -345,8 +325,6 @@ function setNewColor() {
 
     let pathName = document.location.pathname;
 
-    console.log(pathName);
-
     if (pathName == "/flip" || pathName == "/neutralarticle" || pathName == "/articles") {
         initFlip();
     } else if (pathName == "/why-it-matters") {
@@ -361,19 +339,11 @@ function setNewColor() {
 
 }
 
-
-function copyToClipboard(){
-    
-    document.getElementById("copied-element").innerText = "The text was copied!";
-
-    document.getElementById("copied-element").classList.toggle("v-hidden");
-
-
-   // document.getElementById("copied-element").classList.toggle("d-none");
-
-}
-
-
+/**
+ * Converts a Hex color code (i.e.: "#f5f5f5") to rgba code ("rgba(255,255,255,0.5"), giving an hex and alpha variables 
+ * @param {Hex code} hex Hexadecimal code including the "#". 
+ * @param {number} alpha An alpha number between 0 and 1 that will determine the opaccity of the new rgba color.
+ */
 function convertHexToRGBA(hex, alpha) {
     let c;
     if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
@@ -400,7 +370,9 @@ let myChartDoughnut;
 let myChartBars;
 let myChartBars2;
 
-
+/**
+ * Draws the canvas and places the corresponding graphs
+ */
 function drawCanvas() {
 
     ctx1 = document.getElementById('myChartDoughnut').getContext('2d');
@@ -509,3 +481,44 @@ function drawCanvas() {
         });
     } 
 } 
+
+
+/////More functions
+
+/**
+ * Checks which button was selected on the 3rd slide of the predictor when chosing male or female authors
+ * @param {string} gender It should be "male-btn" or "female-btn"
+ */
+function checkGenderForm(gender){
+    console.log(gender);
+    let maleOption = document.getElementById('male');
+    let maleButton = document.getElementById('male-btn');
+    let femaleOption = document.getElementById('female');
+    let femaleButton = document.getElementById('female-btn');
+
+    if(gender == "male-btn"){
+        maleOption.checked = true;
+        maleButton.style.backgroundColor = currentMainColor;
+        femaleButton.style.backgroundColor = '#f5f5f5';
+
+    } else if(gender == "female-btn"){
+        femaleOption.checked = true;
+        femaleButton.style.backgroundColor = currentMainColor;
+        maleButton.style.backgroundColor = '#f5f5f5';
+    } 
+    document.getElementById("btn-results").classList.remove('v-hidden');
+}
+
+/**
+ * Beta function for future functionality to copy the translated text to the clipboard 
+ */
+function copyToClipboard(){
+    
+    document.getElementById("copied-element").innerText = "The text was copied!";
+
+    document.getElementById("copied-element").classList.toggle("v-hidden");
+
+    setTimeout(function(){
+        document.getElementById("copied-element").innerText = "Click on the text to copy";
+    },2000);
+}
