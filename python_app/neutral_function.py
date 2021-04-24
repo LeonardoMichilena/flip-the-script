@@ -10,7 +10,7 @@ dict_neutral = {'United Kingdom': 'United Kingdom', 'Staunton': 'Staunton', 'tau
                 'Man': 'Person', 'MAN': 'PERSON', 'MEN': 'PEOPLE',
                 'woman': 'person',  'Woman': 'Person', 'women': 'people', 
                 'Women': 'People', 'WOMAN': 'PERSON', 'WOMEN': 'PEOPLE',
-                'Mr': 'Mx', 'Ms': 'Mx', 'Sir': 'Mx', 'Lady': 'Mx', 'Lord': 'Mx', 
+                'Mr': 'Mx', 'Ms': 'Mx', 'Sir': 'Mx', 'Lady': 'Mx', 'Lord': 'Mx', 'Mrs': 'Mx',
                 'SIR': 'MX', 'LORD': 'MX', 
                 'lady': 'person', 'gentleman': 'person', 
                 'ladies': 'people', 'gentlemen': 'people',  
@@ -567,7 +567,7 @@ list_string = r"""\bUnited\sKingdom\b|\bStaunton\b|\btaunt\b|\bThe\sSportsman\b|
                 |\bmaids\b|\bMaid\b|\bMaids\b|\bbutler\b|\bButler\b|\bBoys\b|\bboys\b|\bgirls\b|\bGirls\b|\bsons\b|\bSons\b|\bStrongman\b|\bStrongmen\b|\bstrongman\b|
                 |\bstrongmen\b|\bbrothers\b|\bsisters\b|\bBrothers\b|\bSisters\b|\bguys\b|\bGuys\b|\bbishops\b"""
 
-def neutral_converter(string, substitutions = dict_neutral):
+def neutral_converter(string, substitutions=dict_neutral):
     substrings = sorted(substitutions, key=len, reverse=True)
     regex = re.compile('|'.join(map(lambda x: '\\b' + x + '\\b', map(re.escape, substrings))))
     return regex.sub(lambda match: substitutions[match.group(0)], string)
