@@ -23,12 +23,11 @@ Base programming languages:
 
 - JavaScript
 - Python
-</br>
+
 Markup and Styling:
 
 - HTML
 - CSS
-</br>
 
 #### Our Team
 
